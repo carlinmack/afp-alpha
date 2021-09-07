@@ -5873,7 +5873,18 @@
         ],
         "date": "2021-09-05",
         "abstract": "\nThis entry formalises the fast iterative algorithm for computing dominators\ndue to Cooper, Harvey and Kennedy. It gives a specification of computing\ndominators on a control\nflow graph where each node refers to its reverse post order number. A\nsemilattice of reversed-ordered list which represents dominators is\nbuilt and a Kildall-style algorithm on the semilattice is defined for\ncomputing dominators. Finally the soundness and completeness of the\nalgorithm are proved w.r.t. the specification.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Cfg",
+            "Semilat",
+            "Sorted_Less2",
+            "Sorted_List_Operations2",
+            "Dom_Semi_List",
+            "Listn",
+            "Dom_Kildall",
+            "Dom_Kildall_Property",
+            "Dom_Kildall_Correct"
+        ]
     },
     {
         "session": "Residuated_Lattices",
