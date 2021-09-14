@@ -17396,6 +17396,19 @@
         ]
     },
     {
+        "session": "Intro_Dest_Elim",
+        "title": "IDE: Introduction, Destruction, Elimination",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Tools"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nThe article provides the command <b>mk_ide</b> for the\nobject logic Isabelle/HOL of the formal proof assistant Isabelle. The\ncommand <b>mk_ide</b> enables the automated synthesis of\nthe introduction, destruction and elimination rules from arbitrary\ndefinitions of constant predicates stated in Isabelle/HOL.",
+        "licence": "BSD"
+    },
+    {
         "session": "Coinductive_Languages",
         "title": "A Codatatype of Formal Languages",
         "authors": [
@@ -20585,6 +20598,22 @@
         ]
     },
     {
+        "session": "CZH_Elementary_Categories",
+        "title": "Category Theory for ZFC in HOL II: Elementary Theory of 1-Categories",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Mathematics/Category theory"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nThis article provides a formalization of the foundations of the theory\nof 1-categories in the object logic ZFC in HOL of the formal proof\nassistant Isabelle. The article builds upon the foundations that were\nestablished in the AFP entry <i>Category Theory for ZFC in HOL\nI: Foundations: Design Patterns, Set Theory, Digraphs,\nSemicategories</i>.",
+        "licence": "BSD",
+        "dependencies": [
+            "CZH_Foundations"
+        ]
+    },
+    {
         "session": "Integration",
         "title": "Integration theory and random variables",
         "authors": [
@@ -21967,6 +21996,19 @@
         ]
     },
     {
+        "session": "Conditional_Transfer_Rule",
+        "title": "Conditional Transfer Rule",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Tools"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nThis article provides a collection of experimental utilities for\nunoverloading of definitions and synthesis of conditional transfer\nrules for the object logic Isabelle/HOL of the formal proof assistant\nIsabelle written in Isabelle/ML.",
+        "licence": "BSD"
+    },
+    {
         "session": "Tree_Decomposition",
         "title": "Tree Decomposition",
         "authors": [
@@ -22327,6 +22369,24 @@
             "FP64",
             "Conversion_IEEE_Float",
             "Double"
+        ]
+    },
+    {
+        "session": "CZH_Foundations",
+        "title": "Category Theory for ZFC in HOL I: Foundations: Design Patterns, Set Theory, Digraphs, Semicategories",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Mathematics/Category theory",
+            "Logic/Set theory"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nThis article provides a foundational framework for the formalization\nof category theory in the object logic ZFC in HOL of the formal proof\nassistant Isabelle. More specifically, this article provides a\nformalization of canonical set-theoretic constructions internalized in\nthe type <i>V</i> associated with the ZFC in HOL,\nestablishes a design pattern for the formalization of mathematical\nstructures using sequences and locales, and showcases the developed\ninfrastructure by providing formalizations of the elementary theories\nof digraphs and semicategories. The methodology chosen for the\nformalization of the theories of digraphs and semicategories (and\ncategories in future articles) rests on the ideas that were originally\nexpressed in the article <i>Set-Theoretical Foundations of\nCategory Theory</i> written by Solomon Feferman and Georg\nKreisel. Thus, in the context of this work, each of the aforementioned\nmathematical structures is represented as a term of the type\n<i>V</i> embedded into a stage of the von Neumann\nhierarchy.",
+        "licence": "BSD",
+        "dependencies": [
+            "Intro_Dest_Elim",
+            "Conditional_Simplification"
         ]
     },
     {
@@ -26369,6 +26429,19 @@
         ]
     },
     {
+        "session": "Conditional_Simplification",
+        "title": "Conditional Simplification",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Tools"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nThe article provides a collection of experimental general-purpose\nproof methods for the object logic Isabelle/HOL of the formal proof\nassistant Isabelle. The methods in the collection offer functionality\nthat is similar to certain aspects of the functionality provided by\nthe standard proof methods of Isabelle that combine classical\nreasoning and rewriting, such as the method <i>auto</i>,\nbut use a different approach for rewriting. More specifically, these\nmethods allow for the side conditions of the rewrite rules to be\nsolved via intro-resolution.",
+        "licence": "BSD"
+    },
+    {
         "session": "Nominal2",
         "title": "Nominal 2",
         "authors": [
@@ -27329,6 +27402,22 @@
             "ComposeEx",
             "UserGuide",
             "Simpl"
+        ]
+    },
+    {
+        "session": "Types_To_Sets_Extension",
+        "title": "Extension of Types-To-Sets",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Tools"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nIn their article titled <i>From Types to Sets by Local Type\nDefinitions in Higher-Order Logic</i> and published in the\nproceedings of the conference <i>Interactive Theorem\nProving</i> in 2016, Ondřej Kunčar and Andrei Popescu propose an\nextension of the logic Isabelle/HOL and an associated algorithm for\nthe relativization of the <i>type-based theorems</i> to\nmore flexible <i>set-based theorems</i>, collectively\nreferred to as <i>Types-To-Sets</i>. One of the aims of\ntheir work was to open an opportunity for the development of a\nsoftware tool for applied relativization in the implementation of the\nlogic Isabelle/HOL of the proof assistant Isabelle. In this article,\nwe provide a prototype of a software framework for the interactive\nautomated relativization of theorems in Isabelle/HOL, developed as an\nextension of the proof language Isabelle/Isar. The software framework\nincorporates the implementation of the proposed extension of the\nlogic, and builds upon some of the ideas for further work expressed in\nthe original article on Types-To-Sets by Ondřej Kunčar and Andrei\nPopescu and the subsequent article <i>Smooth Manifolds and Types\nto Sets for Linear Algebra in Isabelle/HOL</i> that was written\nby Fabian Immler and Bohua Zhan and published in the proceedings of\nthe <i>International Conference on Certified Programs and\nProofs</i> in 2019.",
+        "licence": "BSD",
+        "dependencies": [
+            "Conditional_Transfer_Rule"
         ]
     },
     {
@@ -29341,6 +29430,22 @@
             "Splay_Tree",
             "Splay_Map",
             "Splay_Heap"
+        ]
+    },
+    {
+        "session": "CZH_Universal_Constructions",
+        "title": "Category Theory for ZFC in HOL III: Universal Constructions",
+        "authors": [
+            "Mihails Milehins"
+        ],
+        "topics": [
+            "Mathematics/Category theory"
+        ],
+        "date": "2021-09-06",
+        "abstract": "\nThe article provides a formalization of elements of the theory of\nuniversal constructions for 1-categories (such as limits, adjoints and\nKan extensions) in the object logic ZFC in HOL of the formal proof\nassistant Isabelle. The article builds upon the foundations\nestablished in the AFP entry <i>Category Theory for ZFC in HOL\nII: Elementary Theory of 1-Categories</i>.",
+        "licence": "BSD",
+        "dependencies": [
+            "CZH_Elementary_Categories"
         ]
     },
     {
