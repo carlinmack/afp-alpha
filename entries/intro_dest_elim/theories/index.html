@@ -1,0 +1,713 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Session Intro_Dest_Elim - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Intro_Dest_Elim">
+<meta property="og:description" content>
+<meta property="og:type" content="article">
+<meta property="og:url" content="/entries/intro_dest_elim/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories">
+<meta property="og:site_name" content="Archive of Formal Proofs">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="/images/afp.png">
+<meta name=twitter:title content="Session Intro_Dest_Elim">
+<meta name=twitter:description content>
+<link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
+<link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
+<body class=mathjax_ignore>
+<aside>
+<div>
+<div>
+<a href=/>
+<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
+</a>
+<ul>
+<li><a href=/entries/intro_dest_elim>Return to entry</a></li>
+</ul>
+<hr>
+<ul><li><a href=#IDE_Tools>IDE_Tools</a>
+</li><li><a href=#files%2fIDE_Utilities.ML>files/IDE_Utilities.ML</a>
+</li><li><a href=#IHOL_IDE>IHOL_IDE</a>
+<ul>
+<li><a href=#IHOL_IDE-PQ_P_Q>PQ_P_Q</a></li>
+</ul>
+</li><li><a href=#files%2fIDE.ML>files/IDE.ML</a>
+</li><li><a href=#Reference_Prerequisites>Reference_Prerequisites</a>
+</li><li><a href=#files%2fISABELLE_HOME%2fsrc%2fDoc%2fantiquote_setup.ML>files/ISABELLE_HOME/src/Doc/antiquote_setup.ML</a>
+</li><li><a href=#IDE_Reference>IDE_Reference</a>
+</li>
+</ul>
+</div>
+<ul>
+<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Intro_Dest_Elim/outline.pdf>Proof
+outline</a></li>
+<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Intro_Dest_Elim/document.pdf>Proof
+document</a></li>
+<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Intro_Dest_Elim/session_graph.pdf>Theory dependencies</a></li>
+</ul>
+</div>
+</aside>
+<div class="content theories"><header>
+<form action=/%20search>
+<div class=form-container>
+<input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
+<datalist id=autocomplete>
+</datalist>
+</div>
+</form>
+<h1><span class=first>S</span>ession <span class=first>I</span>ntro_<span class=first>D</span>est_<span class=first>E</span>lim</h1>
+<div>
+</div>
+</header><div id=banner data-id=0>
+<p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
+</div>
+<div><main>
+<div id=IDE_Tools>
+<div class=head>
+<h1>Theory IDE_Tools</h1>
+</div>
+<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+
+<span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>IDE_Tools›</span></span></span></span>›</span></span>
+<span class=keyword1><span class=command>theory</span></span> IDE_Tools
+  <span class=keyword2><span class=keyword>imports</span></span> <a href=https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/library/HOL/HOL/Main.html>Main</a>
+<span class=keyword2><span class=keyword>begin</span></span>
+
+<span class=keyword1><span class=command>ML_file</span></span> <span class=quoted>"IDE_Utilities.ML"</span>
+
+<span class=keyword2><span class=keyword>end</span></span></pre>
+</div><div id=files/IDE_Utilities.ML>
+<div class=head>
+<h1>File ‹IDE_Utilities.ML›</h1>
+</div>
+<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+
+<span class=keyword1><span class=keyword>signature</span></span> <span class=entity>IDE_UTILITIES</span> <span class=main>=</span>
+<span class=keyword2><span class=keyword>sig</span></span>
+
+<span class=keyword1><span class=keyword>val</span></span> thm_printer <span class=main>:</span> <span class=entity>Proof.context</span> <span class=main>-&gt;</span> bool <span class=main>-&gt;</span> string <span class=main>-&gt;</span> thm list <span class=main>-&gt;</span> unit
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>structure</span></span> <span class=entity>IDE_Utilities</span> <span class=main>:</span> <span class=entity>IDE_UTILITIES</span> <span class=main>=</span>
+<span class=keyword2><span class=keyword>struct</span></span>
+
+<span class=comment1>(* standard theorem printer *)</span>
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>thm_printer</span> <span class=entity>ctxt</span> <span class=entity>print</span> <span class=entity>name</span> <span class=entity>thms</span> <span class=main>=</span> 
+  <span class=entity>Proof_Display.print_results</span> 
+    <span class=entity>print</span> 
+    <span class=main>(</span>Position.thread_data <span class=main>(</span><span class=main>)</span><span class=main>)</span> 
+    <span class=entity>ctxt</span> 
+    <span class=main>(</span><span class=main>(</span>Thm.theoremK<span class=main>,</span> <span class=inner_quoted>""</span><span class=main>)</span><span class=main>,</span> single <span class=main>(</span><span class=entity>name</span><span class=main>,</span> <span class=entity>thms</span><span class=main>)</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre>
+</div><div id=IHOL_IDE>
+<div class=head>
+<h1>Theory IHOL_IDE</h1>
+</div>
+<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+
+<span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>IHOL_IDE›</span></span></span></span>›</span></span>
+<span class=keyword1><span class=command>theory</span></span> IHOL_IDE
+  <span class=keyword2><span class=keyword>imports</span></span> <span class=quoted>"<a href=#IDE_Tools>IDE_Tools/IDE_Tools</a>"</span>
+  <span class=keyword2><span class=keyword>keywords</span></span> <span class=quoted>"mk_ide"</span> <span class=main>::</span> thy_defn
+    <span class=keyword2><span class=keyword>and</span></span> <span class=quoted>"rf"</span>
+    <span class=keyword2><span class=keyword>and</span></span> <span class=quoted>"|intro"</span> <span class=quoted>"|dest"</span> <span class=quoted>"|elim"</span> 
+<span class=keyword2><span class=keyword>begin</span></span>
+
+
+
+<span class=keyword1><span class=command>subsection</span></span><span class=quoted><span class=plain_text>‹Miscellaneous results›</span></span>
+           
+<span class=keyword1 id=IHOL_IDE-PQ_P_Q><span class=command>lemma</span></span> PQ_P_Q<span class=main>:</span> <span class=quoted><span class=quoted>"<span class=free>P</span> <span class=main>≡</span> <span class=free>Q</span> <span class=main>⟹</span> <span class=free>P</span> <span class=main>⟹</span> <span class=free>Q</span>"</span></span> <span class=keyword1><span class=command>by</span></span> <span class=operator>auto</span>
+    
+
+
+<span class=keyword1><span class=command>subsection</span></span><span class=quoted><span class=plain_text>‹Import›</span></span>
+
+<span class=keyword1><span class=command>ML_file</span></span><span class=quoted>‹IDE.ML›</span>
+
+<span class=keyword2><span class=keyword>end</span></span></pre>
+</div><div id=files/IDE.ML>
+<div class=head>
+<h1>File ‹IDE.ML›</h1>
+</div>
+<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+
+<span class=keyword1><span class=keyword>signature</span></span> <span class=entity>IDE</span> <span class=main>=</span>
+<span class=keyword2><span class=keyword>sig</span></span>
+
+<span class=keyword1><span class=keyword>val</span></span> mk_intro <span class=main>:</span> <span class=entity>Proof.context</span> <span class=main>-&gt;</span> thm <span class=main>-&gt;</span> thm list
+<span class=keyword1><span class=keyword>val</span></span> mk_dest <span class=main>:</span> <span class=entity>Proof.context</span> <span class=main>-&gt;</span> thm <span class=main>-&gt;</span> thm list
+<span class=keyword1><span class=keyword>val</span></span> mk_elim <span class=main>:</span> <span class=entity>Proof.context</span> <span class=main>-&gt;</span> thm <span class=main>-&gt;</span> thm list
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>structure</span></span> <span class=entity>IDE</span><span class=main>:</span> <span class=entity>IDE</span>  <span class=main>=</span>
+<span class=keyword2><span class=keyword>struct</span></span>
+
+
+
+<span class=comment1>(*** Auxiliary ***)</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>is_conj</span> <span class=main>(</span>Const <span class=main>(</span><span class=antiquoted><span class=operator><span class=hidden>\&lt;^</span><span class=control>const_name</span><span class=hidden>&gt;</span></span>‹conj›</span><span class=main>,</span> <span class=main>_</span><span class=main>)</span> $ <span class=main>_</span> $ <span class=main>_</span><span class=main>)</span> <span class=main>=</span> true
+  <span class=main>|</span> <span class=entity>is_conj</span> <span class=main>_</span> <span class=main>=</span> false<span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>is_equals</span> <span class=main>(</span>Const <span class=main>(</span><span class=antiquoted><span class=operator><span class=hidden>\&lt;^</span><span class=control>const_name</span><span class=hidden>&gt;</span></span>‹Pure.eq›</span><span class=main>,</span> <span class=main>_</span><span class=main>)</span> $ <span class=main>_</span> $ <span class=main>_</span><span class=main>)</span> <span class=main>=</span> true
+  <span class=main>|</span> <span class=entity>is_equals</span> <span class=main>_</span> <span class=main>=</span> false<span class=main>;</span>
+
+
+
+<span class=comment1>(*** Introduction rule ***)</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>mk_intro</span> <span class=entity>ctxt</span> <span class=entity>thm</span> <span class=main>=</span>
+  <span class=keyword2><span class=keyword>let</span></span> 
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm'</span> <span class=main>=</span> <span class=entity>thm</span> RS <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> verit_Pure_trans<span class=antiquote>}</span></span></span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>n</span> <span class=main>=</span> Thm.nprems_of <span class=entity>thm'</span>
+  <span class=keyword2><span class=keyword>in</span></span> 
+    <span class=entity>thm'</span>
+    |&gt; rotate_prems <span class=main>(</span><span class=entity>n</span> - <span class=inner_numeral>1</span><span class=main>)</span>
+    |&gt; Local_Defs.unfold <span class=entity>ctxt</span> <span class=main>(</span>single <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> conj_imp_eq_imp_imp<span class=antiquote>}</span></span></span><span class=main>)</span> 
+    |&gt; single 
+  <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+
+
+<span class=comment1>(*** Destruction rule ***)</span>
+
+<span class=keyword2><span class=keyword>local</span></span> 
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>is_conj_concl</span> <span class=entity>thm</span> <span class=main>=</span> <span class=entity>thm</span>
+  |&gt; Thm.concl_of
+  |&gt; <span class=entity>HOLogic.dest_Trueprop</span>
+  |&gt; <span class=entity>is_conj</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>dest_conj_concl_impl</span> <span class=main>[</span><span class=main>]</span> <span class=main>=</span> <span class=main>[</span><span class=main>]</span>
+  <span class=main>|</span> <span class=entity>dest_conj_concl_impl</span> <span class=main>(</span><span class=entity>thm</span> :: <span class=entity>thms</span><span class=main>)</span> <span class=main>=</span> 
+    <span class=keyword2><span class=keyword>if</span></span> <span class=entity>is_conj_concl</span> <span class=entity>thm</span> 
+    <span class=keyword2><span class=keyword>then</span></span> 
+      <span class=keyword2><span class=keyword>let</span></span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm2</span> <span class=main>=</span> <span class=entity>thm</span> RS <span class=entity>conjunct2</span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm1</span> <span class=main>=</span> <span class=entity>thm</span> RS <span class=entity>conjunct1</span>
+      <span class=keyword2><span class=keyword>in</span></span>
+        <span class=main>(</span><span class=keyword2><span class=keyword>if</span></span> <span class=entity>is_conj_concl</span> <span class=entity>thm2</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>dest_conj_concl_impl</span> <span class=main>[</span><span class=entity>thm2</span><span class=main>]</span> <span class=keyword2><span class=keyword>else</span></span> <span class=main>[</span><span class=entity>thm2</span><span class=main>]</span><span class=main>)</span> @ 
+        <span class=main>(</span><span class=keyword2><span class=keyword>if</span></span> <span class=entity>is_conj_concl</span> <span class=entity>thm1</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>dest_conj_concl_impl</span> <span class=main>[</span><span class=entity>thm1</span><span class=main>]</span> <span class=keyword2><span class=keyword>else</span></span> <span class=main>[</span><span class=entity>thm1</span><span class=main>]</span><span class=main>)</span> @ 
+        <span class=entity>dest_conj_concl_impl</span> <span class=entity>thms</span>
+      <span class=keyword2><span class=keyword>end</span></span>
+    <span class=keyword2><span class=keyword>else</span></span> <span class=entity>thm</span> :: <span class=entity>dest_conj_concl_impl</span> <span class=entity>thms</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>in</span></span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>mk_dest</span> <span class=entity>ctxt</span> <span class=entity>thm</span> <span class=main>=</span>
+  <span class=keyword2><span class=keyword>let</span></span> 
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm'</span> <span class=main>=</span> Local_Defs.unfold <span class=entity>ctxt</span> <span class=main>(</span>single <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> conj_assoc<span class=antiquote>}</span></span></span><span class=main>)</span> <span class=entity>thm</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm''</span> <span class=main>=</span> <span class=entity>thm'</span> RS <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> PQ_P_Q<span class=antiquote>}</span></span></span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>n</span> <span class=main>=</span> Thm.nprems_of <span class=entity>thm''</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm'''</span> <span class=main>=</span> <span class=entity>thm''</span> 
+      |&gt; rotate_prems <span class=main>(</span><span class=entity>n</span> - <span class=inner_numeral>1</span><span class=main>)</span> 
+      |&gt; Local_Defs.unfold <span class=entity>ctxt</span> <span class=main>(</span>single <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> conj_imp_eq_imp_imp<span class=antiquote>}</span></span></span><span class=main>)</span><span class=main>;</span>
+  <span class=keyword2><span class=keyword>in</span></span> <span class=entity>dest_conj_concl_impl</span> <span class=main>[</span><span class=entity>thm'''</span><span class=main>]</span> |&gt; rev <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+
+
+<span class=comment1>(*** Elimination rule ***)</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>mk_elim</span> <span class=entity>ctxt</span> <span class=entity>thm</span> <span class=main>=</span> 
+  <span class=keyword2><span class=keyword>let</span></span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm'</span> <span class=main>=</span> <span class=main>(</span><span class=entity>thm</span> RS <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> PQ_P_Q<span class=antiquote>}</span></span></span><span class=main>)</span>
+      |&gt; Tactic.make_elim
+      |&gt; Local_Defs.unfold <span class=entity>ctxt</span> <span class=main>(</span>single <span class=antiquoted><span class=entity><span class=antiquote>@{</span><span class=operator>thm</span> conj_imp_eq_imp_imp<span class=antiquote>}</span></span></span><span class=main>)</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>conclt</span> <span class=main>=</span> Thm.concl_of <span class=entity>thm'</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>conclt'</span> <span class=main>=</span> <span class=entity>conclt</span>
+      |&gt; dest_Var
+      ||&gt; K <span class=antiquoted><span class=operator><span class=hidden>\&lt;^</span><span class=control>typ</span><span class=hidden>&gt;</span></span><span class=quoted>‹bool›</span></span>
+      |&gt; Var
+      |&gt; <span class=entity>HOLogic.mk_Trueprop</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>insts</span> <span class=main>=</span> <span class=main>(</span><span class=entity>conclt</span><span class=main>,</span> <span class=entity>conclt'</span><span class=main>)</span>
+      |&gt; apply2 <span class=main>(</span>Thm.cterm_of <span class=entity>ctxt</span><span class=main>)</span>
+      |&gt; Thm.first_order_match 
+  <span class=keyword2><span class=keyword>in</span></span> <span class=entity>thm'</span> |&gt; Drule.instantiate_normalize <span class=entity>insts</span> |&gt; single <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+
+
+<span class=comment1>(*** Command ***)</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=entity>error_msg</span> <span class=main>=</span> <span class=inner_quoted>"mk_ide: invalid arguments"</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=entity>mk_ide_parser</span> <span class=main>=</span> Scan.option <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>keyword</span><span class=hidden>&gt;</span></span>‹<span class=keyword2>rf</span>›</span></span> -- Parse.thm --
+  <span class=main>(</span>
+    Scan.repeat
+      <span class=main>(</span>
+        <span class=main>(</span><span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>keyword</span><span class=hidden>&gt;</span></span>‹<span class=keyword2>|intro</span>›</span></span> -- <span class=entity>Parse_Spec.opt_thm_name</span> <span class=inner_quoted>"|"</span><span class=main>)</span> ||
+        <span class=main>(</span><span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>keyword</span><span class=hidden>&gt;</span></span>‹<span class=keyword2>|dest</span>›</span></span> -- <span class=entity>Parse_Spec.opt_thm_name</span> <span class=inner_quoted>"|"</span><span class=main>)</span> ||
+        <span class=main>(</span><span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>keyword</span><span class=hidden>&gt;</span></span>‹<span class=keyword2>|elim</span>›</span></span> -- <span class=entity>Parse_Spec.opt_thm_name</span> <span class=inner_quoted>"|"</span><span class=main>)</span>
+      <span class=main>)</span>
+  <span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>process_mk_rule</span> <span class=entity>mk_rule</span> <span class=main>(</span><span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=main>=</span>
+  <span class=keyword2><span class=keyword>let</span></span> 
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thms</span> <span class=main>=</span> <span class=entity>thm</span>
+      |&gt; <span class=entity>mk_rule</span> <span class=entity>ctxt</span> 
+      |&gt; 
+        <span class=main>(</span>
+          <span class=keyword1><span class=keyword>fn</span></span> <span class=entity>thms</span> <span class=main>=&gt;</span> 
+            <span class=keyword2><span class=keyword>if</span></span> is_some <span class=entity>rf</span> 
+            <span class=keyword2><span class=keyword>then</span></span> map <span class=main>(</span>Object_Logic.rulify <span class=entity>ctxt</span><span class=main>)</span> <span class=entity>thms</span> 
+            <span class=keyword2><span class=keyword>else</span></span> <span class=entity>thms</span>
+        <span class=main>)</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=main>(</span><span class=main>(</span><span class=entity>c</span><span class=main>,</span> <span class=entity>thms'</span><span class=main>)</span><span class=main>,</span> <span class=entity>ctxt'</span><span class=main>)</span> <span class=main>=</span> 
+      Local_Theory.note <span class=main>(</span><span class=entity>b</span> ||&gt; map <span class=main>(</span><span class=entity>Attrib.check_src</span> <span class=entity>ctxt</span><span class=main>)</span><span class=main>,</span> <span class=entity>thms</span><span class=main>)</span> <span class=entity>ctxt</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span> <span class=entity>IDE_Utilities.thm_printer</span> <span class=entity>ctxt'</span> true <span class=entity>c</span> <span class=entity>thms'</span>
+  <span class=keyword2><span class=keyword>in</span></span> <span class=entity>ctxt'</span> <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>folder_mk_rule</span> <span class=main>(</span><span class=main>(</span><span class=inner_quoted>"|intro"</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=main>=</span>
+      <span class=entity>process_mk_rule</span> <span class=entity>mk_intro</span> <span class=main>(</span><span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span> <span class=entity>ctxt</span>
+  <span class=main>|</span> <span class=entity>folder_mk_rule</span> <span class=main>(</span><span class=main>(</span><span class=inner_quoted>"|dest"</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=main>=</span>
+      <span class=entity>process_mk_rule</span> <span class=entity>mk_dest</span> <span class=main>(</span><span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span> <span class=entity>ctxt</span>
+  <span class=main>|</span> <span class=entity>folder_mk_rule</span> <span class=main>(</span><span class=main>(</span><span class=inner_quoted>"|elim"</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=main>=</span> 
+      <span class=entity>process_mk_rule</span> <span class=entity>mk_elim</span> <span class=main>(</span><span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>b</span><span class=main>)</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span> <span class=entity>ctxt</span>
+  <span class=main>|</span> <span class=entity>folder_mk_rule</span> <span class=main>_</span> <span class=main>_</span> <span class=main>=</span> error <span class=entity>error_msg</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>process_mk_ide</span> <span class=main>(</span><span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>thm</span><span class=main>)</span><span class=main>,</span> <span class=entity>ins</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=main>=</span>
+  <span class=keyword2><span class=keyword>let</span></span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span> <span class=entity>ins</span> |&gt; map <span class=main>#</span><span class=inner_numeral>1</span> |&gt; has_duplicates <span class=keyword1><span class=keyword>op</span></span><span class=main>=</span> |&gt; not <span class=keyword1><span class=keyword>orelse</span></span> error <span class=entity>error_msg</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>thm'</span> <span class=main>=</span> <span class=entity>thm</span>
+      |&gt; singleton <span class=main>(</span><span class=entity>Attrib.eval_thms</span> <span class=entity>ctxt</span><span class=main>)</span> 
+      |&gt; Local_Defs.meta_rewrite_rule <span class=entity>ctxt</span><span class=main>;</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=entity>t</span> <span class=main>=</span> Thm.concl_of <span class=entity>thm'</span> 
+    <span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span> <span class=entity>t</span> |&gt; <span class=entity>is_equals</span> <span class=keyword1><span class=keyword>orelse</span></span> error <span class=entity>error_msg</span>
+    <span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span> <span class=main>(</span><span class=entity>t</span> |&gt; Logic.dest_equals |&gt; <span class=main>#</span><span class=inner_numeral>1</span> |&gt; type_of |&gt; body_type<span class=main>)</span> <span class=main>=</span> <span class=antiquoted><span class=operator><span class=hidden>\&lt;^</span><span class=control>typ</span><span class=hidden>&gt;</span></span><span class=quoted>‹bool›</span></span> 
+      <span class=keyword1><span class=keyword>orelse</span></span> error <span class=entity>error_msg</span>
+  <span class=keyword2><span class=keyword>in</span></span> fold <span class=entity>folder_mk_rule</span> <span class=main>(</span>map <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=entity>x</span> <span class=main>=&gt;</span> <span class=main>(</span><span class=entity>x</span><span class=main>,</span> <span class=main>(</span><span class=entity>rf</span><span class=main>,</span> <span class=entity>thm'</span><span class=main>)</span><span class=main>)</span><span class=main>)</span> <span class=entity>ins</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span>
+  <span class=entity>Outer_Syntax.local_theory</span>
+    <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>command_keyword</span><span class=hidden>&gt;</span></span>‹<span class=keyword1>mk_ide</span>›</span></span> 
+    <span class=inner_quoted>"synthesis of the intro/dest/elim rules"</span> 
+    <span class=main>(</span><span class=entity>mk_ide_parser</span> &gt;&gt; <span class=entity>process_mk_ide</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre>
+</div><div id=Reference_Prerequisites>
+<div class=head>
+<h1>Theory Reference_Prerequisites</h1>
+</div>
+<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+
+<span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹Reference prerequisites›</span></span>
+<span class=keyword1><span class=command>theory</span></span> Reference_Prerequisites
+  <span class=keyword2><span class=keyword>imports</span></span> <span class=quoted>"<a href=https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/library/HOL/HOL-Library/LaTeXsugar.html>HOL-Library.LaTeXsugar</a>"</span> 
+<span class=keyword2><span class=keyword>begin</span></span>
+
+<span class=keyword1><span class=command>ML_file</span></span> <span class=quoted>‹~~/src/Doc/antiquote_setup.ML›</span>
+
+
+<span class=comment1>(* Copied from Transfer.thy in the main library. *)</span>
+<span class=keyword1><span class=command>notation</span></span> rel_fun <span class=main>(</span><span class=keyword2><span class=keyword>infixr</span></span> <span class=quoted>"<span class=keyword1>===&gt;</span>"</span> 55<span class=main>)</span>
+<span class=keyword1><span class=command>notation</span></span> map_fun <span class=main>(</span><span class=keyword2><span class=keyword>infixr</span></span> <span class=quoted>"<span class=keyword1>---&gt;</span>"</span> 55<span class=main>)</span>
+
+<span class=keyword2><span class=keyword>end</span></span></pre>
+</div><div id=files/ISABELLE_HOME/src/Doc/antiquote_setup.ML>
+<div class=head>
+<h1>File ‹~~/src/Doc/antiquote_setup.ML›</h1>
+</div>
+<pre class=source><span class=comment1>(*  Title:      Doc/antiquote_setup.ML
+    Author:     Makarius
+
+Auxiliary antiquotations for the Isabelle manuals.
+*)</span>
+
+<span class=keyword1><span class=keyword>structure</span></span> <span class=entity>Antiquote_Setup</span><span class=main>:</span> <span class=keyword2><span class=keyword>sig</span></span> <span class=keyword2><span class=keyword>end</span></span> <span class=main>=</span>
+<span class=keyword2><span class=keyword>struct</span></span>
+
+<span class=comment1>(* misc utils *)</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>translate</span> <span class=entity>f</span> <span class=main>=</span> Symbol.explode #&gt; map <span class=entity>f</span> #&gt; implode<span class=main>;</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=entity>clean_string</span> <span class=main>=</span> <span class=entity>translate</span>
+  <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=inner_quoted>"_"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"\\_"</span>
+    <span class=main>|</span> <span class=inner_quoted>"#"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"\\#"</span>
+    <span class=main>|</span> <span class=inner_quoted>"$"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"\\$"</span>
+    <span class=main>|</span> <span class=inner_quoted>"%"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"\\%"</span>
+    <span class=main>|</span> <span class=inner_quoted>"&lt;"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"$&lt;$"</span>
+    <span class=main>|</span> <span class=inner_quoted>"&gt;"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"$&gt;$"</span>
+    <span class=main>|</span> <span class=inner_quoted>"{"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"\\{"</span>
+    <span class=main>|</span> <span class=inner_quoted>"|"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"$\\mid$"</span>
+    <span class=main>|</span> <span class=inner_quoted>"}"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"\\}"</span>
+    <span class=main>|</span> <span class=inner_quoted>"‐"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"-"</span>
+    <span class=main>|</span> <span class=entity>c</span> <span class=main>=&gt;</span> <span class=entity>c</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>clean_name</span> <span class=inner_quoted>"…"</span> <span class=main>=</span> <span class=inner_quoted>"dots"</span>
+  <span class=main>|</span> <span class=entity>clean_name</span> <span class=inner_quoted>".."</span> <span class=main>=</span> <span class=inner_quoted>"ddot"</span>
+  <span class=main>|</span> <span class=entity>clean_name</span> <span class=inner_quoted>"."</span> <span class=main>=</span> <span class=inner_quoted>"dot"</span>
+  <span class=main>|</span> <span class=entity>clean_name</span> <span class=inner_quoted>"_"</span> <span class=main>=</span> <span class=inner_quoted>"underscore"</span>
+  <span class=main>|</span> <span class=entity>clean_name</span> <span class=inner_quoted>"{"</span> <span class=main>=</span> <span class=inner_quoted>"braceleft"</span>
+  <span class=main>|</span> <span class=entity>clean_name</span> <span class=inner_quoted>"}"</span> <span class=main>=</span> <span class=inner_quoted>"braceright"</span>
+  <span class=main>|</span> <span class=entity>clean_name</span> <span class=entity>s</span> <span class=main>=</span> <span class=entity>s</span> |&gt; <span class=entity>translate</span> <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=inner_quoted>"_"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"-"</span> <span class=main>|</span> <span class=inner_quoted>"‐"</span> <span class=main>=&gt;</span> <span class=inner_quoted>"-"</span> <span class=main>|</span> <span class=entity>c</span> <span class=main>=&gt;</span> <span class=entity>c</span><span class=main>)</span><span class=main>;</span>
+
+
+<span class=comment1>(* ML text *)</span>
+
+<span class=keyword2><span class=keyword>local</span></span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_val</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=main>[</span><span class=main>]</span><span class=main>)</span> <span class=main>=</span> ML_Lex.read <span class=inner_quoted>"fn _ =&gt; ("</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>");"</span>
+  <span class=main>|</span> <span class=entity>ml_val</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=entity>toks2</span><span class=main>)</span> <span class=main>=</span>
+      ML_Lex.read <span class=inner_quoted>"fn _ =&gt; ("</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>" : "</span> @ <span class=entity>toks2</span> @ ML_Lex.read <span class=inner_quoted>");"</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_op</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=main>[</span><span class=main>]</span><span class=main>)</span> <span class=main>=</span> ML_Lex.read <span class=inner_quoted>"fn _ =&gt; (op "</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>");"</span>
+  <span class=main>|</span> <span class=entity>ml_op</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=entity>toks2</span><span class=main>)</span> <span class=main>=</span>
+      ML_Lex.read <span class=inner_quoted>"fn _ =&gt; (op "</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>" : "</span> @ <span class=entity>toks2</span> @ ML_Lex.read <span class=inner_quoted>");"</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_type</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=main>[</span><span class=main>]</span><span class=main>)</span> <span class=main>=</span> ML_Lex.read <span class=inner_quoted>"val _ = NONE : ("</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>") option;"</span>
+  <span class=main>|</span> <span class=entity>ml_type</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=entity>toks2</span><span class=main>)</span> <span class=main>=</span>
+      ML_Lex.read <span class=inner_quoted>"val _ = [NONE : ("</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>") option, NONE : ("</span> @
+        <span class=entity>toks2</span> @ ML_Lex.read <span class=inner_quoted>") option];"</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_exception</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=main>[</span><span class=main>]</span><span class=main>)</span> <span class=main>=</span> ML_Lex.read <span class=inner_quoted>"fn _ =&gt; ("</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>" : exn);"</span>
+  <span class=main>|</span> <span class=entity>ml_exception</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=entity>toks2</span><span class=main>)</span> <span class=main>=</span>
+      ML_Lex.read <span class=inner_quoted>"fn _ =&gt; ("</span> @ <span class=entity>toks1</span> @ ML_Lex.read <span class=inner_quoted>" : "</span> @ <span class=entity>toks2</span> @ ML_Lex.read <span class=inner_quoted>" -&gt; exn);"</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_structure</span> <span class=main>(</span><span class=entity>toks</span><span class=main>,</span> <span class=main>_</span><span class=main>)</span> <span class=main>=</span>
+  ML_Lex.read <span class=inner_quoted>"functor XXX() = struct structure XX = "</span> @ <span class=entity>toks</span> @ ML_Lex.read <span class=inner_quoted>" end;"</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_functor</span> <span class=main>(</span>Antiquote.Text <span class=entity>tok</span> :: <span class=main>_</span><span class=main>,</span> <span class=main>_</span><span class=main>)</span> <span class=main>=</span>
+      ML_Lex.read <span class=inner_quoted>"ML_Env.check_functor "</span> @
+      ML_Lex.read <span class=main>(</span>ML_Syntax.print_string <span class=main>(</span>ML_Lex.content_of <span class=entity>tok</span><span class=main>)</span><span class=main>)</span>
+  <span class=main>|</span> <span class=entity>ml_functor</span> <span class=main>_</span> <span class=main>=</span> <span class=keyword3><span class=keyword>raise</span></span> Fail <span class=inner_quoted>"Bad ML functor specification"</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=entity>is_name</span> <span class=main>=</span>
+  ML_Lex.kind_of #&gt; <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=entity>kind</span> <span class=main>=&gt;</span> <span class=entity>kind</span> <span class=main>=</span> ML_Lex.Ident <span class=keyword1><span class=keyword>orelse</span></span> <span class=entity>kind</span> <span class=main>=</span> ML_Lex.Long_Ident<span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>ml_name</span> <span class=entity>txt</span> <span class=main>=</span>
+  <span class=main>(</span><span class=keyword2><span class=keyword>case</span></span> filter <span class=entity>is_name</span> <span class=main>(</span>ML_Lex.tokenize <span class=entity>txt</span><span class=main>)</span> <span class=keyword2><span class=keyword>of</span></span>
+    <span class=entity>toks</span> <span class=keyword1><span class=keyword>as</span></span> <span class=main>[</span><span class=main>_</span><span class=main>]</span> <span class=main>=&gt;</span> ML_Lex.flatten <span class=entity>toks</span>
+  <span class=main>|</span> <span class=main>_</span> <span class=main>=&gt;</span> error <span class=main>(</span><span class=inner_quoted>"Single ML name expected in input: "</span> ^ quote <span class=entity>txt</span><span class=main>)</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>prep_ml</span> <span class=entity>source</span> <span class=main>=</span>
+  <span class=main>(</span><span class=main>#</span><span class=inner_numeral>1</span> <span class=main>(</span>Input.source_content <span class=entity>source</span><span class=main>)</span><span class=main>,</span> ML_Lex.read_source <span class=entity>source</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>index_ml</span> <span class=entity>name</span> <span class=entity>kind</span> <span class=entity>ml</span> <span class=main>=</span> <span class=entity>Thy_Output.antiquotation_raw</span> <span class=entity>name</span>
+  <span class=main>(</span>Scan.lift <span class=main>(</span>Args.text_input -- Scan.option <span class=main>(</span>Args.colon |-- Args.text_input<span class=main>)</span><span class=main>)</span><span class=main>)</span>
+  <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=entity>ctxt</span> <span class=main>=&gt;</span> <span class=keyword1><span class=keyword>fn</span></span> <span class=main>(</span><span class=entity>source1</span><span class=main>,</span> <span class=entity>opt_source2</span><span class=main>)</span> <span class=main>=&gt;</span>
+    <span class=keyword2><span class=keyword>let</span></span>
+      <span class=keyword1><span class=keyword>val</span></span> <span class=main>(</span><span class=entity>txt1</span><span class=main>,</span> <span class=entity>toks1</span><span class=main>)</span> <span class=main>=</span> <span class=entity>prep_ml</span> <span class=entity>source1</span><span class=main>;</span>
+      <span class=keyword1><span class=keyword>val</span></span> <span class=main>(</span><span class=entity>txt2</span><span class=main>,</span> <span class=entity>toks2</span><span class=main>)</span> <span class=main>=</span>
+        <span class=main>(</span><span class=keyword2><span class=keyword>case</span></span> <span class=entity>opt_source2</span> <span class=keyword2><span class=keyword>of</span></span>
+          SOME <span class=entity>source</span> <span class=main>=&gt;</span> <span class=entity>prep_ml</span> <span class=entity>source</span>
+        <span class=main>|</span> NONE <span class=main>=&gt;</span> <span class=main>(</span><span class=inner_quoted>""</span><span class=main>,</span> <span class=main>[</span><span class=main>]</span><span class=main>)</span><span class=main>)</span><span class=main>;</span>
+
+      <span class=keyword1><span class=keyword>val</span></span> <span class=entity>txt</span> <span class=main>=</span>
+        <span class=keyword2><span class=keyword>if</span></span> <span class=entity>txt2</span> <span class=main>=</span> <span class=inner_quoted>""</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>txt1</span>
+        <span class=keyword2><span class=keyword>else</span></span> <span class=keyword2><span class=keyword>if</span></span> <span class=entity>kind</span> <span class=main>=</span> <span class=inner_quoted>"type"</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>txt1</span> ^ <span class=inner_quoted>" = "</span> ^ <span class=entity>txt2</span>
+        <span class=keyword2><span class=keyword>else</span></span> <span class=keyword2><span class=keyword>if</span></span> <span class=entity>kind</span> <span class=main>=</span> <span class=inner_quoted>"exception"</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>txt1</span> ^ <span class=inner_quoted>" of "</span> ^ <span class=entity>txt2</span>
+        <span class=keyword2><span class=keyword>else</span></span> <span class=keyword2><span class=keyword>if</span></span> Symbol_Pos.is_identifier <span class=main>(</span>Long_Name.base_name <span class=main>(</span><span class=entity>ml_name</span> <span class=entity>txt1</span><span class=main>)</span><span class=main>)</span>
+        <span class=keyword2><span class=keyword>then</span></span> <span class=entity>txt1</span> ^ <span class=inner_quoted>": "</span> ^ <span class=entity>txt2</span>
+        <span class=keyword2><span class=keyword>else</span></span> <span class=entity>txt1</span> ^ <span class=inner_quoted>" : "</span> ^ <span class=entity>txt2</span><span class=main>;</span>
+      <span class=keyword1><span class=keyword>val</span></span> <span class=entity>txt'</span> <span class=main>=</span> <span class=keyword2><span class=keyword>if</span></span> <span class=entity>kind</span> <span class=main>=</span> <span class=inner_quoted>""</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>txt</span> <span class=keyword2><span class=keyword>else</span></span> <span class=entity>kind</span> ^ <span class=inner_quoted>" "</span> ^ <span class=entity>txt</span><span class=main>;</span>
+
+      <span class=keyword1><span class=keyword>val</span></span> <span class=entity>pos</span> <span class=main>=</span> Input.pos_of <span class=entity>source1</span><span class=main>;</span>
+      <span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span>
+        ML_Context.eval_in <span class=main>(</span>SOME <span class=entity>ctxt</span><span class=main>)</span> ML_Compiler.flags <span class=entity>pos</span> <span class=main>(</span><span class=entity>ml</span> <span class=main>(</span><span class=entity>toks1</span><span class=main>,</span> <span class=entity>toks2</span><span class=main>)</span><span class=main>)</span>
+          <span class=keyword3><span class=keyword>handle</span></span> ERROR <span class=entity>msg</span> <span class=main>=&gt;</span> error <span class=main>(</span><span class=entity>msg</span> ^ Position.here <span class=entity>pos</span><span class=main>)</span><span class=main>;</span>
+      <span class=keyword1><span class=keyword>val</span></span> <span class=entity>kind'</span> <span class=main>=</span> <span class=keyword2><span class=keyword>if</span></span> <span class=entity>kind</span> <span class=main>=</span> <span class=inner_quoted>""</span> <span class=keyword2><span class=keyword>then</span></span> <span class=inner_quoted>"ML"</span> <span class=keyword2><span class=keyword>else</span></span> <span class=inner_quoted>"ML "</span> ^ <span class=entity>kind</span><span class=main>;</span>
+    <span class=keyword2><span class=keyword>in</span></span>
+      Latex.block
+       <span class=main>[</span>Latex.string <span class=main>(</span><span class=inner_quoted>"\\indexdef{}{"</span> ^ <span class=entity>kind'</span> ^ <span class=inner_quoted>"}{"</span> ^ <span class=entity>clean_string</span> <span class=main>(</span><span class=entity>ml_name</span> <span class=entity>txt1</span><span class=main>)</span> ^ <span class=inner_quoted>"}"</span><span class=main>)</span><span class=main>,</span>
+        <span class=entity>Thy_Output.verbatim</span> <span class=entity>ctxt</span> <span class=entity>txt'</span><span class=main>]</span>
+    <span class=keyword2><span class=keyword>end</span></span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>in</span></span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span>
+  Theory.setup
+   <span class=main>(</span><span class=entity>index_ml</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹index_ML›</span></span> <span class=inner_quoted>""</span> <span class=entity>ml_val</span> #&gt;
+    <span class=entity>index_ml</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹index_ML_op›</span></span> <span class=inner_quoted>"infix"</span> <span class=entity>ml_op</span> #&gt;
+    <span class=entity>index_ml</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹index_ML_type›</span></span> <span class=inner_quoted>"type"</span> <span class=entity>ml_type</span> #&gt;
+    <span class=entity>index_ml</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹index_ML_exception›</span></span> <span class=inner_quoted>"exception"</span> <span class=entity>ml_exception</span> #&gt;
+    <span class=entity>index_ml</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹index_ML_structure›</span></span> <span class=inner_quoted>"structure"</span> <span class=entity>ml_structure</span> #&gt;
+    <span class=entity>index_ml</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹index_ML_functor›</span></span> <span class=inner_quoted>"functor"</span> <span class=entity>ml_functor</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+
+<span class=comment1>(* named theorems *)</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span>
+  Theory.setup <span class=main>(</span><span class=entity>Thy_Output.antiquotation_raw</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹named_thms›</span></span>
+    <span class=main>(</span>Scan.repeat <span class=main>(</span><span class=entity>Attrib.thm</span> -- Scan.lift <span class=main>(</span>Args.parens Args.name<span class=main>)</span><span class=main>)</span><span class=main>)</span>
+    <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=entity>ctxt</span> <span class=main>=&gt;</span>
+      map <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=main>(</span><span class=entity>thm</span><span class=main>,</span> <span class=entity>name</span><span class=main>)</span> <span class=main>=&gt;</span>
+        Output.output
+          <span class=main>(</span><span class=entity>Document_Antiquotation.format</span> <span class=entity>ctxt</span>
+            <span class=main>(</span><span class=entity>Document_Antiquotation.delimit</span> <span class=entity>ctxt</span> <span class=main>(</span><span class=entity>Thy_Output.pretty_thm</span> <span class=entity>ctxt</span> <span class=entity>thm</span><span class=main>)</span><span class=main>)</span><span class=main>)</span> ^
+        enclose <span class=inner_quoted>"\\rulename{"</span> <span class=inner_quoted>"}"</span> <span class=main>(</span>Output.output <span class=entity>name</span><span class=main>)</span><span class=main>)</span>
+      #&gt; space_implode <span class=inner_quoted>"\\par\\smallskip%\n"</span>
+      #&gt; Latex.string #&gt; single
+      #&gt; <span class=entity>Thy_Output.isabelle</span> <span class=entity>ctxt</span><span class=main>)</span><span class=main>)</span><span class=main>;</span>
+
+
+<span class=comment1>(* Isabelle/Isar entities (with index) *)</span>
+
+<span class=keyword2><span class=keyword>local</span></span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>no_check</span> <span class=main>(</span><span class=main>_</span><span class=main>:</span> <span class=entity>Proof.context</span><span class=main>)</span> <span class=main>(</span><span class=entity>name</span><span class=main>,</span> <span class=main>_</span><span class=main>:</span> Position.T<span class=main>)</span> <span class=main>=</span> <span class=entity>name</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>check_keyword</span> <span class=entity>ctxt</span> <span class=main>(</span><span class=entity>name</span><span class=main>,</span> <span class=entity>pos</span><span class=main>)</span> <span class=main>=</span>
+  <span class=keyword2><span class=keyword>if</span></span> Keyword.is_keyword <span class=main>(</span>Thy_Header.get_keywords' <span class=entity>ctxt</span><span class=main>)</span> <span class=entity>name</span> <span class=keyword2><span class=keyword>then</span></span> <span class=entity>name</span>
+  <span class=keyword2><span class=keyword>else</span></span> error <span class=main>(</span><span class=inner_quoted>"Bad outer syntax keyword "</span> ^ quote <span class=entity>name</span> ^ Position.here <span class=entity>pos</span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>check_system_option</span> <span class=entity>ctxt</span> <span class=entity>arg</span> <span class=main>=</span>
+  <span class=main>(</span>Completion.check_option <span class=main>(</span>Options.default <span class=main>(</span><span class=main>)</span><span class=main>)</span> <span class=entity>ctxt</span> <span class=entity>arg</span><span class=main>;</span> true<span class=main>)</span>
+    <span class=keyword3><span class=keyword>handle</span></span> ERROR <span class=main>_</span> <span class=main>=&gt;</span> false<span class=main>;</span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=entity>arg</span> <span class=main>=</span> enclose <span class=inner_quoted>"{"</span> <span class=inner_quoted>"}"</span> o <span class=entity>clean_string</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>entity</span> <span class=entity>check</span> <span class=entity>markup</span> <span class=entity>binding</span> <span class=entity>index</span> <span class=main>=</span>
+  <span class=entity>Thy_Output.antiquotation_raw</span>
+    <span class=main>(</span><span class=entity>binding</span> |&gt; Binding.map_name <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=entity>name</span> <span class=main>=&gt;</span> <span class=entity>name</span> ^
+      <span class=main>(</span><span class=keyword2><span class=keyword>case</span></span> <span class=entity>index</span> <span class=keyword2><span class=keyword>of</span></span> NONE <span class=main>=&gt;</span> <span class=inner_quoted>""</span> <span class=main>|</span> SOME true <span class=main>=&gt;</span> <span class=inner_quoted>"_def"</span> <span class=main>|</span> SOME false <span class=main>=&gt;</span> <span class=inner_quoted>"_ref"</span><span class=main>)</span><span class=main>)</span><span class=main>)</span>
+    <span class=main>(</span>Scan.lift <span class=main>(</span>Scan.optional <span class=main>(</span>Args.parens Args.name<span class=main>)</span> <span class=inner_quoted>""</span> -- Args.name_position<span class=main>)</span><span class=main>)</span>
+    <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=entity>ctxt</span> <span class=main>=&gt;</span> <span class=keyword1><span class=keyword>fn</span></span> <span class=main>(</span><span class=entity>logic</span><span class=main>,</span> <span class=main>(</span><span class=entity>name</span><span class=main>,</span> <span class=entity>pos</span><span class=main>)</span><span class=main>)</span> <span class=main>=&gt;</span>
+      <span class=keyword2><span class=keyword>let</span></span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>kind</span> <span class=main>=</span> <span class=entity>translate</span> <span class=main>(</span><span class=keyword1><span class=keyword>fn</span></span> <span class=inner_quoted>"_"</span> <span class=main>=&gt;</span> <span class=inner_quoted>" "</span> <span class=main>|</span> <span class=entity>c</span> <span class=main>=&gt;</span> <span class=entity>c</span><span class=main>)</span> <span class=main>(</span>Binding.name_of <span class=entity>binding</span><span class=main>)</span><span class=main>;</span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>hyper_name</span> <span class=main>=</span>
+          <span class=inner_quoted>"{"</span> ^ Long_Name.append <span class=entity>kind</span> <span class=main>(</span>Long_Name.append <span class=entity>logic</span> <span class=main>(</span><span class=entity>clean_name</span> <span class=entity>name</span><span class=main>)</span><span class=main>)</span> ^ <span class=inner_quoted>"}"</span><span class=main>;</span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>hyper</span> <span class=main>=</span>
+          enclose <span class=main>(</span><span class=inner_quoted>"\\hyperlink"</span> ^ <span class=entity>hyper_name</span> ^ <span class=inner_quoted>"{"</span><span class=main>)</span> <span class=inner_quoted>"}"</span> #&gt;
+          <span class=entity>index</span> <span class=main>=</span> SOME true ? enclose <span class=main>(</span><span class=inner_quoted>"\\hypertarget"</span> ^ <span class=entity>hyper_name</span> ^ <span class=inner_quoted>"{"</span><span class=main>)</span> <span class=inner_quoted>"}"</span><span class=main>;</span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>idx</span> <span class=main>=</span>
+          <span class=main>(</span><span class=keyword2><span class=keyword>case</span></span> <span class=entity>index</span> <span class=keyword2><span class=keyword>of</span></span>
+            NONE <span class=main>=&gt;</span> <span class=inner_quoted>""</span>
+          <span class=main>|</span> SOME <span class=entity>is_def</span> <span class=main>=&gt;</span>
+              <span class=inner_quoted>"\\index"</span> ^ <span class=main>(</span><span class=keyword2><span class=keyword>if</span></span> <span class=entity>is_def</span> <span class=keyword2><span class=keyword>then</span></span> <span class=inner_quoted>"def"</span> <span class=keyword2><span class=keyword>else</span></span> <span class=inner_quoted>"ref"</span><span class=main>)</span> ^ <span class=entity>arg</span> <span class=entity>logic</span> ^ <span class=entity>arg</span> <span class=entity>kind</span> ^ <span class=entity>arg</span> <span class=entity>name</span><span class=main>)</span><span class=main>;</span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span>
+          <span class=keyword2><span class=keyword>if</span></span> Context_Position.is_reported <span class=entity>ctxt</span> <span class=entity>pos</span> <span class=keyword2><span class=keyword>then</span></span> ignore <span class=main>(</span><span class=entity>check</span> <span class=entity>ctxt</span> <span class=main>(</span><span class=entity>name</span><span class=main>,</span> <span class=entity>pos</span><span class=main>)</span><span class=main>)</span> <span class=keyword2><span class=keyword>else</span></span> <span class=main>(</span><span class=main>)</span><span class=main>;</span>
+        <span class=keyword1><span class=keyword>val</span></span> <span class=entity>latex</span> <span class=main>=</span>
+          <span class=entity>idx</span> ^
+          <span class=main>(</span>Output.output <span class=entity>name</span>
+            |&gt; <span class=main>(</span><span class=keyword2><span class=keyword>if</span></span> <span class=entity>markup</span> <span class=main>=</span> <span class=inner_quoted>""</span> <span class=keyword2><span class=keyword>then</span></span> I <span class=keyword2><span class=keyword>else</span></span> enclose <span class=main>(</span><span class=inner_quoted>"\\"</span> ^ <span class=entity>markup</span> ^ <span class=inner_quoted>"{"</span><span class=main>)</span> <span class=inner_quoted>"}"</span><span class=main>)</span>
+            |&gt; <span class=entity>hyper</span> o enclose <span class=inner_quoted>"\\mbox{\\isa{"</span> <span class=inner_quoted>"}}"</span><span class=main>)</span><span class=main>;</span>
+      <span class=keyword2><span class=keyword>in</span></span> Latex.string <span class=entity>latex</span> <span class=keyword2><span class=keyword>end</span></span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword1><span class=keyword>fun</span></span> <span class=entity>entity_antiqs</span> <span class=entity>check</span> <span class=entity>markup</span> <span class=entity>kind</span> <span class=main>=</span>
+  <span class=entity>entity</span> <span class=entity>check</span> <span class=entity>markup</span> <span class=entity>kind</span> NONE #&gt;
+  <span class=entity>entity</span> <span class=entity>check</span> <span class=entity>markup</span> <span class=entity>kind</span> <span class=main>(</span>SOME true<span class=main>)</span> #&gt;
+  <span class=entity>entity</span> <span class=entity>check</span> <span class=entity>markup</span> <span class=entity>kind</span> <span class=main>(</span>SOME false<span class=main>)</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>in</span></span>
+
+<span class=keyword1><span class=keyword>val</span></span> <span class=main>_</span> <span class=main>=</span>
+  Theory.setup
+   <span class=main>(</span><span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹syntax›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>Outer_Syntax.check_command</span> <span class=inner_quoted>"isacommand"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹command›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>check_keyword</span> <span class=inner_quoted>"isakeyword"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹keyword›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>check_keyword</span> <span class=inner_quoted>"isakeyword"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹element›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>Method.check_name</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹method›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>Attrib.check_name</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹attribute›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹fact›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹variable›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹case›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>Document_Antiquotation.check</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹antiquotation›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>Document_Antiquotation.check_option</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹antiquotation_option›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> Document_Marker.check <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹document_marker›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>"isasystem"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹setting›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>check_system_option</span> <span class=inner_quoted>"isasystem"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹system_option›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹inference›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>no_check</span> <span class=inner_quoted>"isasystem"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹executable›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=entity>Isabelle_Tool.check</span> <span class=inner_quoted>"isatool"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹tool›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> ML_Context.check_antiquotation <span class=inner_quoted>""</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹ML_antiquotation›</span></span> #&gt;
+    <span class=entity>entity_antiqs</span> <span class=main>(</span>K <span class=entity>JEdit.check_action</span><span class=main>)</span> <span class=inner_quoted>"isasystem"</span> <span class=antiquoted><span class=entity><span class=operator><span class=hidden>\&lt;^</span><span class=control>binding</span><span class=hidden>&gt;</span></span>‹action›</span></span><span class=main>)</span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
+</pre>
+</div><div id=IDE_Reference>
+<div class=head>
+<h1>Theory IDE_Reference</h1>
+</div>
+<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+
+<span class=keyword1><span class=command>theory</span></span> IDE_Reference
+  <span class=keyword2><span class=keyword>imports</span></span>
+    <a href=#IHOL_IDE>IHOL_IDE</a>
+    <a href=#Reference_Prerequisites>Reference_Prerequisites</a>
+<span class=keyword2><span class=keyword>begin</span></span>
+
+
+
+
+<span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹Introduction›</span></span>
+
+
+
+<span class=keyword1><span class=command>subsection</span></span><span class=quoted><span class=plain_text>‹Background›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹
+This section presents a reference manual for the framework 
+IDE. The framework IDE can be used for the automated synthesis of
+the introduction, destruction and elimination rules from the definitions
+of predicates stated in the object logic Isabelle/HOL 
+(e.g., see \cite{yang_comprehending_2017}) 
+of the proof assistant Isabelle \cite{paulson_natural_1986}.
+
+The primary functionality of the framework is available via the Isar
+command <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>command</span></span> mk_ide<span class=antiquote><span class=antiquote>}</span></span></span></span>.
+Given a definition of a predicate in Isabelle/HOL, the
+command can synthesise introduction, destruction and elimination rules
+for this definition. The rules are stated
+in a certain predetermined format that is meant to be both natural and
+convenient for the end user and the tools for classical reasoning
+available in Isabelle/HOL.
+›</span></span>
+
+
+
+<span class=keyword1><span class=command>subsection</span></span><span class=quoted><span class=plain_text>‹Related and previous work›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹
+The standard distribution of Isabelle2021 provides the attribute 
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>attribute</span></span> elim_format<span class=antiquote><span class=antiquote>}</span></span></span></span> \cite{wenzel_isabelle/isar_2019-1} 
+that can be used for the conversion of the
+destruction rules to the elimination rules. The primary functionality of this
+attribute is reused in the implementation of the command <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>command</span></span> mk_ide<span class=antiquote><span class=antiquote>}</span></span></span></span>.
+
+Furthermore, Isabelle offers several definitional packages 
+that provide similar rules automatically for the constants created
+by these definitional packages \cite{wenzel_isabelle/isar_2019-1}. 
+However, to the best knowledge of the author,
+none of these packages can generate such rules for arbitrary predicates.
+Perhaps, in the future, the approaches can be unified or integrated in
+some manner. 
+›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹\newpage›</span></span>
+
+
+
+<span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹Syntax›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹
+This subsection presents the syntactic categories that are associated with the 
+command <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>command</span></span> mk_ide<span class=antiquote><span class=antiquote>}</span></span></span></span>. It is important to note that the presentation is 
+only approximate.
+›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹
+
+\begin{matharray}{rcl}
+  <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>command_def</span></span> "mk_ide"<span class=antiquote><span class=antiquote>}</span></span></span></span> &amp; : &amp; <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>local_theory → local_theory›</span></span></span></span>
+\end{matharray}
+
+  <span class=antiquoted><span class=operator><span class=antiquoted><span class=operator>┉</span></span></span></span>
+
+  <span class=antiquoted><span class=antiquoted><span class=operator><span class=operator><span class=hidden>\&lt;^</span><span class=control>rail</span><span class=hidden>&gt;</span></span></span>‹
+    <span class=keyword1><span class=keyword1>@</span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>command</span></span> mk_ide<span class=antiquote><span class=antiquote>}</span></span></span></span> <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span><span class=keyword3><span class=keyword3>?</span></span> thm ((intro <span class=keyword3><span class=keyword3>|</span></span> elim <span class=keyword3><span class=keyword3>|</span></span> dest)<span class=keyword3><span class=keyword3>*</span></span>)
+    <span class=keyword2><span class=keyword2>;</span></span>
+    intro<span class=keyword2><span class=keyword2>:</span></span> <span class=keyword1><span class=keyword1>@</span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|intro"<span class=antiquote><span class=antiquote>}</span></span></span></span> (thmdef <span class=keyword1><span class=keyword1>@</span></span><span class=inner_quoted><span class=inner_quoted>'|'</span></span>)
+    <span class=keyword2><span class=keyword2>;</span></span>
+    dest<span class=keyword2><span class=keyword2>:</span></span> <span class=keyword1><span class=keyword1>@</span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|dest"<span class=antiquote><span class=antiquote>}</span></span></span></span> (thmdef <span class=keyword1><span class=keyword1>@</span></span><span class=inner_quoted><span class=inner_quoted>'|'</span></span>)
+    <span class=keyword2><span class=keyword2>;</span></span>
+    elim<span class=keyword2><span class=keyword2>:</span></span> <span class=keyword1><span class=keyword1>@</span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|elim"<span class=antiquote><span class=antiquote>}</span></span></span></span> (thmdef <span class=keyword1><span class=keyword1>@</span></span><span class=inner_quoted><span class=inner_quoted>'|'</span></span>)
+  ›</span></span>
+
+  <span class=antiquoted><span class=antiquoted>➧</span></span> <span class=antiquoted><span class=antiquoted><span class=operator><span class=operator>⬚</span></span><span class=raw_text><span class=raw_text>‹<span class=keyword1><span class=command><span class=keyword1><span class=command>mk_ide</span></span></span></span>›</span></span></span></span> (<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span>) <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|intro"<span class=antiquote><span class=antiquote>}</span></span></span></span> 
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>name[attrbs]›</span></span></span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|"<span class=antiquote><span class=antiquote>}</span></span></span></span> converts the
+definition <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> into an introduction rule, followed by the application of 
+the functionality associated with the optional keyword <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> and
+the attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span> to this rule. 
+The result of the application of the attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span> 
+is stored in the local context under the name <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>name›</span></span></span></span>. <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> is meant to be 
+a fact that consists of exactly one theorem of the form
+\begin{center}
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>A a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ≃ f<span class=hidden>⇩</span><sub>1</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ∧ … ∧ f<span class=hidden>⇩</span><sub>m</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub>›</span></span></span></span>,
+\end{center}
+where <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>A›</span></span></span></span> is a constant predicate in <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>n›</span></span></span></span> arguments, <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>≃›</span></span></span></span> is either the meta-logic 
+equality or the object logic equality, <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>n›</span></span></span></span> and <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>m›</span></span></span></span> are natural numbers,
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub>›</span></span></span></span> are schematic variables and <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>f<span class=hidden>⇩</span><sub>1</sub> … f<span class=hidden>⇩</span><sub>m</sub>›</span></span></span></span> are suitable predicates in <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>n›</span></span></span></span>
+arguments (however, there are further implicit restrictions). The resulting
+introduction rule is expected to be stated in the format 
+\begin{center}
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>f<span class=hidden>⇩</span><sub>1</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ⟹ … ⟹ f<span class=hidden>⇩</span><sub>m</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ⟹ A a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub>›</span></span></span></span>
+\end{center}
+prior to the application of the functionality associated with the keyword 
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> and the attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span>. If the optional keyword
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> is passed to the command, then the output of the command 
+(prior to the application of the attributes) is formatted using an algorithm
+associated with the attribute <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>attribute</span></span> rule_format<span class=antiquote><span class=antiquote>}</span></span></span></span> 
+\cite{wenzel_isabelle/isar_2019-1}. 
+  <span class=antiquoted><span class=antiquoted>➧</span></span> <span class=antiquoted><span class=antiquoted><span class=operator><span class=operator>⬚</span></span><span class=raw_text><span class=raw_text>‹<span class=keyword1><span class=command><span class=keyword1><span class=command>mk_ide</span></span></span></span>›</span></span></span></span> (<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span>) <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|dest"<span class=antiquote><span class=antiquote>}</span></span></span></span> 
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>name[attrbs]›</span></span></span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|"<span class=antiquote><span class=antiquote>}</span></span></span></span> converts the definition
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> into one or more destruction rules, followed by the application of the
+functionality associated with the optional keyword <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> and the 
+attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span> to each destruction rule. 
+Given the theorem <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> in the format described above, 
+the command provides <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>m›</span></span></span></span> destruction rules of the form
+\begin{center}
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>A a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ⟹ f<span class=hidden>⇩</span><sub>i</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub>›</span></span></span></span>
+\end{center}
+for each <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>1≤i≤m›</span></span></span></span> prior to the application of the functionality associated with
+the keyword <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> and the attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span>.
+  <span class=antiquoted><span class=antiquoted>➧</span></span> <span class=antiquoted><span class=antiquoted><span class=operator><span class=operator>⬚</span></span><span class=raw_text><span class=raw_text>‹<span class=keyword1><span class=command><span class=keyword1><span class=command>mk_ide</span></span></span></span>›</span></span></span></span> (<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span>) <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|elim"<span class=antiquote><span class=antiquote>}</span></span></span></span> 
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>name[attrbs]›</span></span></span></span><span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|"<span class=antiquote><span class=antiquote>}</span></span></span></span> converts the definition
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> into an elimination rule, followed by the application of the
+functionality associated with the optional keyword <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> and the 
+attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span> to each destruction rule. 
+Given the theorem <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>def_thm›</span></span></span></span> in the format
+described above, the elimination rule has the format
+\begin{center}
+<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>A a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ⟹ (f<span class=hidden>⇩</span><sub>1</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ⟹ … ⟹ f<span class=hidden>⇩</span><sub>m</sub> a<span class=hidden>⇩</span><sub>1</sub> … a<span class=hidden>⇩</span><sub>n</sub> ⟹ P) ⟹ P›</span></span></span></span>
+\end{center}
+prior to the application of the functionality associated with
+the keyword <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "rf"<span class=antiquote><span class=antiquote>}</span></span></span></span> and the attributes <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>attrbs›</span></span></span></span>.
+
+It is also possible to combine the keywords <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|intro"<span class=antiquote><span class=antiquote>}</span></span></span></span>,
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|dest"<span class=antiquote><span class=antiquote>}</span></span></span></span> and <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>element</span></span> "|elim"<span class=antiquote><span class=antiquote>}</span></span></span></span> in a single invocation of the 
+command.
+›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹\newpage›</span></span>
+
+
+
+<span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹Examples›</span></span>
+
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹
+In this section, some of the capabilities of the framework IDE are demonstrated
+by example. The example is based on the definition of the constant
+<span class=antiquoted><span class=antiquoted><span class=operator><span class=operator><span class=hidden>\&lt;^</span><span class=control>const</span><span class=hidden>&gt;</span></span></span>‹monoid›</span></span> from the standard library of 
+Isabelle/HOL \cite{noauthor_isabellehol_2020} and given by 
+\begin{center}
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> monoid_def<span class=main><span class=main>[</span></span><span class=operator><span class=operator>unfolded</span></span> monoid_axioms_def<span class=main><span class=main>,</span></span> <span class=operator><span class=operator>no_vars</span></span><span class=main><span class=main>]</span></span><span class=antiquote><span class=antiquote>}</span></span></span></span>
+\end{center}
+›</span></span>
+<span class=keyword1><span class=command>mk_ide</span></span> <span class=keyword2><span class=keyword>rf</span></span> monoid_def<span class=main>[</span><span class=operator>unfolded</span> monoid_axioms_def<span class=main>]</span> 
+  <span class=main>|intro</span> monoidI<span class=main>|</span>
+  <span class=main>|dest</span> monoidD<span class=main>|</span>
+  <span class=main>|elim</span> monoidE<span class=main>|</span>
+  
+<span class=keyword1><span class=command>text</span></span><span class=quoted><span class=plain_text>‹
+The invocation of the command <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>command</span></span> mk_ide<span class=antiquote><span class=antiquote>}</span></span></span></span> provides the theorem
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> [source] monoidI<span class=antiquote><span class=antiquote>}</span></span></span></span> given by 
+\begin{center}
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> monoidI<span class=main><span class=main>[</span></span><span class=operator><span class=operator>no_vars</span></span><span class=main><span class=main>]</span></span><span class=antiquote><span class=antiquote>}</span></span></span></span>,
+\end{center}
+the fact <span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> [source] monoidD<span class=antiquote><span class=antiquote>}</span></span></span></span> given by
+\begin{center}
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> monoidD<span class=main><span class=main>[</span></span><span class=operator><span class=operator>no_vars</span></span><span class=main><span class=main>]</span></span><span class=antiquote><span class=antiquote>}</span></span></span></span>
+\end{center}
+and the theorem
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> [source] monoidE<span class=antiquote><span class=antiquote>}</span></span></span></span> given by
+\begin{center}
+<span class=antiquoted><span class=antiquoted><span class=antiquote><span class=antiquote>@{</span></span><span class=operator><span class=operator>thm</span></span> monoidE<span class=main><span class=main>[</span></span><span class=operator><span class=operator>no_vars</span></span><span class=main><span class=main>]</span></span><span class=antiquote><span class=antiquote>}</span></span></span></span>.
+\end{center}
+›</span></span>
+     
+<span class=keyword2><span class=keyword>end</span></span></pre>
+</div>
+</main>
+</div>
+</div>
+</body>
+</html>
