@@ -797,6 +797,36 @@
         "licence": "BSD",
         "dependencies": [
             "Polynomials"
+        ],
+        "theories": [
+            "QE",
+            "MPolyExtension",
+            "ExecutiblePolyProps",
+            "PolyAtoms",
+            "Debruijn",
+            "Reindex",
+            "Optimizations",
+            "OptimizationProofs",
+            "VSAlgos",
+            "Heuristic",
+            "PrettyPrinting",
+            "Exports",
+            "LinearCase",
+            "QuadraticCase",
+            "EliminateVariable",
+            "LuckyFind",
+            "EqualityVS",
+            "UniAtoms",
+            "NegInfinity",
+            "NegInfinityUni",
+            "Infinitesimals",
+            "InfinitesimalsUni",
+            "DNFUni",
+            "GeneralVSProofs",
+            "DNF",
+            "VSQuad",
+            "HeuristicProofs",
+            "ExportProofs"
         ]
     },
     {
@@ -2371,6 +2401,22 @@
         "licence": "BSD",
         "dependencies": [
             "Knuth_Bendix_Order"
+        ],
+        "theories": [
+            "Status",
+            "Precedence",
+            "Relations",
+            "List_Order",
+            "Multiset_Extension_Pair",
+            "Multiset_Extension_Pair_Impl",
+            "Multiset_Extension2",
+            "Multiset_Extension2_Impl",
+            "WPO",
+            "RPO",
+            "LPO",
+            "KBO_Transformation",
+            "KBO_as_WPO",
+            "Executable_Orders"
         ]
     },
     {
@@ -13829,7 +13875,10 @@
         ],
         "date": "2021-09-24",
         "abstract": "\nThis work is a formalization of the soundness and completeness of an\naxiomatic system for first-order logic. The proof system is based on\nSystem Q1 by Smullyan and the completeness proof follows his textbook\n\"First-Order Logic\" (Springer-Verlag 1968). The completeness\nproof is in the Henkin style where a consistent set is extended to a\nmaximal consistent set using Lindenbaum's construction and Henkin\nwitnesses are added during the construction to ensure saturation as\nwell. The resulting set is a Hintikka set which, by the model\nexistence theorem, is satisfiable in the Herbrand universe.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "FOL_Axiomatic"
+        ]
     },
     {
         "session": "BDD",
@@ -28891,6 +28940,44 @@
             "Stone_Kleene_Relation_Algebras",
             "Subset_Boolean_Algebras",
             "MonoBoolTranAlgebra"
+        ],
+        "theories": [
+            "Base",
+            "Omega_Algebras",
+            "Capped_Omega_Algebras",
+            "General_Refinement_Algebras",
+            "Lattice_Ordered_Semirings",
+            "Boolean_Semirings",
+            "Binary_Iterings",
+            "Binary_Iterings_Strict",
+            "Binary_Iterings_Nonstrict",
+            "Tests",
+            "Test_Iterings",
+            "N_Semirings",
+            "N_Semirings_Boolean",
+            "N_Semirings_Modal",
+            "Approximation",
+            "Recursion_Strict",
+            "N_Algebras",
+            "Recursion",
+            "N_Omega_Algebras",
+            "N_Omega_Binary_Iterings",
+            "N_Relation_Algebras",
+            "Domain",
+            "Domain_Iterings",
+            "Domain_Recursion",
+            "Extended_Designs",
+            "Relative_Domain",
+            "Relative_Modal",
+            "Complete_Tests",
+            "Complete_Domain",
+            "Preconditions",
+            "Hoare",
+            "Hoare_Modal",
+            "Pre_Post",
+            "Pre_Post_Modal",
+            "Monotonic_Boolean_Transformers",
+            "Monotonic_Boolean_Transformers_Instances"
         ]
     },
     {
