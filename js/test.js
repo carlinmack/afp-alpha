@@ -63,6 +63,6 @@ function handlePostSubmit() {
             query: createPostMutation,
         }),
     }).then(() => {
-        updatePosts();
+        // updatePosts();
     });
 }
