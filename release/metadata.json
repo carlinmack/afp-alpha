@@ -15275,7 +15275,12 @@
         ],
         "date": "2021-11-08",
         "abstract": "\nIn this formalisation, we  construct real exponents as the limits of\nsequences of rational exponents. In particular, if $a \\ge 1$ and $x\n\\in \\mathbb{R}$, we choose an increasing rational sequence $r_n$ such\nthat $\\lim_{n\\to\\infty} {r_n} = x$. Then the sequence $a^{r_n}$ is\nincreasing and if $r$ is any rational number such that $r > x$,\n$a^{r_n}$ is bounded above by $a^r$. By the convergence criterion for\nmonotone sequences, $a^{r_n}$ converges. We define $a^ x =\n\\lim_{n\\to\\infty} a^{r_n}$ and show that it has the expected\nproperties (for $a \\ge 0$).  This particular construction of real\nexponents is needed instead of the usual one using the natural\nlogarithm and exponential functions (which already exists in Isabelle)\nto support our mechanical derivation of Euler's exponential\nseries as an ``infinite polynomial\". Aside from helping us avoid\ncircular reasoning, this is, as far as we are aware, the first time\nreal exponents are mechanised in this way within a proof assistant.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "RatPower",
+            "RealPower",
+            "Log"
+        ]
     },
     {
         "session": "Category",
@@ -17993,6 +17998,20 @@
         "theories": [
             "Localization"
         ]
+    },
+    {
+        "session": "PAL",
+        "title": "Automating Public Announcement Logic and the Wise Men Puzzle in Isabelle/HOL",
+        "authors": [
+            "Christoph Benzmüller",
+            "Sebastian Reiche"
+        ],
+        "topics": [
+            "Logic/General logic/Logics of knowledge and belief"
+        ],
+        "date": "2021-11-08",
+        "abstract": "\nWe present a shallow embedding of public announcement logic (PAL) with\nrelativized general knowledge in HOL. We then use PAL to obtain an\nelegant encoding of the wise men puzzle, which we solve automatically\nusing sledgehammer.",
+        "licence": "BSD"
     },
     {
         "session": "Safe_OCL",
@@ -29902,6 +29921,20 @@
             "Symmetric_Polynomials",
             "Symmetric_Polynomials_Code"
         ]
+    },
+    {
+        "session": "Factor_Algebraic_Polynomial",
+        "title": "Factorization of Polynomials with Algebraic Coefficients",
+        "authors": [
+            "Manuel Eberl",
+            "René Thiemann"
+        ],
+        "topics": [
+            "Mathematics/Algebra"
+        ],
+        "date": "2021-11-08",
+        "abstract": "\nThe AFP already contains a verified implementation of algebraic\nnumbers. However, it is has a severe limitation in its factorization\nalgorithm of real and complex polynomials: the factorization is only\nguaranteed to succeed if the coefficients of the polynomial are\nrational numbers. In this work, we verify an algorithm to factor all\nreal and complex polynomials whose coefficients are algebraic. The\nexistence of such an algorithm proves in a constructive way that the\nset of complex algebraic numbers is algebraically closed. Internally,\nthe algorithm is based on resultants of multivariate polynomials and\nan approximation algorithm using interval arithmetic.",
+        "licence": "BSD"
     },
     {
         "session": "Monomorphic_Monad",
