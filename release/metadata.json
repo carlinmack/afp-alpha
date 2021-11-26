@@ -6278,7 +6278,22 @@
         ],
         "date": "2021-11-08",
         "abstract": "\n<p>Simplified variants of Gödel's ontological argument are\nexplored. Among those is a particularly interesting simplified\nargument which is (i) valid already in basic\nmodal logics K or KT, (ii) which does not suffer from modal collapse,\nand (iii) which avoids the rather complex predicates of essence (Ess.)\nand necessary existence (NE) as used by Gödel.\n</p><p>\nWhether the presented variants increase or decrease the\nattractiveness and persuasiveness of the ontological argument is a\nquestion I would like to pass on to philosophy and theology.\n</p>",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "HOML",
+            "DisableKodkodScala",
+            "SimplifiedOntologicalArgument",
+            "MFilter",
+            "BaseDefs",
+            "ScottVariant",
+            "UFilterVariant",
+            "SimpleVariant",
+            "SimpleVariantPG",
+            "SimpleVariantSE",
+            "SimpleVariantSEinT",
+            "SimpleVariantHF",
+            "KanckosLethenNo2Possibilist"
+        ]
     },
     {
         "session": "Deriving",
@@ -16192,6 +16207,21 @@
         ]
     },
     {
+        "session": "Hahn_Jordan_Decomposition",
+        "title": "The Hahn and Jordan Decomposition Theorems",
+        "authors": [
+            "Marie Cousin",
+            "Mnacho Echenim",
+            "Hervé Guiol"
+        ],
+        "topics": [
+            "Mathematics/Measure theory"
+        ],
+        "date": "2021-11-19",
+        "abstract": "\nIn this work we formalize the Hahn decomposition theorem for signed\nmeasures, namely that any measure space for a signed measure can be\ndecomposed into a positive and a negative set, where every measurable\nsubset of the positive one has a positive measure, and every\nmeasurable subset of the negative one has a negative measure. We also\nformalize the Jordan decomposition theorem as a corollary, which\nstates that the signed measure under consideration admits a unique\ndecomposition into a difference of two positive measures, at least one\nof which is finite.",
+        "licence": "BSD"
+    },
+    {
         "session": "Stern_Brocot",
         "title": "The Stern-Brocot Tree",
         "authors": [
@@ -20626,7 +20656,45 @@
         ],
         "date": "2021-11-23",
         "abstract": "\nThe <em>van Emde Boas tree</em> or <em>van Emde Boas\npriority queue</em> is a data structure supporting membership\ntest, insertion, predecessor and successor search, minimum and maximum\ndetermination and deletion in <em>O(log log U)</em> time, where <em>U =\n0,...,2<sup>n-1</sup></em> is the overall range to be\nconsidered. <p/> The presented formalization follows Chapter 20\nof the popular <em>Introduction to Algorithms (3rd\ned.)</em> by Cormen, Leiserson, Rivest and Stein (CLRS),\nextending the list of formally verified CLRS algorithms. Our current\nformalization is based on the first author's bachelor's\nthesis. <p/> First, we prove correct a\n<em>functional</em> implementation, w.r.t. an abstract\ndata type for sets. Apart from functional correctness, we show a\nresource bound, and runtime bounds w.r.t. manually defined timing\nfunctions for the operations. <p/> Next, we refine the\noperations to Imperative HOL with time, and show correctness and\ncomplexity. This yields a practically more efficient implementation,\nand eliminates the manually defined timing functions from the trusted\nbase of the proof.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Heap_Time_Monad",
+            "Array_Time",
+            "Heap",
+            "Ref_Time",
+            "Imperative_HOL_Time",
+            "Syntax_Match",
+            "Assertions",
+            "Hoare_Triple",
+            "Refine_Imp_Hol",
+            "Automation",
+            "Sep_Main",
+            "Imperative_HOL_Add",
+            "Time_Reasoning",
+            "Simple_TBOUND_Cond",
+            "VEBT_Example_Setup",
+            "VEBT_Definitions",
+            "VEBT_Member",
+            "VEBT_Insert",
+            "VEBT_InsertCorrectness",
+            "VEBT_MinMax",
+            "VEBT_Succ",
+            "VEBT_Pred",
+            "VEBT_Delete",
+            "VEBT_DeleteCorrectness",
+            "VEBT_Uniqueness",
+            "VEBT_Height",
+            "VEBT_Bounds",
+            "VEBT_DeleteBounds",
+            "VEBT_Space",
+            "VEBT_Intf_Functional",
+            "VEBT_List_Assn",
+            "VEBT_BuildupMemImp",
+            "VEBT_SuccPredImperative",
+            "VEBT_DelImperative",
+            "VEBT_Intf_Imperative",
+            "VEBT_Example"
+        ]
     },
     {
         "session": "FileRefinement",
