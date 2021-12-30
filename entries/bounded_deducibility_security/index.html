@@ -4,7 +4,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1"><title>Bounded-Deducibility Security - Archive of Formal Proofs</title><meta name=description content="This is a formalization of bounded-deducibility security (BD
 security), a flexible notion of information-flow security applicable
-to arbitrary input-output..."><meta property="og:title" content="Bounded-Deducibility Security">
+to arbitrary transition..."><meta property="og:title" content="Bounded-Deducibility Security">
 <meta property="og:description" content>
 <meta property="og:type" content="article">
 <meta property="og:url" content="/entries/bounded_deducibility_security/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="entries">
@@ -51,7 +51,7 @@ to arbitrary input-output..."><meta property="og:title" content="Bounded-Deducib
 </form>
 <h1><span class=first>B</span>ounded-<span class=first>D</span>educibility <span class=first>S</span>ecurity</h1>
 <div>
-<p><a href=/authors/andrei-popescu>Andrei Popescu</a> and <a href=/authors/peter-lammich>Peter Lammich</a>
+<p><a href=/authors/andrei-popescu>Andrei Popescu</a>, <a href=/authors/peter-lammich>Peter Lammich</a> and <a href=/authors/thomas-bauereiss>Thomas Bauereiss</a>
 </p>
 <p class=date>22 April 2014</p>
 </div>
@@ -62,13 +62,23 @@ to arbitrary input-output..."><meta property="og:title" content="Bounded-Deducib
 <h3>Abstract</h3>
 <div class="abstract mathjax_process">This is a formalization of bounded-deducibility security (BD
 security), a flexible notion of information-flow security applicable
-to arbitrary input-output automata. It generalizes Sutherland's
+to arbitrary transition systems. It generalizes Sutherland's
 classic notion of nondeducibility by factoring in declassification
 bounds and trigger, whereas nondeducibility states that, in a
 system, information cannot flow between specified sources and sinks,
 BD security indicates upper bounds for the flow and triggers under
-which these upper bounds are no longer guaranteed.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/security>Computer science/Security</a></li></ul><h3>Theories</h3>
+which these upper bounds are no longer guaranteed.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Change history</h3>
+<p>[2021-08-12]
+Generalised BD Security from I/O automata to nondeterministic
+transition systems, with the former retained as an instance of the
+latter (renaming locale BD_Security to BD_Security_IO).
+Generalise unwinding conditions to allow making more than one
+transition at a time when constructing alternative traces.
+Add results about the expressivity of declassification triggers vs.
+bounds, due to Thomas Bauereiss (added as author).</p><h3>Used by</h3>
+<ul><li><a href=/entries/cocon/>CoCon</a></li><li><a href=/entries/bd_security_compositional/>BD_Security_Compositional</a></li><li><a href=/entries/cosmed/>CoSMed</a></li></ul><h3>Topics</h3>
+<ul><li><a href=/topics/computer-science/security>Computer science/Security</a></li></ul><h3>Related Entries</h3>
+<ul><li><a href=/entries/bd_security_compositional>BD_Security_Compositional</a></li></ul><h3>Theories</h3>
 <ul>
 <li><a href=theories/#Trivia>Trivia</a></li><li><a href=theories/#IO_Automaton>IO_Automaton</a></li><li><a href=theories/#BD_Security>BD_Security</a></li><li><a href=theories/#Compositional_Reasoning>Compositional_Reasoning</a></li><li><a href=theories/#Bounded_Deducibility_Security>Bounded_Deducibility_Security</a></li></ul>
 </main>
@@ -90,7 +100,7 @@ document</a>
 <div>
 <p style=display:none id=bibtexFileName>Bounded_Deducibility_Security-AFP</p>
 <pre id=copyText>@article{Bounded_Deducibility_Security-AFP,
-  author  = {Andrei Popescu and Peter Lammich},
+  author  = {Andrei Popescu, Peter Lammich and Thomas Bauereiss},
   title   = {Bounded-Deducibility Security},
   journal = {Archive of Formal Proofs},
   month   = April,
@@ -110,7 +120,15 @@ document</a>
 <a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Bounded_Deducibility_Security-current.tar.gz download>Download latest</a>
 <p>Older releases:</p>
-<ul><li>Isabelle2019:
+<ul><li>Isabelle2021:
+<a href=https://isa-afp.org/release/afp-Bounded_Deducibility_Security-2021-02-23.tar.gz>
+afp-Bounded_Deducibility_Security-2021-02-23.tar.gz
+</a>
+</li><li>Isabelle2020:
+<a href=https://isa-afp.org/release/afp-Bounded_Deducibility_Security-2020-04-18.tar.gz>
+afp-Bounded_Deducibility_Security-2020-04-18.tar.gz
+</a>
+</li><li>Isabelle2019:
 <a href=https://isa-afp.org/release/afp-Bounded_Deducibility_Security-2019-06-11.tar.gz>
 afp-Bounded_Deducibility_Security-2019-06-11.tar.gz
 </a>

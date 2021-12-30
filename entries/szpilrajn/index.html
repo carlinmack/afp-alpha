@@ -2,10 +2,9 @@
 <head>
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Szpilrajn Extension Theorem - Archive of Formal Proofs</title><meta name=description content="
-We formalize the Szpilrajn extension theorem, also known as
-order-extension principal: Every strict partial order can be extended
-to a strict linear..."><meta property="og:title" content="Szpilrajn Extension Theorem">
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Order Extension and Szpilrajn's Extension Theorem - Archive of Formal Proofs</title><meta name=description content="
+This entry is concerned with the principle of order extension, i.e. the extension of an order relation to a total order relation.
+To this end, we prove a..."><meta property="og:title" content="Order Extension and Szpilrajn's Extension Theorem">
 <meta property="og:description" content>
 <meta property="og:type" content="article">
 <meta property="og:url" content="/entries/szpilrajn/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="entries">
@@ -13,7 +12,7 @@ to a strict linear..."><meta property="og:title" content="Szpilrajn Extension Th
 <meta property="article:modified_time" content="2019-07-27T00:00:00+00:00"><meta property="og:site_name" content="Archive of Formal Proofs">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/images/afp.png">
-<meta name=twitter:title content="Szpilrajn Extension Theorem">
+<meta name=twitter:title content="Order Extension and Szpilrajn's Extension Theorem">
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
@@ -50,9 +49,9 @@ to a strict linear..."><meta property="og:title" content="Szpilrajn Extension Th
 </datalist>
 </div>
 </form>
-<h1><span class=first>S</span>zpilrajn <span class=first>E</span>xtension <span class=first>T</span>heorem</h1>
+<h1><span class=first>O</span>rder <span class=first>E</span>xtension and <span class=first>S</span>zpilrajn's <span class=first>E</span>xtension <span class=first>T</span>heorem</h1>
 <div>
-<p><a href=/authors/peter-zeller>Peter Zeller</a>
+<p><a href=/authors/peter-zeller>Peter Zeller</a> and <a href=/authors/lukas-stevens>Lukas Stevens</a>
 </p>
 <p class=date>27 July 2019</p>
 </div>
@@ -61,9 +60,11 @@ to a strict linear..."><meta property="og:title" content="Szpilrajn Extension Th
 </div>
 <div><main>
 <h3>Abstract</h3>
-<div class="abstract mathjax_process">We formalize the Szpilrajn extension theorem, also known as
-order-extension principal: Every strict partial order can be extended
-to a strict linear order.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Used by</h3>
+<div class="abstract mathjax_process">This entry is concerned with the principle of order extension, i.e. the extension of an order relation to a total order relation.
+To this end, we prove a more general version of Szpilrajn's extension theorem employing terminology from the book "Consistency, Choice, and Rationality" by Bossert and Suzumura.
+We also formalize theorem 2.7 of their book.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Change history</h3>
+<p>[2021-03-22]
+(by Lukas Stevens) generalise Szpilrajn's extension theorem and add material from the book "Consistency, Choice, and Rationality"</p><h3>Used by</h3>
 <ul><li><a href=/entries/combinatorics_words_lyndon/>Combinatorics_Words_Lyndon</a></li></ul><h3>Topics</h3>
 <ul><li><a href=/topics/mathematics/order>Mathematics/Order</a></li></ul><h3>Theories</h3>
 <ul>
@@ -87,8 +88,8 @@ document</a>
 <div>
 <p style=display:none id=bibtexFileName>Szpilrajn-AFP</p>
 <pre id=copyText>@article{Szpilrajn-AFP,
-  author  = {Peter Zeller},
-  title   = {Szpilrajn Extension Theorem},
+  author  = {Peter Zeller and Lukas Stevens},
+  title   = {Order Extension and Szpilrajn&#39;s Extension Theorem},
   journal = {Archive of Formal Proofs},
   month   = July,
   year    = 2019,
@@ -107,7 +108,15 @@ document</a>
 <a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Szpilrajn-current.tar.gz download>Download latest</a>
 <p>Older releases:</p>
-<ul><li>Isabelle2019:
+<ul><li>Isabelle2021:
+<a href=https://isa-afp.org/release/afp-Szpilrajn-2021-02-23.tar.gz>
+afp-Szpilrajn-2021-02-23.tar.gz
+</a>
+</li><li>Isabelle2020:
+<a href=https://isa-afp.org/release/afp-Szpilrajn-2020-04-20.tar.gz>
+afp-Szpilrajn-2020-04-20.tar.gz
+</a>
+</li><li>Isabelle2019:
 <a href=https://isa-afp.org/release/afp-Szpilrajn-2019-07-28.tar.gz>
 afp-Szpilrajn-2019-07-28.tar.gz
 </a>

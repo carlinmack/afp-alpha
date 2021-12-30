@@ -69,7 +69,9 @@ function;</li> <li>the formalization of an unboxing
 optimization (Ubx), a proof of bisimulation with (Inca), and a simple
 compilation function.</li> </ul> This formalization was
 described in the CPP 2021 paper <em>Towards Efficient and
-Verified Virtual Machines for Dynamic Languages</em></div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/vericomp>VeriComp</a></li></ul><h3>Topics</h3>
+Verified Virtual Machines for Dynamic Languages</em></div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Change history</h3>
+<p>[2021-06-14] refactored function definitions to contain explicit basic blocks<br>
+[2021-06-25] proved conditional completeness of compilation<br></p><h3>Depends On</h3><ul><li><a href=/entries/vericomp>VeriComp</a></li></ul><h3>Topics</h3>
 <ul><li><a href=/topics/computer-science/programming-languages/misc>Computer science/Programming languages/Misc</a></li></ul><h3>Theories</h3>
 <ul>
 <li><a href=theories/#Env>Env</a></li><li><a href=theories/#Env_list>Env_list</a></li><li><a href=theories/#List_util>List_util</a></li><li><a href=theories/#Option_applicative>Option_applicative</a></li><li><a href=theories/#Result>Result</a></li><li><a href=theories/#Global>Global</a></li><li><a href=theories/#Op>Op</a></li><li><a href=theories/#OpInl>OpInl</a></li><li><a href=theories/#Dynamic>Dynamic</a></li><li><a href=theories/#Inca>Inca</a></li><li><a href=theories/#Unboxed>Unboxed</a></li><li><a href=theories/#OpUbx>OpUbx</a></li><li><a href=theories/#Ubx>Ubx</a></li><li><a href=theories/#Ubx_type_inference>Ubx_type_inference</a></li><li><a href=theories/#Unboxed_lemmas>Unboxed_lemmas</a></li><li><a href=theories/#Inca_to_Ubx_simulation>Inca_to_Ubx_simulation</a></li><li><a href=theories/#Inca_to_Ubx_compiler>Inca_to_Ubx_compiler</a></li><li><a href=theories/#Op_example>Op_example</a></li><li><a href=theories/#Std>Std</a></li><li><a href=theories/#Std_to_Inca_simulation>Std_to_Inca_simulation</a></li><li><a href=theories/#Std_to_Inca_compiler>Std_to_Inca_compiler</a></li></ul>
@@ -111,6 +113,12 @@ document</a>
 <h2>Download</h2>
 <a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Interpreter_Optimizations-current.tar.gz download>Download latest</a>
+<p>Older releases:</p>
+<ul><li>Isabelle2021:
+<a href=https://isa-afp.org/release/afp-Interpreter_Optimizations-2021-02-23.tar.gz>
+afp-Interpreter_Optimizations-2021-02-23.tar.gz
+</a>
+</li></ul>
 </div>
 </div>
 </div>
