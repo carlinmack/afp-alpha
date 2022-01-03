@@ -88,6 +88,40 @@
         "dependencies": [
             "Bounded_Deducibility_Security",
             "Fresh_Identifiers"
+        ],
+        "theories": [
+            "Prelim",
+            "System_Specification",
+            "Automation_Setup",
+            "Safety_Properties",
+            "Observation_Setup",
+            "Paper_Intro",
+            "Paper_Value_Setup",
+            "Paper_Aut_PC",
+            "Paper_Aut",
+            "Paper_All",
+            "Review_Intro",
+            "Review_Value_Setup",
+            "Review_RAut",
+            "Review_RAut_NCPC",
+            "Review_RAut_NCPC_PAut",
+            "Review_All",
+            "Discussion_Intro",
+            "Discussion_Value_Setup",
+            "Discussion_NCPC",
+            "Discussion_All",
+            "Decision_Intro",
+            "Decision_Value_Setup",
+            "Decision_NCPC",
+            "Decision_NCPC_Aut",
+            "Decision_All",
+            "Reviewer_Assignment_Intro",
+            "Reviewer_Assignment_Value_Setup",
+            "Reviewer_Assignment_NCPC",
+            "Reviewer_Assignment_NCPC_Aut",
+            "Reviewer_Assignment_All",
+            "Traceback_Properties",
+            "All_BD_Security_Instances_for_CoCon"
         ]
     },
     {
@@ -1775,6 +1809,24 @@
         ],
         "theories": [
             "Fisher_Yates"
+        ]
+    },
+    {
+        "session": "Gale_Shapley",
+        "title": "Gale-Shapley Algorithm",
+        "authors": [
+            "Tobias Nipkow"
+        ],
+        "topics": [
+            "Computer science/Algorithms",
+            "Mathematics/Games and economics"
+        ],
+        "date": "2021-12-29",
+        "abstract": "\nThis is a stepwise refinement and proof of the Gale-Shapley stable\nmatching (or marriage) algorithm down to executable code. Both a\npurely functional implementation based on lists and a functional\nimplementation based on efficient arrays (provided by the Collections\nFramework in the AFP) are developed. The latter implementation runs in\ntime <i>O(n<sup>2</sup>)</i> where\n<i>n</i> is the cardinality of the two sets to be matched.",
+        "licence": "BSD",
+        "dependencies": [
+            "List-Index",
+            "Collections"
         ]
     },
     {
@@ -5662,6 +5714,25 @@
         "dependencies": [
             "Bounded_Deducibility_Security",
             "Fresh_Identifiers"
+        ],
+        "theories": [
+            "Prelim",
+            "System_Specification",
+            "Automation_Setup",
+            "Safety_Properties",
+            "Observation_Setup",
+            "Post_Intro",
+            "Post_Value_Setup",
+            "Post",
+            "Friend_Intro",
+            "Friend_Value_Setup",
+            "Friend",
+            "Friend_Request_Intro",
+            "Friend_Request_Value_Setup",
+            "Friend_Request",
+            "Traceback_Intro",
+            "Post_Visibility_Traceback",
+            "Friend_Traceback"
         ]
     },
     {
@@ -10707,6 +10778,35 @@
         "licence": "BSD",
         "dependencies": [
             "Knuth_Bendix_Order"
+        ],
+        "theories": [
+            "Term_Context",
+            "Basic_Utils",
+            "Ground_Terms",
+            "FSet_Utils",
+            "Ground_Ctxt",
+            "Ground_Closure",
+            "Horn_Inference",
+            "Horn_List",
+            "Horn_Fset",
+            "Tree_Automata",
+            "Tree_Automata_Det",
+            "Tree_Automata_Complement",
+            "Tree_Automata_Pumping",
+            "Myhill_Nerode",
+            "GTT",
+            "GTT_Compose",
+            "GTT_Transitive_Closure",
+            "Pair_Automaton",
+            "AGTT",
+            "RRn_Automata",
+            "RR2_Infinite",
+            "Tree_Automata_Abstract_Impl",
+            "Tree_Automata_Class_Instances_Impl",
+            "Tree_Automata_Impl",
+            "RR2_Infinite_Q_infinity",
+            "Regular_Relation_Abstract_Impl",
+            "Regular_Relation_Impl"
         ]
     },
     {
@@ -10726,6 +10826,21 @@
         "dependencies": [
             "MDP-Rewards",
             "Gauss_Jordan"
+        ],
+        "theories": [
+            "Value_Iteration",
+            "Policy_Iteration",
+            "Modified_Policy_Iteration",
+            "Matrix_Util",
+            "Blinfun_Matrix",
+            "Splitting_Methods",
+            "Algorithms",
+            "Code_DP",
+            "Code_Mod",
+            "Code_Real_Approx_By_Float_Fix",
+            "Code_Inventory",
+            "Code_Gridworld",
+            "Examples"
         ]
     },
     {
@@ -11964,6 +12079,13 @@
         "olderReleases": [],
         "dependencies": [
             "Bounded_Deducibility_Security"
+        ],
+        "theories": [
+            "Composing_Security",
+            "Trivial_Security",
+            "Transporting_Security",
+            "Composing_Security_Network",
+            "Independent_Secrets"
         ]
     },
     {
@@ -12024,6 +12146,25 @@
             "UPF",
             "Service",
             "ServiceExample"
+        ]
+    },
+    {
+        "session": "Roth_Arithmetic_Progressions",
+        "title": "Roth's Theorem on Arithmetic Progressions",
+        "authors": [
+            "Chelsea Edmonds",
+            "Angeliki Koutsoukou-Argyraki",
+            "Lawrence C. Paulson"
+        ],
+        "topics": [
+            "Mathematics/Graph theory",
+            "Mathematics/Combinatorics"
+        ],
+        "date": "2021-12-28",
+        "abstract": "\nWe formalise a proof of Roth's Theorem on Arithmetic\nProgressions, a major result in additive combinatorics on the\nexistence of 3-term arithmetic progressions in subsets of natural\nnumbers. To this end, we follow a proof using graph regularity. We\nemploy our recent formalisation of Szemerédi's Regularity Lemma,\na major result in extremal graph theory, which we use here to prove\nthe Triangle Counting Lemma and the Triangle Removal Lemma. Our\nsources are Yufei Zhao's MIT lecture notes\n\"<a href=\"https://ocw.mit.edu/courses/mathematics/18-217-graph-theory-and-additive-combinatorics-fall-2019/lecture-notes/MIT18_217F19_ch3.pdf\">Graph Theory and Additive Combinatorics</a>\"\n(revised version <a href=\"https://yufeizhao.com/gtac/gtac17.pdf\">here</a>)\nand W.T. Gowers's Cambridge lecture notes\n\"<a href=\"https://www.dpmms.cam.ac.uk/~par31/notes/tic.pdf\">Topics in Combinatorics</a>\".\nWe also refer to the University of\nGeorgia notes by Stephanie Bell and Will Grodzicki,\n\"<a href=\"http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.432.327\">Using Szemerédi's Regularity Lemma to Prove Roth's Theorem</a>\".",
+        "licence": "BSD",
+        "dependencies": [
+            "Girth_Chromatic Szemeredi_Regularity Random_Graph_Subgraph_Threshold Ergodic_Theory"
         ]
     },
     {
@@ -16495,7 +16636,15 @@
         ],
         "date": "2021-12-16",
         "abstract": "\nWe present a formalization of Markov Decision Processes with rewards.\nIn particular we first build on Hölzl's formalization  of MDPs\n(AFP entry: Markov_Models) and extend them with rewards. We proceed\nwith an analysis of the expected total discounted reward criterion for\ninfinite horizon MDPs. The central result is the construction of the\niteration rule for the Bellman operator. We prove the optimality\nequations for this operator and show the existence of an optimal\nstationary deterministic solution. The analysis can be used to obtain\ndynamic programming algorithms such as value iteration and policy\niteration to solve MDPs with formal guarantees. Our formalization is\nbased on chapters 5 and 6 in Puterman's book \"Markov\nDecision Processes: Discrete Stochastic Dynamic Programming\".",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Bounded_Functions",
+            "Blinfun_Util",
+            "MDP_reward_Util",
+            "MDP_cont",
+            "MDP_disc",
+            "MDP_reward"
+        ]
     },
     {
         "session": "Euler_Partition",
@@ -29182,6 +29331,63 @@
         "dependencies": [
             "BD_Security_Compositional",
             "Fresh_Identifiers"
+        ],
+        "theories": [
+            "Prelim",
+            "System_Specification",
+            "API_Network",
+            "Automation_Setup",
+            "Safety_Properties",
+            "Post_Intro",
+            "Post_Observation_Setup_ISSUER",
+            "Post_Unwinding_Helper_ISSUER",
+            "Post_Value_Setup_ISSUER",
+            "Post_ISSUER",
+            "Post_Observation_Setup_RECEIVER",
+            "Post_Unwinding_Helper_RECEIVER",
+            "Post_Value_Setup_RECEIVER",
+            "Post_RECEIVER",
+            "Post_COMPOSE2",
+            "Post_Network",
+            "DYNAMIC_Post_Value_Setup_ISSUER",
+            "DYNAMIC_Post_ISSUER",
+            "DYNAMIC_Post_COMPOSE2",
+            "DYNAMIC_Post_Network",
+            "Independent_Post_Observation_Setup_ISSUER",
+            "Independent_DYNAMIC_Post_Value_Setup_ISSUER",
+            "Independent_DYNAMIC_Post_ISSUER",
+            "Independent_Post_Observation_Setup_RECEIVER",
+            "Independent_Post_Value_Setup_RECEIVER",
+            "Independent_Post_RECEIVER",
+            "Independent_DYNAMIC_Post_Network",
+            "Independent_Posts_Network",
+            "Post_All",
+            "Friend_Intro",
+            "Friend_Observation_Setup",
+            "Friend_State_Indistinguishability",
+            "Friend_Openness",
+            "Friend_Value_Setup",
+            "Friend",
+            "Friend_Network",
+            "Friend_All",
+            "Friend_Request_Intro",
+            "Friend_Request_Value_Setup",
+            "Friend_Request",
+            "Friend_Request_Network",
+            "Friend_Request_All",
+            "Outer_Friend_Intro",
+            "Outer_Friend",
+            "Outer_Friend_Issuer_Observation_Setup",
+            "Outer_Friend_Issuer_State_Indistinguishability",
+            "Outer_Friend_Issuer_Openness",
+            "Outer_Friend_Issuer_Value_Setup",
+            "Outer_Friend_Issuer",
+            "Outer_Friend_Receiver_Observation_Setup",
+            "Outer_Friend_Receiver_State_Indistinguishability",
+            "Outer_Friend_Receiver_Value_Setup",
+            "Outer_Friend_Receiver",
+            "Outer_Friend_Network",
+            "Outer_Friend_All"
         ]
     },
     {
