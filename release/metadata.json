@@ -1827,6 +1827,10 @@
         "dependencies": [
             "List-Index",
             "Collections"
+        ],
+        "theories": [
+            "Gale_Shapley1",
+            "Gale_Shapley2"
         ]
     },
     {
@@ -12165,6 +12169,9 @@
         "licence": "BSD",
         "dependencies": [
             "Girth_Chromatic Szemeredi_Regularity Random_Graph_Subgraph_Threshold Ergodic_Theory"
+        ],
+        "theories": [
+            "Roth_Arithmetic_Progressions"
         ]
     },
     {
@@ -16645,6 +16652,19 @@
             "MDP_disc",
             "MDP_reward"
         ]
+    },
+    {
+        "session": "Knights_Tour",
+        "title": "Knight's Tour Revisited Revisited",
+        "authors": [
+            "Lukas Koller"
+        ],
+        "topics": [
+            "Mathematics/Graph theory"
+        ],
+        "date": "2022-01-04",
+        "abstract": "\nThis is a formalization of the article \"Knight's Tour Revisited\" by\nCull and De Curtins where they prove the existence of a Knight's\npath for arbitrary <i>n &times; m</i>-boards with <i>min(n,m) &le;\n5</i>. If <i>n &middot; m</i> is even, then there exists a Knight's\ncircuit.  A Knight's Path is a sequence of moves of a Knight on a\nchessboard s.t. the Knight visits every square of a chessboard\nexactly once.  Finding a Knight's path is a an instance of the\nHamiltonian path problem. A Knight's circuit is a Knight's path,\nwhere additionally the Knight can move from the last square to the\nfirst square of the path, forming a loop.  During the formalization\ntwo mistakes in the original proof were discovered. These mistakes\nare corrected in this formalization.",
+        "licence": "BSD"
     },
     {
         "session": "Euler_Partition",
