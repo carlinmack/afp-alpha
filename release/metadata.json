@@ -5797,7 +5797,11 @@
         ],
         "date": "2022-01-23",
         "abstract": "\nActuarial Mathematics is a theory in applied mathematics, which is\nmainly used for determining the prices of insurance products and\nevaluating the liability of a company associating with insurance\ncontracts. It is related to calculus, probability theory and financial\ntheory, etc. In this entry, I formalize the very basic part of\nActuarial Mathematics in Isabelle/HOL. The first formalization is\nabout the theory of interest which deals with interest rates, present\nvalue factors, an annuity certain, etc. I have already formalized the\nbasic part of Actuarial Mathematics in Coq\n(https://github.com/Yosuke-Ito-345/Actuary). This entry is currently\nthe partial translation and a little generalization of the Coq\nformalization. The further translation in Isabelle/HOL is now\nproceeding.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Preliminaries",
+            "Interest"
+        ]
     },
     {
         "session": "LLL_Factorization",
@@ -23231,6 +23235,19 @@
             "Fourier_Aux2",
             "Fourier"
         ]
+    },
+    {
+        "session": "Median_Method",
+        "title": "Median Method",
+        "authors": [
+            "Emin Karayel"
+        ],
+        "topics": [
+            "Mathematics/Probability theory"
+        ],
+        "date": "2022-01-25",
+        "abstract": "\n<p>The median method is an amplification result for randomized\napproximation algorithms described in [<a\nhref=\"https://doi.org/10.1006/jcss.1997.1545\">1</a>].\nGiven an algorithm whose result is in a desired interval with a\nprobability larger than <i>1/2</i>, it is possible to\nimprove the success probability, by running the algorithm multiple\ntimes independently and using the median. In contrast to using the\nmean, the amplification of the success probability grows exponentially\nwith the number of independent runs.</p> <p>This entry\ncontains a formalization of the underlying theorem: Given a sequence\nof n independent random variables, which are in a desired interval\nwith a probability <i>1/2 + a</i>. Then their median will\nbe in the desired interval with a probability of <i>1 −\nexp(−2a<sup>2</sup> n)</i>. In particular, the\nsuccess probability approaches <i>1</i> exponentially with\nthe number of variables.</p> <p>In addition to that, this\nentry also contains a proof that order-statistics of Borel-measurable\nrandom variables are themselves measurable and that generalized\nintervals in linearly ordered Borel-spaces are measurable.</p>",
+        "licence": "BSD"
     },
     {
         "session": "Probabilistic_System_Zoo",
