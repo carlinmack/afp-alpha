@@ -18885,7 +18885,22 @@
         ],
         "date": "2022-02-03",
         "abstract": "\nThe notion of quasi-Borel spaces was introduced by <a\nhref=\"https://dl.acm.org/doi/10.5555/3329995.3330072\">\nHeunen et al</a>. The theory provides a suitable\ndenotational model for higher-order probabilistic programming\nlanguages with continuous distributions. This entry is a formalization\nof the theory of quasi-Borel spaces, including construction of\nquasi-Borel spaces (product, coproduct, function spaces), the\nadjunction between the category of measurable spaces and the category\nof quasi-Borel spaces, and the probability monad on quasi-Borel\nspaces. This entry also contains the formalization of the Bayesian\nregression presented in the work of Heunen et al. This work is a part\nof the work by same authors, <i>Program Logic for Higher-Order\nProbabilistic Programs in Isabelle/HOL</i>, which will be\npublished in the proceedings of the 16th International Symposium on\nFunctional and Logic Programming (FLOPS 2022).",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "StandardBorel",
+            "QuasiBorel",
+            "Measure_QuasiBorel_Adjunction",
+            "Binary_Product_QuasiBorel",
+            "Product_QuasiBorel",
+            "Binary_CoProduct_QuasiBorel",
+            "CoProduct_QuasiBorel",
+            "Exponent_QuasiBorel",
+            "Probability_Space_QuasiBorel",
+            "Monad_QuasiBorel",
+            "Pair_QuasiBorel_Measure",
+            "Measure_as_QuasiBorel_Measure",
+            "Bayesian_Linear_Regression"
+        ]
     },
     {
         "session": "Belief_Revision",
@@ -35370,6 +35385,19 @@
             "Abstract_Completeness",
             "Propositional_Logic"
         ]
+    },
+    {
+        "session": "Youngs_Inequality",
+        "title": "Young's Inequality for Increasing Functions",
+        "authors": [
+            "Lawrence C. Paulson"
+        ],
+        "topics": [
+            "Mathematics/Analysis"
+        ],
+        "date": "2022-01-31",
+        "abstract": "\nYoung's inequality states that $$ ab \\leq \\int_0^a f(x)dx +\n\\int_0^b f^{-1}(y) dy $$ where $a\\geq 0$, $b\\geq 0$ and $f$ is\nstrictly increasing and continuous. Its proof is formalised following\n<a href=\"https://www.jstor.org/stable/2318018\">the\ndevelopment</a> by Cunningham and Grossman. Their idea is to\nmake the intuitive, geometric folklore proof rigorous by reasoning\nabout step functions. The lack of the Riemann integral makes the\ndevelopment longer than one would like, but their argument is\nreproduced faithfully.",
+        "licence": "BSD"
     },
     {
         "session": "Statecharts",
