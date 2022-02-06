@@ -30295,6 +30295,22 @@
         ]
     },
     {
+        "session": "LP_Duality",
+        "title": "Duality of Linear Programming",
+        "authors": [
+            "René Thiemann"
+        ],
+        "topics": [
+            "Mathematics/Algebra"
+        ],
+        "date": "2022-02-03",
+        "abstract": "\nWe formalize the weak and strong duality theorems of linear\nprogramming. For the strong duality theorem we provide three\nsufficient preconditions: both the primal problem and the dual problem\nare satisfiable, the primal problem is satisfiable and bounded, or the\ndual problem is satisfiable and bounded. The proofs are based on an\nexisting formalization of Farkas' Lemma.",
+        "licence": "BSD",
+        "dependencies": [
+            "Linear_Inequalities"
+        ]
+    },
+    {
         "session": "CZH_Universal_Constructions",
         "title": "Category Theory for ZFC in HOL III: Universal Constructions",
         "authors": [
@@ -35397,7 +35413,10 @@
         ],
         "date": "2022-01-31",
         "abstract": "\nYoung's inequality states that $$ ab \\leq \\int_0^a f(x)dx +\n\\int_0^b f^{-1}(y) dy $$ where $a\\geq 0$, $b\\geq 0$ and $f$ is\nstrictly increasing and continuous. Its proof is formalised following\n<a href=\"https://www.jstor.org/stable/2318018\">the\ndevelopment</a> by Cunningham and Grossman. Their idea is to\nmake the intuitive, geometric folklore proof rigorous by reasoning\nabout step functions. The lack of the Riemann integral makes the\ndevelopment longer than one would like, but their argument is\nreproduced faithfully.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Youngs"
+        ]
     },
     {
         "session": "Statecharts",
