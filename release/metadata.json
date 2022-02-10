@@ -9906,6 +9906,9 @@
         "licence": "BSD",
         "dependencies": [
             "Card_Equiv_Relations"
+        ],
+        "theories": [
+            "Equivalence_Relation_Enumeration"
         ]
     },
     {
@@ -20277,6 +20280,25 @@
             "Breadth_First_Search",
             "WordRefine",
             "Examples"
+        ]
+    },
+    {
+        "session": "FO_Theory_Rewriting",
+        "title": "First-Order Theory of Rewriting",
+        "authors": [
+            "Alexander Lochmann",
+            "Bertram Felgenhauer"
+        ],
+        "topics": [
+            "Computer science/Automata and formal languages",
+            "Logic/Rewriting",
+            "Logic/Proof theory"
+        ],
+        "date": "2022-02-02",
+        "abstract": "\nThe first-order theory of rewriting (FORT) is a decidable theory for\nlinear variable-separated rewrite systems. The decision procedure is\nbased on tree automata technique and an inference system presented in\n\"Certifying Proofs in the First-Order Theory of Rewriting\".\nThis AFP entry provides a formalization of the underlying decision\nprocedure. Moreover it allows to generate a function that can verify\neach inference step via the code generation facility of Isabelle/HOL.\nAdditionally it contains the specification of a certificate language\n(that allows to state proofs in FORT) and a formalized function that\nallows to verify the validity of the proof. This gives software tool\nauthors, that implement the decision procedure, the possibility to\nverify their output.",
+        "licence": "BSD",
+        "dependencies": [
+            "Regular_Tree_Relations"
         ]
     },
     {
