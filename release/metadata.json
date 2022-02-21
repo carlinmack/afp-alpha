@@ -12090,7 +12090,10 @@
         ],
         "date": "2022-02-18",
         "abstract": "\nLet $F$ be a set of analytic functions on the complex plane such that,\nfor each $z\\in\\mathbb{C}$, the set $\\{f(z) \\mid f\\in F\\}$ is\ncountable; must then $F$ itself be countable? The answer is yes if the\nContinuum Hypothesis is false, i.e., if the cardinality of\n$\\mathbb{R}$ exceeds $\\aleph_1$. But if CH is true then such an $F$,\nof cardinality $\\aleph_1$, can be constructed by transfinite\nrecursion.  The formal proof illustrates reasoning about complex\nanalysis (analytic and homomorphic functions) and set theory\n(transfinite cardinalities) in a single setting. The mathematical text\ncomes from <em>Proofs from THE BOOK</em> by Aigner and\nZiegler.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Wetzels_Problem"
+        ]
     },
     {
         "session": "Noninterference_Ipurge_Unwinding",
@@ -25186,6 +25189,23 @@
             "NonInterferenceIntra",
             "LiftingIntra",
             "NonInterferenceWhile"
+        ]
+    },
+    {
+        "session": "Universal_Hash_Families",
+        "title": "Universal Hash Families",
+        "authors": [
+            "Emin Karayel"
+        ],
+        "topics": [
+            "Mathematics/Probability theory",
+            "Computer science/Algorithms"
+        ],
+        "date": "2022-02-20",
+        "abstract": "\nA <i>k</i>-universal hash family is a probability\nspace of functions, which have uniform distribution and form\n<i>k</i>-wise independent random variables. They can often be used\nin place of classic (or cryptographic) hash functions and allow the\nrigorous analysis of the performance of randomized algorithms and\ndata structures that rely on hash functions. In 1981\n<a href=\"https://doi.org/10.1016/0022-0000(81)90033-7\">Wegman and Carter</a>\nintroduced a generic construction for such families with arbitrary\n<i>k</i> using polynomials over a finite field. This entry\ncontains a formalization of them and establishes the property of\n<i>k</i>-universality. To be useful the formalization also provides\nan explicit construction of finite fields using the factor ring of\nintegers modulo a prime. Additionally, some generic results about\nindependent families are shown that might be of independent interest.",
+        "licence": "BSD",
+        "dependencies": [
+            "Interpolation_Polynomials_HOL_Algebra"
         ]
     },
     {
