@@ -14,11 +14,10 @@
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -36,41 +35,20 @@
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>C</span>onverting <span class=first>L</span>inear-<span class=first>T</span>ime <span class=first>T</span>emporal <span class=first>L</span>ogic to <span class=first>G</span>eneralized <span class=first>B</span>üchi <span class=first>A</span>utomata</h1>
-<div>
+</div></form><h1><span class=first>C</span>onverting <span class=first>L</span>inear-<span class=first>T</span>ime <span class=first>T</span>emporal <span class=first>L</span>ogic to <span class=first>G</span>eneralized <span class=first>B</span>üchi <span class=first>A</span>utomata</h1><div>
 <p><a href=/authors/alexander-schimpf>Alexander Schimpf</a> and <a href=/authors/peter-lammich>Peter Lammich</a>
-</p>
-<p class=date>28 May 2014</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>28 May 2014</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">We formalize linear-time temporal logic (LTL) and the algorithm by Gerth
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">We formalize linear-time temporal logic (LTL) and the algorithm by Gerth
 et al. to convert LTL formulas to generalized Büchi automata.
 We also formalize some syntactic rewrite rules that can be applied to
 optimize the LTL formula before conversion.
@@ -80,30 +58,21 @@ between stuttering equivalent runs to our setting.
 <p>
 We use the Isabelle Refinement and Collection framework, as well as the
 Autoref tool, to obtain a refined version of our algorithm, from which
-efficiently executable code can be extracted.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/cava_automata>CAVA_Automata</a></li><li><a href=/entries/ltl>LTL</a></li><li><a href=/entries/stuttering_equivalence>Stuttering_Equivalence</a></li></ul><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/automata-and-formal-languages>Computer science/Automata and formal languages</a></li></ul><h3>Related Entries</h3>
-<ul><li><a href=/entries/stuttering_equivalence>Stuttering_Equivalence</a></li><li><a href=/entries/ltl_to_dra>LTL_to_DRA</a></li><li><a href=/entries/ltl_normal_form>LTL_Normal_Form</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#LTL_to_GBA>LTL_to_GBA</a></li><li><a href=theories/#LTL_to_GBA_impl>LTL_to_GBA_impl</a></li><li><a href=theories/#All_Of_LTL_to_GBA>All_Of_LTL_to_GBA</a></li></ul>
-</main>
-<nav class=links>
+efficiently executable code can be extracted.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/cava_automata>CAVA_Automata</a></li><li><a href=/entries/ltl>LTL</a></li><li><a href=/entries/stuttering_equivalence>Stuttering_Equivalence</a></li></ul><h3>Topics</h3><ul><li><a href=/topics/computer-science/automata-and-formal-languages>Computer science/Automata and formal languages</a></li></ul><h3>Related Entries</h3><ul><li><a href=/entries/stuttering_equivalence>Stuttering_Equivalence</a></li><li><a href=/entries/ltl_to_dra>LTL_to_DRA</a></li><li><a href=/entries/ltl_normal_form>LTL_Normal_Form</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#LTL_to_GBA>LTL_to_GBA</a></li><li><a href=theories/#LTL_to_GBA_impl>LTL_to_GBA_impl</a></li><li><a href=theories/#All_Of_LTL_to_GBA>All_Of_LTL_to_GBA</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/LTL_to_GBA/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/LTL_to_GBA/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/LTL_to_GBA/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/LTL_to_GBA/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>LTL_to_GBA-AFP</p>
-<pre id=copyText>@article{LTL_to_GBA-AFP,
+<p style=display:none id=bibtexFileName>LTL_to_GBA-AFP</p><pre id=copyText>@article{LTL_to_GBA-AFP,
   author  = {Alexander Schimpf and Peter Lammich},
   title   = {Converting Linear-Time Temporal Logic to Generalized Büchi Automata},
   journal = {Archive of Formal Proofs},
@@ -112,19 +81,13 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/LTL_to_GBA.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-LTL_to_GBA-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-LTL_to_GBA-2021-02-23.tar.gz>
 afp-LTL_to_GBA-2021-02-23.tar.gz
 </a>
@@ -164,10 +127,4 @@ afp-LTL_to_GBA-2014-08-28.tar.gz
 <a href=https://isa-afp.org/release/afp-LTL_to_GBA-2014-05-29.tar.gz>
 afp-LTL_to_GBA-2014-05-29.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>

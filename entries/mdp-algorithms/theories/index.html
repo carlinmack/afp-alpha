@@ -13,8 +13,7 @@
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
 <link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div>
 <div>
@@ -22,9 +21,7 @@
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/entries/mdp-algorithms>Return to entry</a></li>
-</ul>
-<hr>
+<li><a href=/entries/mdp-algorithms>Return to entry</a></li></ul><hr>
 <ul><li><a href=#Value_Iteration>Value_Iteration</a>
 </li><li><a href=#Policy_Iteration>Policy_Iteration</a>
 </li><li><a href=#Modified_Policy_Iteration>Modified_Policy_Iteration</a>
@@ -38,38 +35,22 @@
 </li><li><a href=#Code_Inventory>Code_Inventory</a>
 </li><li><a href=#Code_Gridworld>Code_Gridworld</a>
 </li><li><a href=#Examples>Examples</a>
-</li>
-</ul>
-</div>
-<ul>
+</li></ul></div><ul>
 <li><a href=https://www.isa-afp.org/browser_info/current/AFP/MDP-Algorithms/outline.pdf>Proof
-outline</a></li>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/MDP-Algorithms/document.pdf>Proof
-document</a></li>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/MDP-Algorithms/session_graph.pdf>Theory dependencies</a></li>
-</ul>
-</div>
-</aside>
-<div class="content theories"><header>
+outline</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/MDP-Algorithms/document.pdf>Proof
+document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/MDP-Algorithms/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>S</span>ession <span class=first>M</span><span class=first>D</span><span class=first>P</span>-<span class=first>A</span>lgorithms</h1>
-<div>
-</div>
-</header><div id=banner data-id=0>
+</div></form><h1><span class=first>S</span>ession <span class=first>M</span><span class=first>D</span><span class=first>P</span>-<span class=first>A</span>lgorithms</h1><div>
+</div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
+</div><div><main>
 <div id=Examples><body>
 <div class=head>
-<h1>Theory Value_Iteration</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Value_Iteration</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Value_Iteration</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><span class=quoted><span>"</span><a href=../MDP-Rewards/MDP_reward.html><span>MDP-Rewards.MDP_reward</span></a><span>"</span></span><span>
@@ -422,9 +403,7 @@ document</a></li>
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>
 <body>
 <div class=head>
-<h1>Theory Policy_Iteration</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Policy_Iteration</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Policy_Iteration</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><span class=quoted><span>"</span><a href=../MDP-Rewards/MDP_reward.html><span>MDP-Rewards.MDP_reward</span></a><span>"</span></span><span>
@@ -742,12 +721,9 @@ document</a></li>
   </span><span class=keyword1><span class=command><span>by</span></span></span><span> </span><span class=operator><span>unfold_locales</span></span><span> </span><span class=main><span>(</span></span><span class=operator><span>auto</span></span><span> </span><span class=quasi_keyword><span>intro</span></span><span class=main><span class=main><span>:</span></span></span><span> </span><a class=entity_ref href=../../HOL/HOL/Orderings.html#Orderings.wellorder_class.LeastI|fact><span>LeastI</span></a><span class=main><span>)</span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples></head>
-<body>
+</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples></head><body>
 <div class=head>
-<h1>Theory Modified_Policy_Iteration</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Modified_Policy_Iteration</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Modified_Policy_Iteration</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> 
@@ -1490,9 +1466,7 @@ document</a></li>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>y>
 <div class=head>
-<h1>Theory Matrix_Util</h1>
-</div>
-<pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Matrix_Util</span><span>
+<h1>Theory Matrix_Util</h1></div><pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Matrix_Util</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><span class=quoted><span>"</span><a href=../../HOL/HOL-Analysis/Analysis.html><span>HOL-Analysis.Analysis</span></a><span>"</span></span><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 
@@ -1687,9 +1661,7 @@ document</a></li>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>body>
 <div class=head>
-<h1>Theory Blinfun_Matrix</h1>
-</div>
-<pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Blinfun_Matrix</span><span>
+<h1>Theory Blinfun_Matrix</h1></div><pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Blinfun_Matrix</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> 
     </span><span class=quoted><span>"</span><a href=../MDP-Rewards/Blinfun_Util.html><span>MDP-Rewards.Blinfun_Util</span></a><span>"</span></span><span> 
     </span><a href=Matrix_Util.html><span>Matrix_Util</span></a><span>
@@ -1930,9 +1902,7 @@ document</a></li>
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>
 <body>
 <div class=head>
-<h1>Theory Splitting_Methods</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Splitting_Methods</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Splitting_Methods</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> 
@@ -3979,9 +3949,7 @@ qed
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>>
 <div class=head>
-<h1>Theory Algorithms</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Algorithms</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Algorithms</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
@@ -3991,9 +3959,7 @@ qed
     </span><a href=Splitting_Methods.html><span>Splitting_Methods</span></a><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>div class="head">
-<h1>Theory Code_DP</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Code_DP</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_DP</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> 
@@ -4519,9 +4485,7 @@ qed
 </span><span class=keyword1><span class=command><span>declare</span></span></span><span> </span><a class=entity_ref href=../Gauss_Jordan/Gauss_Jordan_PA_IArrays.html#Gauss_Jordan_PA_IArrays.matrix_to_iarray_fst_Gauss_Jordan_PA|fact><span>matrix_to_iarray_fst_Gauss_Jordan_PA</span></a><span class=main><span>[</span></span><span class=operator><span>code_unfold</span></span><span class=main><span>]</span></span><span> 
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples><div class=head>
-<h1>Theory Code_Mod</h1>
-</div>
-<pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_Mod</span><span>
+<h1>Theory Code_Mod</h1></div><pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_Mod</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Code_DP.html><span>Code_DP</span></a><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 </span><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Code Generation for Concrete Finite MDPs</span><span>âº</span></span></span><span>
@@ -4631,12 +4595,9 @@ value "mod_MDP_vi_gs_policy (Î»_::(2Ã2). return_pmf (1::2)) (Î»_. {}) (Î
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
 </span></pre></div><div id=Examples>le>
-</head>
-<body>
+</head><body>
 <div class=head>
-<h1>Theory Code_Real_Approx_By_Float_Fix</h1>
-</div>
-<pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_Real_Approx_By_Float_Fix</span><span>
+<h1>Theory Code_Real_Approx_By_Float_Fix</h1></div><pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_Real_Approx_By_Float_Fix</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
   </span><span class=quoted><span>"</span><a href=../../HOL/HOL-Library/Code_Real_Approx_By_Float.html><span>HOL-Library.Code_Real_Approx_By_Float</span></a><span>"</span></span><span>
   </span><span class=quoted><span>"</span><a href=../Gauss_Jordan/Code_Real_Approx_By_Float_Haskell.html><span>Gauss_Jordan.Code_Real_Approx_By_Float_Haskell</span></a><span>"</span></span><span>
@@ -4696,9 +4657,7 @@ value "mod_MDP_vi_gs_policy (Î»_::(2Ã2). return_pmf (1::2)) (Î»_. {}) (Î
 </span><span class=comment1><span>(</span><span>*</span><span>&gt;</span><span>*</span><span>)</span></span><span>
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>body>
 <div class=head>
-<h1>Theory Code_Inventory</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Code_Inventory</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_Inventory</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> 
@@ -4896,9 +4855,7 @@ value "benchmark_mpi ()"
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples>body>
 <div class=head>
-<h1>Theory Code_Gridworld</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Code_Gridworld</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Code_Gridworld</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> 
@@ -5040,18 +4997,11 @@ value "benchmark_pi"
 </span><span class=keyword1><span class=command><span>export_code</span></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_gs|const><span>benchmark_gs</span></a></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_vi|const><span>benchmark_vi</span></a></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_mpi|const><span>benchmark_mpi</span></a></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_pi|const><span>benchmark_pi</span></a></span></span><span> </span><span class=keyword2><span class=keyword><span>in</span></span></span><span> Haskell </span><span class=keyword2><span class=keyword><span>module_name</span></span></span><span> DP</span><span>
 </span><span class=keyword1><span class=command><span>export_code</span></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_gs|const><span>benchmark_gs</span></a></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_vi|const><span>benchmark_vi</span></a></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_mpi|const><span>benchmark_mpi</span></a></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Code_Gridworld.html#Code_Gridworld.benchmark_pi|const><span>benchmark_pi</span></a></span></span><span> </span><span class=keyword2><span class=keyword><span>in</span></span></span><span> SML </span><span class=keyword2><span class=keyword><span>module_name</span></span></span><span> DP</span><span>
 </span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Examples><div class=head>
-<h1>Theory Examples</h1>
-</div>
-<pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
+<h1>Theory Examples</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span> Author: Maximilian SchÃ¤ffeler </span><span>*</span><span>)</span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Examples</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
     </span><a href=Code_Inventory.html><span>Code_Inventory</span></a><span>
     </span><a href=Code_Gridworld.html><span>Code_Gridworld</span></a><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
-</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div>
-</main>
-</div>
-</div>
-</body>
-</html>
+</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div></main></div></div></body></html>

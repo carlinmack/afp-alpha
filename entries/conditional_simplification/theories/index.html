@@ -13,8 +13,7 @@
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
 <link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div>
 <div>
@@ -22,9 +21,7 @@
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/entries/conditional_simplification>Return to entry</a></li>
-</ul>
-<hr>
+<li><a href=/entries/conditional_simplification>Return to entry</a></li></ul><hr>
 <ul><li><a href=#CS_Tools>CS_Tools</a>
 </li><li><a href=#files%2fMore_Tactical.ML>files/More_Tactical.ML</a>
 </li><li><a href=#files%2fCS_Stats.ML>files/CS_Stats.ML</a>
@@ -35,38 +32,22 @@
 </li><li><a href=#Reference_Prerequisites>Reference_Prerequisites</a>
 </li><li><a href=#files%2fISABELLE_HOME%2fsrc%2fDoc%2fantiquote_setup.ML>files/ISABELLE_HOME/src/Doc/antiquote_setup.ML</a>
 </li><li><a href=#CS_Reference>CS_Reference</a>
-</li>
-</ul>
-</div>
-<ul>
+</li></ul></div><ul>
 <li><a href=https://www.isa-afp.org/browser_info/current/AFP/Conditional_Simplification/outline.pdf>Proof
-outline</a></li>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Conditional_Simplification/document.pdf>Proof
-document</a></li>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Conditional_Simplification/session_graph.pdf>Theory dependencies</a></li>
-</ul>
-</div>
-</aside>
-<div class="content theories"><header>
+outline</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Conditional_Simplification/document.pdf>Proof
+document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Conditional_Simplification/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>S</span>ession <span class=first>C</span>onditional_<span class=first>S</span>implification</h1>
-<div>
-</div>
-</header><div id=banner data-id=0>
+</div></form><h1><span class=first>S</span>ession <span class=first>C</span>onditional_<span class=first>S</span>implification</h1><div>
+</div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
+</div><div><main>
 <div id=CS_Tools>
 <div class=head>
-<h1>Theory CS_Tools</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>Theory CS_Tools</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹Import›</span></span>
 <span class=keyword1><span class=command>theory</span></span> CS_Tools
@@ -85,12 +66,9 @@ document</a></li>
 
 <span class=keyword1><span class=command>ML_file</span></span> <span class=quoted>"CS_Stats.ML"</span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre>
-</div><div id=files/More_Tactical.ML>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=files/More_Tactical.ML>
 <div class=head>
-<h1>File ‹More_Tactical.ML›</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>File ‹More_Tactical.ML›</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=keyword1><span class=keyword>signature</span></span> <span class=entity>TACTICAL</span> <span class=main>=</span>
 <span class=keyword2><span class=keyword>sig</span></span>
@@ -108,12 +86,9 @@ document</a></li>
 
 <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
 
-<span class=keyword3><span class=keyword>open</span></span> Tactical<span class=main>;</span></pre>
-</div><div id=files/CS_Stats.ML>
+<span class=keyword3><span class=keyword>open</span></span> Tactical<span class=main>;</span></pre></div><div id=files/CS_Stats.ML>
 <div class=head>
-<h1>File ‹CS_Stats.ML›</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>File ‹CS_Stats.ML›</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=keyword1><span class=keyword>signature</span></span> <span class=entity>CS_STATS</span> <span class=main>=</span>
 <span class=keyword2><span class=keyword>sig</span></span>
@@ -134,12 +109,9 @@ document</a></li>
     <span class=keyword1><span class=keyword>val</span></span> <span class=entity>min</span> <span class=main>=</span> fold <span class=main>(</span>curry Real.min<span class=main>)</span> <span class=entity>xs</span> <span class=entity>max</span>
   <span class=keyword2><span class=keyword>in</span></span> <span class=main>[</span><span class=entity>mean</span><span class=main>,</span> <span class=entity>variance</span><span class=main>,</span> <span class=entity>min</span><span class=main>,</span> <span class=entity>max</span><span class=main>]</span> <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
 
-<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre>
-</div><div id=IHOL_CS>
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre></div><div id=IHOL_CS>
 <div class=head>
-<h1>Theory IHOL_CS</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>Theory IHOL_CS</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹<span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>IHOL_CS›</span></span></span></span>›</span></span>
 <span class=keyword1><span class=command>theory</span></span> IHOL_CS
@@ -151,12 +123,9 @@ document</a></li>
 <span class=keyword1><span class=command>ML_file</span></span> <span class=quoted>"CS_UM.ML"</span>
 <span class=keyword1><span class=command>ML_file</span></span> <span class=quoted>"CS_Cond_Simp.ML"</span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre>
-</div><div id=files/CS_TimeIt.ML>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=files/CS_TimeIt.ML>
 <div class=head>
-<h1>File ‹CS_TimeIt.ML›</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>File ‹CS_TimeIt.ML›</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=comment1>(*
 The infrastructure of CS_TimeIt builds upon and extends the functionality of
@@ -261,12 +230,9 @@ or alternative functionality.
       <span class=inner_quoted>"higher order timing method"</span>
   <span class=main>)</span><span class=main>;</span>
 
-<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre>
-</div><div id=files/CS_UM.ML>
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre></div><div id=files/CS_UM.ML>
 <div class=head>
-<h1>File ‹CS_UM.ML›</h1>
-</div>
-<pre class=source><span class=keyword1><span class=keyword>signature</span></span> <span class=entity>CS_UM</span> <span class=main>=</span>
+<h1>File ‹CS_UM.ML›</h1></div><pre class=source><span class=keyword1><span class=keyword>signature</span></span> <span class=entity>CS_UM</span> <span class=main>=</span>
 <span class=keyword2><span class=keyword>sig</span></span>
 
 <span class=keyword1><span class=keyword>val</span></span> match_inst_rec <span class=main>:</span>
@@ -366,12 +332,9 @@ from the textbook
 
 <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
 
-<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre>
-</div><div id=files/CS_Cond_Simp.ML>
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre></div><div id=files/CS_Cond_Simp.ML>
 <div class=head>
-<h1>File ‹CS_Cond_Simp.ML›</h1>
-</div>
-<pre class=source><span class=keyword1><span class=keyword>signature</span></span> <span class=entity>CS_COND_SIMP</span> <span class=main>=</span>
+<h1>File ‹CS_Cond_Simp.ML›</h1></div><pre class=source><span class=keyword1><span class=keyword>signature</span></span> <span class=entity>CS_COND_SIMP</span> <span class=main>=</span>
 <span class=keyword2><span class=keyword>sig</span></span>
 <span class=keyword1><span class=keyword>datatype</span></span> <span class=entity>match</span> <span class=main>=</span> <span class=entity>mdefault</span> <span class=main>|</span> <span class=entity>mfull</span><span class=main>;</span>
 <span class=keyword1><span class=keyword>datatype</span></span> <span class=entity>ist</span> <span class=main>=</span> <span class=entity>ist_simple</span> <span class=main>|</span> <span class=entity>ist_compound</span><span class=main>;</span>
@@ -961,12 +924,9 @@ main distribution of Isabelle2020.*)</span>
       <span class=inner_quoted>"conditional simplification of premises"</span>
   <span class=main>)</span><span class=main>;</span>
 
-<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre>
-</div><div id=Reference_Prerequisites>
+<span class=keyword2><span class=keyword>end</span></span><span class=main>;</span></pre></div><div id=Reference_Prerequisites>
 <div class=head>
-<h1>Theory Reference_Prerequisites</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>Theory Reference_Prerequisites</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=keyword1><span class=command>section</span></span><span class=quoted><span class=plain_text>‹Reference prerequisites›</span></span>
 <span class=keyword1><span class=command>theory</span></span> Reference_Prerequisites
@@ -980,12 +940,9 @@ main distribution of Isabelle2020.*)</span>
 <span class=keyword1><span class=command>notation</span></span> rel_fun <span class=main>(</span><span class=keyword2><span class=keyword>infixr</span></span> <span class=quoted>"<span class=keyword1>===&gt;</span>"</span> 55<span class=main>)</span>
 <span class=keyword1><span class=command>notation</span></span> map_fun <span class=main>(</span><span class=keyword2><span class=keyword>infixr</span></span> <span class=quoted>"<span class=keyword1>---&gt;</span>"</span> 55<span class=main>)</span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre>
-</div><div id=files/ISABELLE_HOME/src/Doc/antiquote_setup.ML>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=files/ISABELLE_HOME/src/Doc/antiquote_setup.ML>
 <div class=head>
-<h1>File ‹~~/src/Doc/antiquote_setup.ML›</h1>
-</div>
-<pre class=source><span class=comment1>(*  Title:      Doc/antiquote_setup.ML
+<h1>File ‹~~/src/Doc/antiquote_setup.ML›</h1></div><pre class=source><span class=comment1>(*  Title:      Doc/antiquote_setup.ML
     Author:     Makarius
 
 Auxiliary antiquotations for the Isabelle manuals.
@@ -1195,12 +1152,9 @@ Auxiliary antiquotations for the Isabelle manuals.
 <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
 
 <span class=keyword2><span class=keyword>end</span></span><span class=main>;</span>
-</pre>
-</div><div id=CS_Reference>
+</pre></div><div id=CS_Reference>
 <div class=head>
-<h1>Theory CS_Reference</h1>
-</div>
-<pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
+<h1>Theory CS_Reference</h1></div><pre class=source><span class=comment1>(* Copyright 2021 (C) Mihails Milehins *)</span>
 
 <span class=keyword1><span class=command>theory</span></span> CS_Reference
   <span class=keyword2><span class=keyword>imports</span></span>
@@ -1397,10 +1351,4 @@ quantifiers, although a limited and highly experimental capacity for
 the first-order reasoning is provided.
 ›</span></span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre>
-</div>
-</main>
-</div>
-</div>
-</body>
-</html>
+<span class=keyword2><span class=keyword>end</span></span></pre></div></main></div></div></body></html>

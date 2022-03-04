@@ -16,11 +16,10 @@ due to Cooper, Harvey and Kennedy. It gives a specification of computing..."><me
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -38,71 +37,41 @@ due to Cooper, Harvey and Kennedy. It gives a specification of computing..."><me
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>A</span> <span class=first>D</span>ata <span class=first>F</span>low <span class=first>A</span>nalysis <span class=first>A</span>lgorithm for <span class=first>C</span>omputing <span class=first>D</span>ominators</h1>
-<div>
+</div></form><h1><span class=first>A</span> <span class=first>D</span>ata <span class=first>F</span>low <span class=first>A</span>nalysis <span class=first>A</span>lgorithm for <span class=first>C</span>omputing <span class=first>D</span>ominators</h1><div>
 <p><a href=/authors/nan-jiang>Nan Jiang</a>
-</p>
-<p class=date>5 September 2021</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>5 September 2021</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">This entry formalises the fast iterative algorithm for computing dominators
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">This entry formalises the fast iterative algorithm for computing dominators
 due to Cooper, Harvey and Kennedy. It gives a specification of computing
 dominators on a control
 flow graph where each node refers to its reverse post order number. A
 semilattice of reversed-ordered list which represents dominators is
 built and a Kildall-style algorithm on the semilattice is defined for
 computing dominators. Finally the soundness and completeness of the
-algorithm are proved w.r.t. the specification.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/list-index>List-Index</a></li><li><a href=/entries/jinja>Jinja</a></li></ul><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/programming-languages/static-analysis>Computer science/Programming languages/Static analysis</a></li></ul><h3>Related Entries</h3>
-<ul><li><a href=/entries/jinjadci>JinjaDCI</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Cfg>Cfg</a></li><li><a href=theories/#Semilat>Semilat</a></li><li><a href=theories/#Sorted_Less2>Sorted_Less2</a></li><li><a href=theories/#Sorted_List_Operations2>Sorted_List_Operations2</a></li><li><a href=theories/#Dom_Semi_List>Dom_Semi_List</a></li><li><a href=theories/#Listn>Listn</a></li><li><a href=theories/#Dom_Kildall>Dom_Kildall</a></li><li><a href=theories/#Dom_Kildall_Property>Dom_Kildall_Property</a></li><li><a href=theories/#Dom_Kildall_Correct>Dom_Kildall_Correct</a></li></ul>
-</main>
-<nav class=links>
+algorithm are proved w.r.t. the specification.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/list-index>List-Index</a></li><li><a href=/entries/jinja>Jinja</a></li></ul><h3>Topics</h3><ul><li><a href=/topics/computer-science/programming-languages/static-analysis>Computer science/Programming languages/Static analysis</a></li></ul><h3>Related Entries</h3><ul><li><a href=/entries/jinjadci>JinjaDCI</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Cfg>Cfg</a></li><li><a href=theories/#Semilat>Semilat</a></li><li><a href=theories/#Sorted_Less2>Sorted_Less2</a></li><li><a href=theories/#Sorted_List_Operations2>Sorted_List_Operations2</a></li><li><a href=theories/#Dom_Semi_List>Dom_Semi_List</a></li><li><a href=theories/#Listn>Listn</a></li><li><a href=theories/#Dom_Kildall>Dom_Kildall</a></li><li><a href=theories/#Dom_Kildall_Property>Dom_Kildall_Property</a></li><li><a href=theories/#Dom_Kildall_Correct>Dom_Kildall_Correct</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/Dominance_CHK/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Dominance_CHK/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Dominance_CHK/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Dominance_CHK/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>Dominance_CHK-AFP</p>
-<pre id=copyText>@article{Dominance_CHK-AFP,
+<p style=display:none id=bibtexFileName>Dominance_CHK-AFP</p><pre id=copyText>@article{Dominance_CHK-AFP,
   author  = {Nan Jiang},
   title   = {A data flow analysis algorithm for computing dominators},
   journal = {Archive of Formal Proofs},
@@ -111,26 +80,14 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/Dominance_CHK.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Dominance_CHK-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-Dominance_CHK-2021-09-07.tar.gz>
 afp-Dominance_CHK-2021-09-07.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>

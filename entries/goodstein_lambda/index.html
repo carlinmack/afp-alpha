@@ -16,11 +16,10 @@ function G in plain &amp;lambda;-calculus, linked to a concise, self-contained..
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -38,69 +37,40 @@ function G in plain &amp;lambda;-calculus, linked to a concise, self-contained..
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>I</span>mplementing the <span class=first>G</span>oodstein <span class=first>F</span>unction in &<span class=first>L</span>ambda;-<span class=first>C</span>alculus</h1>
-<div>
+</div></form><h1><span class=first>I</span>mplementing the <span class=first>G</span>oodstein <span class=first>F</span>unction in &<span class=first>L</span>ambda;-<span class=first>C</span>alculus</h1><div>
 <p><a href=/authors/bertram-felgenhauer>Bertram Felgenhauer</a>
-</p>
-<p class=date>21 February 2020</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>21 February 2020</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">In this formalization, we develop an implementation of the Goodstein
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">In this formalization, we develop an implementation of the Goodstein
 function G in plain &#955;-calculus, linked to a concise, self-contained
 specification. The implementation works on a Church-encoded
 representation of countable ordinals. The initial conversion to
 hereditary base 2 is not covered, but the material is sufficient to
 compute the particular value G(16), and easily extends to other fixed
-arguments.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3>
-<ul><li><a href=/topics/logic/rewriting>Logic/Rewriting</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Goodstein_Lambda>Goodstein_Lambda</a></li></ul>
-</main>
-<nav class=links>
+arguments.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3><ul><li><a href=/topics/logic/rewriting>Logic/Rewriting</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Goodstein_Lambda>Goodstein_Lambda</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Goodstein_Lambda/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>Goodstein_Lambda-AFP</p>
-<pre id=copyText>@article{Goodstein_Lambda-AFP,
+<p style=display:none id=bibtexFileName>Goodstein_Lambda-AFP</p><pre id=copyText>@article{Goodstein_Lambda-AFP,
   author  = {Bertram Felgenhauer},
   title   = {Implementing the Goodstein Function in λ-Calculus},
   journal = {Archive of Formal Proofs},
@@ -109,19 +79,13 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/Goodstein_Lambda.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Goodstein_Lambda-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-Goodstein_Lambda-2021-02-23.tar.gz>
 afp-Goodstein_Lambda-2021-02-23.tar.gz
 </a>
@@ -133,10 +97,4 @@ afp-Goodstein_Lambda-2020-04-18.tar.gz
 <a href=https://isa-afp.org/release/afp-Goodstein_Lambda-2020-02-24.tar.gz>
 afp-Goodstein_Lambda-2020-02-24.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>

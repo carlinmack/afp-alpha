@@ -14,11 +14,10 @@
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -36,41 +35,20 @@
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>A</span> <span class=first>M</span>eta-<span class=first>M</span>odel for the <span class=first>I</span>sabelle <span class=first>A</span><span class=first>P</span><span class=first>I</span></h1>
-<div>
+</div></form><h1><span class=first>A</span> <span class=first>M</span>eta-<span class=first>M</span>odel for the <span class=first>I</span>sabelle <span class=first>A</span><span class=first>P</span><span class=first>I</span></h1><div>
 <p><a href=/authors/fr%C3%A9d%C3%A9ric-tuong>Frédéric Tuong</a> and <a href=/authors/burkhart-wolff>Burkhart Wolff</a>
-</p>
-<p class=date>16 September 2015</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>16 September 2015</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">We represent a theory <i>of</i> (a fragment of) Isabelle/HOL <i>in</i>
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">We represent a theory <i>of</i> (a fragment of) Isabelle/HOL <i>in</i>
 Isabelle/HOL. The purpose of this exercise is to write packages for
 domain-specific specifications such as class models, B-machines, ...,
 and generally speaking, any domain-specific languages whose
@@ -100,29 +78,21 @@ as well as the generation of ".thy"-files for debugging purposes.
 Gained experience from this project shows that the compiled code is sufficiently
 efficient for practical purposes while being based on a formal <i>model</i>
 on which properties of the package can be proven such as termination of certain
-transformations, correctness, etc.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/programming-languages/language-definitions>Computer science/Programming languages/Language definitions</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Antiquote_Setup>Antiquote_Setup</a></li><li><a href=theories/#files/ISABELLE_HOME/src/Doc/antiquote_setup.ML>files/ISABELLE_HOME/src/Doc/antiquote_setup.ML</a></li><li><a href=theories/#Isabelle_Cartouche_Examples>Isabelle_Cartouche_Examples</a></li><li><a href=theories/#Isabelle_Main0>Isabelle_Main0</a></li><li><a href=theories/#Isabelle_code_target>Isabelle_code_target</a></li><li><a href=theories/#Isabelle_code_runtime>Isabelle_code_runtime</a></li><li><a href=theories/#Isabelle_Main1>Isabelle_Main1</a></li><li><a href=theories/#Isabelle_typedecl>Isabelle_typedecl</a></li><li><a href=theories/#Isabelle_Main2>Isabelle_Main2</a></li><li><a href=theories/#Init>Init</a></li><li><a href=theories/#Meta_Pure>Meta_Pure</a></li><li><a href=theories/#Parser_init>Parser_init</a></li><li><a href=theories/#Parser_Pure>Parser_Pure</a></li><li><a href=theories/#Meta_SML>Meta_SML</a></li><li><a href=theories/#Meta_Isabelle>Meta_Isabelle</a></li><li><a href=theories/#Printer_init>Printer_init</a></li><li><a href=theories/#Printer_Pure>Printer_Pure</a></li><li><a href=theories/#Printer_SML>Printer_SML</a></li><li><a href=theories/#Printer_Isabelle>Printer_Isabelle</a></li><li><a href=theories/#Toy_Library_Static>Toy_Library_Static</a></li><li><a href=theories/#Init_rbt>Init_rbt</a></li><li><a href=theories/#Meta_Toy>Meta_Toy</a></li><li><a href=theories/#Meta_Toy_extended>Meta_Toy_extended</a></li><li><a href=theories/#Meta_META>Meta_META</a></li><li><a href=theories/#Core_init>Core_init</a></li><li><a href=theories/#Floor1_infra>Floor1_infra</a></li><li><a href=theories/#Floor1_access>Floor1_access</a></li><li><a href=theories/#Floor1_examp>Floor1_examp</a></li><li><a href=theories/#Floor2_examp>Floor2_examp</a></li><li><a href=theories/#Floor1_ctxt>Floor1_ctxt</a></li><li><a href=theories/#Core>Core</a></li><li><a href=theories/#Parser_Toy>Parser_Toy</a></li><li><a href=theories/#Parser_Toy_extended>Parser_Toy_extended</a></li><li><a href=theories/#Parser_META>Parser_META</a></li><li><a href=theories/#Printer_Toy>Printer_Toy</a></li><li><a href=theories/#Printer_Toy_extended>Printer_Toy_extended</a></li><li><a href=theories/#Printer_META>Printer_META</a></li><li><a href=theories/#Printer>Printer</a></li><li><a href=theories/#Generator_static>Generator_static</a></li><li><a href=theories/#Generator_dynamic_sequential>Generator_dynamic_sequential</a></li><li><a href=theories/#Design_deep>Design_deep</a></li><li><a href=theories/#Toy_Library>Toy_Library</a></li><li><a href=theories/#Design_shallow>Design_shallow</a></li><li><a href=theories/#Rail>Rail</a></li><li><a href=theories/#Design_generated>Design_generated</a></li><li><a href=theories/#Design_generated_generated>Design_generated_generated</a></li></ul>
-</main>
-<nav class=links>
+transformations, correctness, etc.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3><ul><li><a href=/topics/computer-science/programming-languages/language-definitions>Computer science/Programming languages/Language definitions</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Antiquote_Setup>Antiquote_Setup</a></li><li><a href=theories/#files/ISABELLE_HOME/src/Doc/antiquote_setup.ML>files/ISABELLE_HOME/src/Doc/antiquote_setup.ML</a></li><li><a href=theories/#Isabelle_Cartouche_Examples>Isabelle_Cartouche_Examples</a></li><li><a href=theories/#Isabelle_Main0>Isabelle_Main0</a></li><li><a href=theories/#Isabelle_code_target>Isabelle_code_target</a></li><li><a href=theories/#Isabelle_code_runtime>Isabelle_code_runtime</a></li><li><a href=theories/#Isabelle_Main1>Isabelle_Main1</a></li><li><a href=theories/#Isabelle_typedecl>Isabelle_typedecl</a></li><li><a href=theories/#Isabelle_Main2>Isabelle_Main2</a></li><li><a href=theories/#Init>Init</a></li><li><a href=theories/#Meta_Pure>Meta_Pure</a></li><li><a href=theories/#Parser_init>Parser_init</a></li><li><a href=theories/#Parser_Pure>Parser_Pure</a></li><li><a href=theories/#Meta_SML>Meta_SML</a></li><li><a href=theories/#Meta_Isabelle>Meta_Isabelle</a></li><li><a href=theories/#Printer_init>Printer_init</a></li><li><a href=theories/#Printer_Pure>Printer_Pure</a></li><li><a href=theories/#Printer_SML>Printer_SML</a></li><li><a href=theories/#Printer_Isabelle>Printer_Isabelle</a></li><li><a href=theories/#Toy_Library_Static>Toy_Library_Static</a></li><li><a href=theories/#Init_rbt>Init_rbt</a></li><li><a href=theories/#Meta_Toy>Meta_Toy</a></li><li><a href=theories/#Meta_Toy_extended>Meta_Toy_extended</a></li><li><a href=theories/#Meta_META>Meta_META</a></li><li><a href=theories/#Core_init>Core_init</a></li><li><a href=theories/#Floor1_infra>Floor1_infra</a></li><li><a href=theories/#Floor1_access>Floor1_access</a></li><li><a href=theories/#Floor1_examp>Floor1_examp</a></li><li><a href=theories/#Floor2_examp>Floor2_examp</a></li><li><a href=theories/#Floor1_ctxt>Floor1_ctxt</a></li><li><a href=theories/#Core>Core</a></li><li><a href=theories/#Parser_Toy>Parser_Toy</a></li><li><a href=theories/#Parser_Toy_extended>Parser_Toy_extended</a></li><li><a href=theories/#Parser_META>Parser_META</a></li><li><a href=theories/#Printer_Toy>Printer_Toy</a></li><li><a href=theories/#Printer_Toy_extended>Printer_Toy_extended</a></li><li><a href=theories/#Printer_META>Printer_META</a></li><li><a href=theories/#Printer>Printer</a></li><li><a href=theories/#Generator_static>Generator_static</a></li><li><a href=theories/#Generator_dynamic_sequential>Generator_dynamic_sequential</a></li><li><a href=theories/#Design_deep>Design_deep</a></li><li><a href=theories/#Toy_Library>Toy_Library</a></li><li><a href=theories/#Design_shallow>Design_shallow</a></li><li><a href=theories/#Rail>Rail</a></li><li><a href=theories/#Design_generated>Design_generated</a></li><li><a href=theories/#Design_generated_generated>Design_generated_generated</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/Isabelle_Meta_Model/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Isabelle_Meta_Model/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Isabelle_Meta_Model/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Isabelle_Meta_Model/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>Isabelle_Meta_Model-AFP</p>
-<pre id=copyText>@article{Isabelle_Meta_Model-AFP,
+<p style=display:none id=bibtexFileName>Isabelle_Meta_Model-AFP</p><pre id=copyText>@article{Isabelle_Meta_Model-AFP,
   author  = {Frédéric Tuong and Burkhart Wolff},
   title   = {A Meta-Model for the Isabelle API},
   journal = {Archive of Formal Proofs},
@@ -131,19 +101,13 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/Isabelle_Meta_Model.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Isabelle_Meta_Model-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-Isabelle_Meta_Model-2021-02-23.tar.gz>
 afp-Isabelle_Meta_Model-2021-02-23.tar.gz
 </a>
@@ -179,10 +143,4 @@ afp-Isabelle_Meta_Model-2015-09-28.tar.gz
 <a href=https://isa-afp.org/release/afp-Isabelle_Meta_Model-2015-09-25.tar.gz>
 afp-Isabelle_Meta_Model-2015-09-25.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>

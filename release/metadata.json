@@ -25206,6 +25206,12 @@
         "licence": "BSD",
         "dependencies": [
             "Interpolation_Polynomials_HOL_Algebra"
+        ],
+        "theories": [
+            "Definitions",
+            "Preliminary_Results",
+            "Carter_Wegman_Hash_Family",
+            "Field"
         ]
     },
     {
@@ -25423,6 +25429,22 @@
             "Simplex",
             "Simplex_Incremental"
         ]
+    },
+    {
+        "session": "Transitive_Models",
+        "title": "Transitive Models of Fragments of ZFC",
+        "authors": [
+            "Emmanuel Gunther",
+            "Miguel Pagano",
+            "Pedro Sánchez Terraf",
+            "and Matías Steinberg"
+        ],
+        "topics": [
+            "Logic/Set theory"
+        ],
+        "date": "2022-03-03",
+        "abstract": "\nWe extend the ZF-Constructibility library by relativizing theories of\nthe Isabelle/ZF and Delta System Lemma sessions to a transitive class.\nWe also relativize Paulson's work on Aleph and our former\ntreatment of the Axiom of Dependent Choices. This work is a\nprerrequisite to our formalization of the independence of the\nContinuum Hypothesis.",
+        "licence": "BSD"
     },
     {
         "session": "Perron_Frobenius",

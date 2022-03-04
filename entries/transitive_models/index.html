@@ -1,0 +1,88 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Transitive Models of Fragments of ZFC - Archive of Formal Proofs</title><meta name=description content="
+We extend the ZF-Constructibility library by relativizing theories of
+the Isabelle/ZF and Delta System Lemma sessions to a transitive class.
+We also..."><meta property="og:title" content="Transitive Models of Fragments of ZFC">
+<meta property="og:description" content>
+<meta property="og:type" content="article">
+<meta property="og:url" content="/entries/transitive_models/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="entries">
+<meta property="article:published_time" content="2022-03-03T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-03-03T00:00:00+00:00"><meta property="og:site_name" content="Archive of Formal Proofs">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="/images/afp.png">
+<meta name=twitter:title content="Transitive Models of Fragments of ZFC">
+<meta name=twitter:description content>
+<link rel=stylesheet type=text/css href=/css/front.min.css>
+<link rel=icon href=/images/favicon.ico type=image/icon>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
+<script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
+<script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
+<aside>
+<div id=menuToggle>
+<input id=toggle type=checkbox>
+<label for=toggle>
+<span>menu</span>
+<img src=/images/menu.svg alt=Menu>
+</label>
+<a href=/ class=logoLink>
+<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
+</a>
+<a href=/search><img src=/images/search.svg alt=Search></a>
+<nav id=menu>
+<div>
+<a href=/ class=logoLink>
+<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
+</a>
+<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
+<li><a href=/contribution/>Contribution</a>
+</li></ul></nav></div></aside><div class="content entries"><header>
+<form action=/search>
+<div class=form-container>
+<input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
+<datalist id=autocomplete>
+</datalist>
+</div></form><h1><span class=first>T</span>ransitive <span class=first>M</span>odels of <span class=first>F</span>ragments of <span class=first>Z</span><span class=first>F</span><span class=first>C</span></h1><div>
+<p><a href=/authors/emmanuel-gunther>Emmanuel Gunther</a>, <a href=/authors/miguel-pagano>Miguel Pagano</a>, <a href=/authors/pedro-s%C3%A1nchez-terraf>Pedro Sánchez Terraf</a> and <a href=/authors/and-mat%C3%ADas-steinberg>and Matías Steinberg</a>
+</p><p class=date>3 March 2022</p></div></header><div id=banner data-id=0>
+<p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">We extend the ZF-Constructibility library by relativizing theories of
+the Isabelle/ZF and Delta System Lemma sessions to a transitive class.
+We also relativize Paulson's work on Aleph and our former
+treatment of the Axiom of Dependent Choices. This work is a
+prerrequisite to our formalization of the independence of the
+Continuum Hypothesis.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3><ul><li><a href=/topics/logic/set-theory>Logic/Set theory</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Nat_Miscellanea>Nat_Miscellanea</a></li><li><a href=theories/#ZF_Miscellanea>ZF_Miscellanea</a></li><li><a href=theories/#Renaming>Renaming</a></li><li><a href=theories/#Utils>Utils</a></li><li><a href=theories/#files/Utils.ml>files/Utils.ml</a></li><li><a href=theories/#Renaming_Auto>Renaming_Auto</a></li><li><a href=theories/#files/Renaming_ML.ml>files/Renaming_ML.ml</a></li><li><a href=theories/#M_Basic_No_Repl>M_Basic_No_Repl</a></li><li><a href=theories/#Recursion_Thms>Recursion_Thms</a></li><li><a href=theories/#Synthetic_Definition>Synthetic_Definition</a></li><li><a href=theories/#Internalizations>Internalizations</a></li><li><a href=theories/#Least>Least</a></li><li><a href=theories/#Higher_Order_Constructs>Higher_Order_Constructs</a></li><li><a href=theories/#Relativization>Relativization</a></li><li><a href=theories/#files/Relativization_Database.ml>files/Relativization_Database.ml</a></li><li><a href=theories/#Discipline_Base>Discipline_Base</a></li><li><a href=theories/#Arities>Arities</a></li><li><a href=theories/#Discipline_Function>Discipline_Function</a></li><li><a href=theories/#Lambda_Replacement>Lambda_Replacement</a></li><li><a href=theories/#Discipline_Cardinal>Discipline_Cardinal</a></li><li><a href=theories/#Univ_Relative>Univ_Relative</a></li><li><a href=theories/#Cardinal_Relative>Cardinal_Relative</a></li><li><a href=theories/#CardinalArith_Relative>CardinalArith_Relative</a></li><li><a href=theories/#Aleph_Relative>Aleph_Relative</a></li><li><a href=theories/#Cardinal_AC_Relative>Cardinal_AC_Relative</a></li><li><a href=theories/#FiniteFun_Relative>FiniteFun_Relative</a></li><li><a href=theories/#ZF_Library_Relative>ZF_Library_Relative</a></li><li><a href=theories/#Replacement_Lepoll>Replacement_Lepoll</a></li><li><a href=theories/#Cardinal_Library_Relative>Cardinal_Library_Relative</a></li><li><a href=theories/#Delta_System_Relative>Delta_System_Relative</a></li><li><a href=theories/#Pointed_DC_Relative>Pointed_DC_Relative</a></li><li><a href=theories/#Partial_Functions_Relative>Partial_Functions_Relative</a></li></ul></main><nav class=links>
+<a class=popUpButton href=#citePopUp>Cite</a>
+<a class=popUpButton href=#downloadPopUp>Download</a>
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Transitive_Models/outline.pdf>Proof
+outline</a>
+<a href=https://www.isa-afp.org/browser_info/current/AFP/Transitive_Models/document.pdf>Proof
+document</a>
+<a href=https://www.isa-afp.org/browser_info/current/AFP/Transitive_Models/session_graph.pdf>Dependencies</a>
+</nav><div id=citePopUp class=overlay>
+<a class=cancel href=#></a>
+<div class=popup>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
+<div>
+<p style=display:none id=bibtexFileName>Transitive_Models-AFP</p><pre id=copyText>@article{Transitive_Models-AFP,
+  author  = {Emmanuel Gunther, Miguel Pagano, Pedro Sánchez Terraf and and Matías Steinberg},
+  title   = {Transitive Models of Fragments of ZFC},
+  journal = {Archive of Formal Proofs},
+  month   = March,
+  year    = 2022,
+  note    = {\url{http://isa-afp.org/entries/Transitive_Models.html},
+            Formal proof development},
+  ISSN    = {2150-914x},
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
+<a class=cancel href=#></a>
+<div class=popup>
+<h2>Download</h2><a class=close href=#>&#215;</a>
+<a href=https://isa-afp.org/release/afp-Transitive_Models-current.tar.gz download>Download latest</a>
+</div></div></div></div></body></html>

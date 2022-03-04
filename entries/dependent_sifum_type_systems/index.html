@@ -17,11 +17,10 @@ a dependent..."><meta property="og:title" content="A Dependent Security Type Sys
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -39,41 +38,20 @@ a dependent..."><meta property="og:title" content="A Dependent Security Type Sys
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>A</span> <span class=first>D</span>ependent <span class=first>S</span>ecurity <span class=first>T</span>ype <span class=first>S</span>ystem for <span class=first>C</span>oncurrent <span class=first>I</span>mperative <span class=first>P</span>rograms</h1>
-<div>
+</div></form><h1><span class=first>A</span> <span class=first>D</span>ependent <span class=first>S</span>ecurity <span class=first>T</span>ype <span class=first>S</span>ystem for <span class=first>C</span>oncurrent <span class=first>I</span>mperative <span class=first>P</span>rograms</h1><div>
 <p><a href=/authors/toby-murray>Toby Murray</a>, <a href=/authors/robert-sison>Robert Sison</a>, <a href=/authors/edward-pierzchalski>Edward Pierzchalski</a> and <a href=/authors/christine-rizkallah>Christine Rizkallah</a>
-</p>
-<p class=date>25 June 2016</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>25 June 2016</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">The paper "Compositional Verification and Refinement of Concurrent
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">The paper "Compositional Verification and Refinement of Concurrent
 Value-Dependent Noninterference" by Murray et. al. (CSF 2016) presents
 a dependent security type system for compositionally verifying a
 value-dependent noninterference property, defined in (Murray, PLAS
@@ -81,37 +59,26 @@ value-dependent noninterference property, defined in (Murray, PLAS
 security definition, the type system and its soundness proof, and
 demonstrates its application on some small examples. It was derived
 from the SIFUM_Type_Systems AFP entry, by Sylvia Grewe, Heiko Mantel
-and Daniel Schoepe, and whose structure it inherits.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Change history</h3>
-<p>[2016-08-19]
+and Daniel Schoepe, and whose structure it inherits.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Change history</h3><p>[2016-08-19]
 Removed unused "stop" parameter and "stop_no_eval" assumption from the sifum_security locale.
 (revision dbc482d36372)
 [2016-09-27]
 Added security locale support for the imposition of requirements on the initial memory.
-(revision cce4ceb74ddb)</p><h3>Used by</h3>
-<ul><li><a href=/entries/dependent_sifum_refinement/>Dependent_SIFUM_Refinement</a></li></ul><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/security>Computer science/Security</a></li><li><a href=/topics/computer-science/programming-languages/type-systems>Computer science/Programming languages/Type systems</a></li></ul><h3>Related Entries</h3>
-<ul><li><a href=/entries/dependent_sifum_refinement>Dependent_SIFUM_Refinement</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Preliminaries>Preliminaries</a></li><li><a href=theories/#Security>Security</a></li><li><a href=theories/#Compositionality>Compositionality</a></li><li><a href=theories/#Language>Language</a></li><li><a href=theories/#TypeSystem>TypeSystem</a></li><li><a href=theories/#LocallySoundModeUse>LocallySoundModeUse</a></li><li><a href=theories/#Example>Example</a></li><li><a href=theories/#TypeSystemTactics>TypeSystemTactics</a></li><li><a href=theories/#Example_TypeSystem>Example_TypeSystem</a></li><li><a href=theories/#Example_Swap_Add>Example_Swap_Add</a></li></ul>
-</main>
-<nav class=links>
+(revision cce4ceb74ddb)</p><h3>Used by</h3><ul><li><a href=/entries/dependent_sifum_refinement/>Dependent_SIFUM_Refinement</a></li></ul><h3>Topics</h3><ul><li><a href=/topics/computer-science/security>Computer science/Security</a></li><li><a href=/topics/computer-science/programming-languages/type-systems>Computer science/Programming languages/Type systems</a></li></ul><h3>Related Entries</h3><ul><li><a href=/entries/dependent_sifum_refinement>Dependent_SIFUM_Refinement</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Preliminaries>Preliminaries</a></li><li><a href=theories/#Security>Security</a></li><li><a href=theories/#Compositionality>Compositionality</a></li><li><a href=theories/#Language>Language</a></li><li><a href=theories/#TypeSystem>TypeSystem</a></li><li><a href=theories/#LocallySoundModeUse>LocallySoundModeUse</a></li><li><a href=theories/#Example>Example</a></li><li><a href=theories/#TypeSystemTactics>TypeSystemTactics</a></li><li><a href=theories/#Example_TypeSystem>Example_TypeSystem</a></li><li><a href=theories/#Example_Swap_Add>Example_Swap_Add</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/Dependent_SIFUM_Type_Systems/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Dependent_SIFUM_Type_Systems/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Dependent_SIFUM_Type_Systems/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Dependent_SIFUM_Type_Systems/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>Dependent_SIFUM_Type_Systems-AFP</p>
-<pre id=copyText>@article{Dependent_SIFUM_Type_Systems-AFP,
+<p style=display:none id=bibtexFileName>Dependent_SIFUM_Type_Systems-AFP</p><pre id=copyText>@article{Dependent_SIFUM_Type_Systems-AFP,
   author  = {Toby Murray, Robert Sison, Edward Pierzchalski and Christine Rizkallah},
   title   = {A Dependent Security Type System for Concurrent Imperative Programs},
   journal = {Archive of Formal Proofs},
@@ -120,19 +87,13 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/Dependent_SIFUM_Type_Systems.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Dependent_SIFUM_Type_Systems-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-Dependent_SIFUM_Type_Systems-2021-02-23.tar.gz>
 afp-Dependent_SIFUM_Type_Systems-2021-02-23.tar.gz
 </a>
@@ -160,10 +121,4 @@ afp-Dependent_SIFUM_Type_Systems-2016-12-17.tar.gz
 <a href=https://isa-afp.org/release/afp-Dependent_SIFUM_Type_Systems-2016-06-25.tar.gz>
 afp-Dependent_SIFUM_Type_Systems-2016-06-25.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>

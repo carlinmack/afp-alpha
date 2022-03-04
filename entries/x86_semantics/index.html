@@ -17,11 +17,10 @@ arithmetic/logical..."><meta property="og:title" content="X86 instruction semant
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -39,41 +38,20 @@ arithmetic/logical..."><meta property="og:title" content="X86 instruction semant
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>X</span>86 <span class=first>I</span>nstruction <span class=first>S</span>emantics and <span class=first>B</span>asic <span class=first>B</span>lock <span class=first>S</span>ymbolic <span class=first>E</span>xecution</h1>
-<div>
+</div></form><h1><span class=first>X</span>86 <span class=first>I</span>nstruction <span class=first>S</span>emantics and <span class=first>B</span>asic <span class=first>B</span>lock <span class=first>S</span>ymbolic <span class=first>E</span>xecution</h1><div>
 <p><a href=/authors/freek-verbeek>Freek Verbeek</a>, <a href=/authors/abhijith-bharadwaj>Abhijith Bharadwaj</a>, <a href=/authors/joshua-bockenek>Joshua Bockenek</a>, <a href=/authors/ian-roessle>Ian Roessle</a>, <a href=/authors/timmy-weerwag>Timmy Weerwag</a> and <a href=/authors/binoy-ravindran>Binoy Ravindran</a>
-</p>
-<p class=date>13 October 2021</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>13 October 2021</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">This AFP entry provides semantics for roughly 120 different X86-64
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">This AFP entry provides semantics for roughly 120 different X86-64
 assembly instructions. These instructions include various moves,
 arithmetic/logical operations, jumps, call/return, SIMD extensions and
 others. External functions are supported by allowing a user to provide
@@ -97,29 +75,21 @@ included, including functions from the word count program. Several
 examples can be supplied upon request (they are not included due to
 the running time of verification): functions from the floating-point
 modulo function from FDLIBM, the GLIBC strlen function and the
-CoreUtils SHA256 implementation.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/word_lib>Word_Lib</a></li></ul><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/hardware>Computer science/Hardware</a></li><li><a href=/topics/computer-science/semantics>Computer science/Semantics</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#BitByte>BitByte</a></li><li><a href=theories/#Memory>Memory</a></li><li><a href=theories/#State>State</a></li><li><a href=theories/#X86_InstructionSemantics>X86_InstructionSemantics</a></li><li><a href=theories/#StateCleanUp>StateCleanUp</a></li><li><a href=theories/#files/MySubst.ML>files/MySubst.ML</a></li><li><a href=theories/#SymbolicExecution>SymbolicExecution</a></li><li><a href=theories/#Examples>Examples</a></li><li><a href=theories/#X86_Parse>X86_Parse</a></li><li><a href=theories/#files/X86_Parse.ML>files/X86_Parse.ML</a></li><li><a href=theories/#Example_WC>Example_WC</a></li></ul>
-</main>
-<nav class=links>
+CoreUtils SHA256 implementation.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/word_lib>Word_Lib</a></li></ul><h3>Topics</h3><ul><li><a href=/topics/computer-science/hardware>Computer science/Hardware</a></li><li><a href=/topics/computer-science/semantics>Computer science/Semantics</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#BitByte>BitByte</a></li><li><a href=theories/#Memory>Memory</a></li><li><a href=theories/#State>State</a></li><li><a href=theories/#X86_InstructionSemantics>X86_InstructionSemantics</a></li><li><a href=theories/#StateCleanUp>StateCleanUp</a></li><li><a href=theories/#files/MySubst.ML>files/MySubst.ML</a></li><li><a href=theories/#SymbolicExecution>SymbolicExecution</a></li><li><a href=theories/#Examples>Examples</a></li><li><a href=theories/#X86_Parse>X86_Parse</a></li><li><a href=theories/#files/X86_Parse.ML>files/X86_Parse.ML</a></li><li><a href=theories/#Example_WC>Example_WC</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/X86_Semantics/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/X86_Semantics/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/X86_Semantics/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/X86_Semantics/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>X86_Semantics-AFP</p>
-<pre id=copyText>@article{X86_Semantics-AFP,
+<p style=display:none id=bibtexFileName>X86_Semantics-AFP</p><pre id=copyText>@article{X86_Semantics-AFP,
   author  = {Freek Verbeek, Abhijith Bharadwaj, Joshua Bockenek, Ian Roessle, Timmy Weerwag and Binoy Ravindran},
   title   = {X86 instruction semantics and basic block symbolic execution},
   journal = {Archive of Formal Proofs},
@@ -128,26 +98,14 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/X86_Semantics.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-X86_Semantics-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-X86_Semantics-2021-10-31.tar.gz>
 afp-X86_Semantics-2021-10-31.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>

@@ -14,11 +14,10 @@
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -36,41 +35,20 @@
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>C</span>o<span class=first>C</span>on: <span class=first>A</span> <span class=first>C</span>onfidentiality-<span class=first>V</span>erified <span class=first>C</span>onference <span class=first>M</span>anagement <span class=first>S</span>ystem</h1>
-<div>
+</div></form><h1><span class=first>C</span>o<span class=first>C</span>on: <span class=first>A</span> <span class=first>C</span>onfidentiality-<span class=first>V</span>erified <span class=first>C</span>onference <span class=first>M</span>anagement <span class=first>S</span>ystem</h1><div>
 <p><a href=/authors/andrei-popescu>Andrei Popescu</a>, <a href=/authors/peter-lammich>Peter Lammich</a> and <a href=/authors/thomas-bauereiss>Thomas Bauereiss</a>
-</p>
-<p class=date>16 August 2021</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>16 August 2021</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">This entry contains the confidentiality verification of the
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">This entry contains the confidentiality verification of the
 (functional kernel of) the CoCon conference management system [<a href=https://doi.org/10.1007/978-3-319-08867-9_11>1</a>,
 <a href=https://doi.org/10.1007/s10817-020-09566-9>2</a>].
 The confidentiality properties refer to the documents managed by the
@@ -79,30 +57,21 @@ acceptance/rejection decisions, and also to the assignment of
 reviewers to papers. They have all been formulated as instances of BD
 Security [<a href=https://doi.org/10.4230/LIPIcs.ITP.2021.3>3</a>,
 <a href=https://www.isa-afp.org/entries/Bounded_Deducibility_Security.html>4</a>]
-and verified using the BD Security unwinding technique.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/bounded_deducibility_security>Bounded_Deducibility_Security</a></li><li><a href=/entries/fresh_identifiers>Fresh_Identifiers</a></li></ul><h3>Topics</h3>
-<ul><li><a href=/topics/computer-science/security>Computer science/Security</a></li></ul><h3>Related Entries</h3>
-<ul><li><a href=/entries/cosmed>CoSMed</a></li><li><a href=/entries/cosmedis>CoSMeDis</a></li><li><a href=/entries/bd_security_compositional>BD_Security_Compositional</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Prelim>Prelim</a></li><li><a href=theories/#System_Specification>System_Specification</a></li><li><a href=theories/#Automation_Setup>Automation_Setup</a></li><li><a href=theories/#Safety_Properties>Safety_Properties</a></li><li><a href=theories/#Observation_Setup>Observation_Setup</a></li><li><a href=theories/#Paper_Intro>Paper_Intro</a></li><li><a href=theories/#Paper_Value_Setup>Paper_Value_Setup</a></li><li><a href=theories/#Paper_Aut_PC>Paper_Aut_PC</a></li><li><a href=theories/#Paper_Aut>Paper_Aut</a></li><li><a href=theories/#Paper_All>Paper_All</a></li><li><a href=theories/#Review_Intro>Review_Intro</a></li><li><a href=theories/#Review_Value_Setup>Review_Value_Setup</a></li><li><a href=theories/#Review_RAut>Review_RAut</a></li><li><a href=theories/#Review_RAut_NCPC>Review_RAut_NCPC</a></li><li><a href=theories/#Review_RAut_NCPC_PAut>Review_RAut_NCPC_PAut</a></li><li><a href=theories/#Review_All>Review_All</a></li><li><a href=theories/#Discussion_Intro>Discussion_Intro</a></li><li><a href=theories/#Discussion_Value_Setup>Discussion_Value_Setup</a></li><li><a href=theories/#Discussion_NCPC>Discussion_NCPC</a></li><li><a href=theories/#Discussion_All>Discussion_All</a></li><li><a href=theories/#Decision_Intro>Decision_Intro</a></li><li><a href=theories/#Decision_Value_Setup>Decision_Value_Setup</a></li><li><a href=theories/#Decision_NCPC>Decision_NCPC</a></li><li><a href=theories/#Decision_NCPC_Aut>Decision_NCPC_Aut</a></li><li><a href=theories/#Decision_All>Decision_All</a></li><li><a href=theories/#Reviewer_Assignment_Intro>Reviewer_Assignment_Intro</a></li><li><a href=theories/#Reviewer_Assignment_Value_Setup>Reviewer_Assignment_Value_Setup</a></li><li><a href=theories/#Reviewer_Assignment_NCPC>Reviewer_Assignment_NCPC</a></li><li><a href=theories/#Reviewer_Assignment_NCPC_Aut>Reviewer_Assignment_NCPC_Aut</a></li><li><a href=theories/#Reviewer_Assignment_All>Reviewer_Assignment_All</a></li><li><a href=theories/#Traceback_Properties>Traceback_Properties</a></li><li><a href=theories/#All_BD_Security_Instances_for_CoCon>All_BD_Security_Instances_for_CoCon</a></li></ul>
-</main>
-<nav class=links>
+and verified using the BD Security unwinding technique.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/bounded_deducibility_security>Bounded_Deducibility_Security</a></li><li><a href=/entries/fresh_identifiers>Fresh_Identifiers</a></li></ul><h3>Topics</h3><ul><li><a href=/topics/computer-science/security>Computer science/Security</a></li></ul><h3>Related Entries</h3><ul><li><a href=/entries/cosmed>CoSMed</a></li><li><a href=/entries/cosmedis>CoSMeDis</a></li><li><a href=/entries/bd_security_compositional>BD_Security_Compositional</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Prelim>Prelim</a></li><li><a href=theories/#System_Specification>System_Specification</a></li><li><a href=theories/#Automation_Setup>Automation_Setup</a></li><li><a href=theories/#Safety_Properties>Safety_Properties</a></li><li><a href=theories/#Observation_Setup>Observation_Setup</a></li><li><a href=theories/#Paper_Intro>Paper_Intro</a></li><li><a href=theories/#Paper_Value_Setup>Paper_Value_Setup</a></li><li><a href=theories/#Paper_Aut_PC>Paper_Aut_PC</a></li><li><a href=theories/#Paper_Aut>Paper_Aut</a></li><li><a href=theories/#Paper_All>Paper_All</a></li><li><a href=theories/#Review_Intro>Review_Intro</a></li><li><a href=theories/#Review_Value_Setup>Review_Value_Setup</a></li><li><a href=theories/#Review_RAut>Review_RAut</a></li><li><a href=theories/#Review_RAut_NCPC>Review_RAut_NCPC</a></li><li><a href=theories/#Review_RAut_NCPC_PAut>Review_RAut_NCPC_PAut</a></li><li><a href=theories/#Review_All>Review_All</a></li><li><a href=theories/#Discussion_Intro>Discussion_Intro</a></li><li><a href=theories/#Discussion_Value_Setup>Discussion_Value_Setup</a></li><li><a href=theories/#Discussion_NCPC>Discussion_NCPC</a></li><li><a href=theories/#Discussion_All>Discussion_All</a></li><li><a href=theories/#Decision_Intro>Decision_Intro</a></li><li><a href=theories/#Decision_Value_Setup>Decision_Value_Setup</a></li><li><a href=theories/#Decision_NCPC>Decision_NCPC</a></li><li><a href=theories/#Decision_NCPC_Aut>Decision_NCPC_Aut</a></li><li><a href=theories/#Decision_All>Decision_All</a></li><li><a href=theories/#Reviewer_Assignment_Intro>Reviewer_Assignment_Intro</a></li><li><a href=theories/#Reviewer_Assignment_Value_Setup>Reviewer_Assignment_Value_Setup</a></li><li><a href=theories/#Reviewer_Assignment_NCPC>Reviewer_Assignment_NCPC</a></li><li><a href=theories/#Reviewer_Assignment_NCPC_Aut>Reviewer_Assignment_NCPC_Aut</a></li><li><a href=theories/#Reviewer_Assignment_All>Reviewer_Assignment_All</a></li><li><a href=theories/#Traceback_Properties>Traceback_Properties</a></li><li><a href=theories/#All_BD_Security_Instances_for_CoCon>All_BD_Security_Instances_for_CoCon</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/CoCon/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/CoCon/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/CoCon/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/CoCon/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>CoCon-AFP</p>
-<pre id=copyText>@article{CoCon-AFP,
+<p style=display:none id=bibtexFileName>CoCon-AFP</p><pre id=copyText>@article{CoCon-AFP,
   author  = {Andrei Popescu, Peter Lammich and Thomas Bauereiss},
   title   = {CoCon: A Confidentiality-Verified Conference Management System},
   journal = {Archive of Formal Proofs},
@@ -111,20 +80,10 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/CoCon.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-CoCon-current.tar.gz download>Download latest</a>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</div></div></div></div></body></html>

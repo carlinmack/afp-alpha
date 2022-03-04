@@ -14,11 +14,10 @@
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -36,80 +35,51 @@
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>M</span>edian <span class=first>M</span>ethod</h1>
-<div>
+</div></form><h1><span class=first>M</span>edian <span class=first>M</span>ethod</h1><div>
 <p><a href=/authors/emin-karayel>Emin Karayel</a>
-</p>
-<p class=date>25 January 2022</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>25 January 2022</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process"><p>The median method is an amplification result for randomized
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process"><p>The median method is an amplification result for randomized
 approximation algorithms described in [<a href=https://doi.org/10.1006/jcss.1997.1545>1</a>].
 Given an algorithm whose result is in a desired interval with a
 probability larger than <i>1/2</i>, it is possible to
 improve the success probability, by running the algorithm multiple
 times independently and using the median. In contrast to using the
 mean, the amplification of the success probability grows exponentially
-with the number of independent runs.</p> <p>This entry
+with the number of independent runs.</p><p>This entry
 contains a formalization of the underlying theorem: Given a sequence
 of n independent random variables, which are in a desired interval
 with a probability <i>1/2 + a</i>. Then their median will
 be in the desired interval with a probability of <i>1 −
 exp(−2a<sup>2</sup> n)</i>. In particular, the
 success probability approaches <i>1</i> exponentially with
-the number of variables.</p> <p>In addition to that, this
+the number of variables.</p><p>In addition to that, this
 entry also contains a proof that order-statistics of Borel-measurable
 random variables are themselves measurable and that generalized
-intervals in linearly ordered Borel-spaces are measurable.</p></div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3>
-<ul><li><a href=/topics/mathematics/probability-theory>Mathematics/Probability theory</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Median>Median</a></li></ul>
-</main>
-<nav class=links>
+intervals in linearly ordered Borel-spaces are measurable.</p></div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Topics</h3><ul><li><a href=/topics/mathematics/probability-theory>Mathematics/Probability theory</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Median>Median</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/Median_Method/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Median_Method/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Median_Method/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Median_Method/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>Median_Method-AFP</p>
-<pre id=copyText>@article{Median_Method-AFP,
+<p style=display:none id=bibtexFileName>Median_Method-AFP</p><pre id=copyText>@article{Median_Method-AFP,
   author  = {Emin Karayel},
   title   = {Median Method},
   journal = {Archive of Formal Proofs},
@@ -118,20 +88,10 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/Median_Method.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Median_Method-current.tar.gz download>Download latest</a>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</div></div></div></div></body></html>

@@ -17,11 +17,10 @@ formalization of the simplex..."><meta property="og:title" content="Farkas' Lemm
 <meta name=twitter:description content>
 <link rel=stylesheet type=text/css href=/css/front.min.css>
 <link rel=icon href=/images/favicon.ico type=image/icon>
-<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},processEscapes:!0,svg:{fontCache:'global'}}</script>
+<script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},processEscapes:!0,svg:{fontCache:"global"}}</script>
 <script id=MathJax-script async src=/js/mathjax/es5/tex-mml-chtml.js></script>
 <script src=/js/entries.js></script><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head>
-<body class=mathjax_ignore>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
 <aside>
 <div id=menuToggle>
 <input id=toggle type=checkbox>
@@ -39,72 +38,41 @@ formalization of the simplex..."><meta property="og:title" content="Farkas' Lemm
 <img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
 </a>
 <ul>
-<li><a href=/>Home</a></li>
-<li><a href=/topics/>Topics</a></li>
-<li><a href=/download/>Download</a></li>
-<li><a href=/help/>Help</a></li>
-<li><a href=/statistics/>Statistics</a></li>
-<li><a href=/about/>About</a></li>
-</ul>
-</div>
-<ul>
+<li><a href=/>Home</a></li><li><a href=/topics/>Topics</a></li><li><a href=/download/>Download</a></li><li><a href=/help/>Help</a></li><li><a href=/statistics/>Statistics</a></li><li><a href=/about/>About</a></li></ul></div><ul>
 <li><a href=/contribution/>Contribution</a>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<div class="content entries"><header>
+</li></ul></nav></div></aside><div class="content entries"><header>
 <form action=/search>
 <div class=form-container>
 <input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
 <datalist id=autocomplete>
 </datalist>
-</div>
-</form>
-<h1><span class=first>F</span>arkas' <span class=first>L</span>emma and <span class=first>M</span>otzkin's <span class=first>T</span>ransposition <span class=first>T</span>heorem</h1>
-<div>
+</div></form><h1><span class=first>F</span>arkas' <span class=first>L</span>emma and <span class=first>M</span>otzkin's <span class=first>T</span>ransposition <span class=first>T</span>heorem</h1><div>
 <p><a href=/authors/ralph-bottesch>Ralph Bottesch</a>, <a href=/authors/max-w.-haslbeck>Max W. Haslbeck</a> and <a href=/authors/ren%C3%A9-thiemann>René Thiemann</a>
-</p>
-<p class=date>17 January 2019</p>
-</div>
-</header><div id=banner data-id=0>
+</p><p class=date>17 January 2019</p></div></header><div id=banner data-id=0>
 <p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div>
-<div><main>
-<h3>Abstract</h3>
-<div class="abstract mathjax_process">We formalize a proof of Motzkin's transposition theorem and
+</div><div><main>
+<h3>Abstract</h3><div class="abstract mathjax_process">We formalize a proof of Motzkin's transposition theorem and
 Farkas' lemma in Isabelle/HOL. Our proof is based on the
 formalization of the simplex algorithm which, given a set of linear
 constraints, either returns a satisfying assignment to the problem or
 detects unsatisfiability. By reusing facts about the simplex algorithm
 we show that a set of linear constraints is unsatisfiable if and only
 if there is a linear combination of the constraints which evaluates to
-a trivially unsatisfiable inequality.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/simplex>Simplex</a></li><li><a href=/entries/jordan_normal_form>Jordan_Normal_Form</a></li></ul><h3>Used by</h3>
-<ul><li><a href=/entries/linear_programming/>Linear_Programming</a></li></ul><h3>Topics</h3>
-<ul><li><a href=/topics/mathematics/algebra>Mathematics/Algebra</a></li></ul><h3>Related Entries</h3>
-<ul><li><a href=/entries/linear_programming>Linear_Programming</a></li></ul><h3>Theories</h3>
-<ul>
-<li><a href=theories/#Farkas>Farkas</a></li><li><a href=theories/#Matrix_Farkas>Matrix_Farkas</a></li><li><a href=theories/#Simplex_for_Reals>Simplex_for_Reals</a></li></ul>
-</main>
-<nav class=links>
+a trivially unsatisfiable inequality.</div><a href=http://isa-afp.org/LICENSE>BSD License</a><h3>Depends On</h3><ul><li><a href=/entries/simplex>Simplex</a></li><li><a href=/entries/jordan_normal_form>Jordan_Normal_Form</a></li></ul><h3>Used by</h3><ul><li><a href=/entries/linear_programming/>Linear_Programming</a></li></ul><h3>Topics</h3><ul><li><a href=/topics/mathematics/algebra>Mathematics/Algebra</a></li></ul><h3>Related Entries</h3><ul><li><a href=/entries/linear_programming>Linear_Programming</a></li></ul><h3>Theories</h3><ul>
+<li><a href=theories/#Farkas>Farkas</a></li><li><a href=theories/#Matrix_Farkas>Matrix_Farkas</a></li><li><a href=theories/#Simplex_for_Reals>Simplex_for_Reals</a></li></ul></main><nav class=links>
 <a class=popUpButton href=#citePopUp>Cite</a>
 <a class=popUpButton href=#downloadPopUp>Download</a>
-<h4>PDFs</h4>
-<a href=https://www.isa-afp.org/browser_info/current/AFP/Farkas/outline.pdf>Proof
+<h4>PDFs</h4><a href=https://www.isa-afp.org/browser_info/current/AFP/Farkas/outline.pdf>Proof
 outline</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Farkas/document.pdf>Proof
 document</a>
 <a href=https://www.isa-afp.org/browser_info/current/AFP/Farkas/session_graph.pdf>Dependencies</a>
-</nav>
-<div id=citePopUp class=overlay>
+</nav><div id=citePopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Cite</h2>
-<a class=close href=#>&#215;</a>
+<h2>Cite</h2><a class=close href=#>&#215;</a>
 <div>
-<p style=display:none id=bibtexFileName>Farkas-AFP</p>
-<pre id=copyText>@article{Farkas-AFP,
+<p style=display:none id=bibtexFileName>Farkas-AFP</p><pre id=copyText>@article{Farkas-AFP,
   author  = {Ralph Bottesch, Max W. Haslbeck and René Thiemann},
   title   = {Farkas&#39; Lemma and Motzkin&#39;s Transposition Theorem},
   journal = {Archive of Formal Proofs},
@@ -113,19 +81,13 @@ document</a>
   note    = {\url{http://isa-afp.org/entries/Farkas.html},
             Formal proof development},
   ISSN    = {2150-914x},
-}</pre>
-<button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
-</div>
-</div>
-</div>
-<div id=downloadPopUp class=overlay>
+}</pre><button id=copyBibtex>Copy</button> <a id=downloadBibtex>Download</a>
+</div></div></div><div id=downloadPopUp class=overlay>
 <a class=cancel href=#></a>
 <div class=popup>
-<h2>Download</h2>
-<a class=close href=#>&#215;</a>
+<h2>Download</h2><a class=close href=#>&#215;</a>
 <a href=https://isa-afp.org/release/afp-Farkas-current.tar.gz download>Download latest</a>
-<p>Older releases:</p>
-<ul><li>Isabelle2021:
+<p>Older releases:</p><ul><li>Isabelle2021:
 <a href=https://isa-afp.org/release/afp-Farkas-2021-02-23.tar.gz>
 afp-Farkas-2021-02-23.tar.gz
 </a>
@@ -141,10 +103,4 @@ afp-Farkas-2019-06-11.tar.gz
 <a href=https://isa-afp.org/release/afp-Farkas-2019-01-21.tar.gz>
 afp-Farkas-2019-01-21.tar.gz
 </a>
-</li></ul>
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+</li></ul></div></div></div></div></body></html>
