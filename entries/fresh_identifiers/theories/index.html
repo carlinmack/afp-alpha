@@ -1,49 +1,8 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Session Fresh_Identifiers - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Fresh_Identifiers">
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:url" content="/entries/fresh_identifiers/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories">
-<meta property="og:site_name" content="Archive of Formal Proofs">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="/images/afp.png">
-<meta name=twitter:title content="Session Fresh_Identifiers">
-<meta name=twitter:description content>
-<link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
-<link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
-<aside>
-<div>
-<div>
-<a href=/>
-<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
-</a>
-<ul>
-<li><a href=/entries/fresh_identifiers>Return to entry</a></li></ul><hr>
-<ul><li><a href=#Fresh>Fresh</a>
-</li><li><a href=#Fresh_Nat>Fresh_Nat</a>
-<ul>
-<li><a href=#Fresh_Nat-fresh2_notIn>fresh2_notIn</a></li><li><a href=#Fresh_Nat-fresh2_eq>fresh2_eq</a></li><li><a href=#Fresh_Nat-fresh2_list>fresh2_list</a></li></ul></li><li><a href=#Fresh_String>Fresh_String</a>
-<ul>
-<li><a href=#Fresh_String-ordst_antirefl>ordst_antirefl</a></li><li><a href=#Fresh_String-ordst_trans>ordst_trans</a></li><li><a href=#Fresh_String-ordstNS_refl>ordstNS_refl</a></li><li><a href=#Fresh_String-ordstNS_trans>ordstNS_trans</a></li><li><a href=#Fresh_String-ordst_ordstNS_trans>ordst_ordstNS_trans</a></li><li><a href=#Fresh_String-ordstNS_ordst_trans>ordstNS_ordst_trans</a></li><li><a href=#Fresh_String-upChar_ordst>upChar_ordst</a></li><li><a href=#Fresh_String-fresh_string_ordstNS>fresh_string_ordstNS</a></li><li><a href=#Fresh_String-fresh_string_set>fresh_string_set</a></li><li><a href=#Fresh_String-fresh_string_if>fresh_string_if</a></li><li><a href=#Fresh_String-map_ascii_of_idem>map_ascii_of_idem</a></li><li><a href=#Fresh_String-is_ascii_butlast>is_ascii_butlast</a></li><li><a href=#Fresh_String-ascii_char_of>ascii_char_of</a></li><li><a href=#Fresh_String-is_ascii_upChar>is_ascii_upChar</a></li><li><a href=#Fresh_String-is_ascii_fresh_string>is_ascii_fresh_string</a></li><li><a href=#Fresh_String-upChar_literal_upChar>upChar_literal_upChar</a></li><li><a href=#Fresh_String-fresh_literal_if>fresh_literal_if</a></li></ul></li><li><a href=#Fresh_Infinite>Fresh_Infinite</a>
-</li></ul></div><ul>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Fresh_Identifiers/outline.pdf>Proof
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Session Fresh_Identifiers - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Fresh_Identifiers"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="/entries/fresh_identifiers/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories"><meta property="og:site_name" content="Archive of Formal Proofs"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/afp.png"><meta name=twitter:title content="Session Fresh_Identifiers"><meta name=twitter:description content><link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css><link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore><aside><div><div><a href=/><img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo></a><ul><li><a href=/entries/fresh_identifiers>Return to entry</a></li></ul><hr><ul><li><a href=#Fresh>Fresh</a></li><li><a href=#Fresh_Nat>Fresh_Nat</a><ul><li><a href=#Fresh_Nat-fresh2_notIn>fresh2_notIn</a></li><li><a href=#Fresh_Nat-fresh2_eq>fresh2_eq</a></li><li><a href=#Fresh_Nat-fresh2_list>fresh2_list</a></li></ul></li><li><a href=#Fresh_String>Fresh_String</a><ul><li><a href=#Fresh_String-ordst_antirefl>ordst_antirefl</a></li><li><a href=#Fresh_String-ordst_trans>ordst_trans</a></li><li><a href=#Fresh_String-ordstNS_refl>ordstNS_refl</a></li><li><a href=#Fresh_String-ordstNS_trans>ordstNS_trans</a></li><li><a href=#Fresh_String-ordst_ordstNS_trans>ordst_ordstNS_trans</a></li><li><a href=#Fresh_String-ordstNS_ordst_trans>ordstNS_ordst_trans</a></li><li><a href=#Fresh_String-upChar_ordst>upChar_ordst</a></li><li><a href=#Fresh_String-fresh_string_ordstNS>fresh_string_ordstNS</a></li><li><a href=#Fresh_String-fresh_string_set>fresh_string_set</a></li><li><a href=#Fresh_String-fresh_string_if>fresh_string_if</a></li><li><a href=#Fresh_String-map_ascii_of_idem>map_ascii_of_idem</a></li><li><a href=#Fresh_String-is_ascii_butlast>is_ascii_butlast</a></li><li><a href=#Fresh_String-ascii_char_of>ascii_char_of</a></li><li><a href=#Fresh_String-is_ascii_upChar>is_ascii_upChar</a></li><li><a href=#Fresh_String-is_ascii_fresh_string>is_ascii_fresh_string</a></li><li><a href=#Fresh_String-upChar_literal_upChar>upChar_literal_upChar</a></li><li><a href=#Fresh_String-fresh_literal_if>fresh_literal_if</a></li></ul></li><li><a href=#Fresh_Infinite>Fresh_Infinite</a></li></ul></div><ul><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Fresh_Identifiers/outline.pdf>Proof
 outline</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Fresh_Identifiers/document.pdf>Proof
-document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Fresh_Identifiers/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header>
-<form action=/search>
-<div class=form-container>
-<input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
-<datalist id=autocomplete>
-</datalist>
-</div></form><h1><span class=first>S</span>ession <span class=first>F</span>resh_<span class=first>I</span>dentifiers</h1><div>
-</div></header><div id=banner data-id=0>
-<p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div><div><main>
-<div id=Fresh>
-<div class=head>
-<h1>Theory Fresh</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹The type class <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>fresh›</span></span></span></span>›</span></span>
+document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Fresh_Identifiers/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header><form action=/search><div class=form-container><input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
+<datalist id=autocomplete></datalist></div></form><h1><span class=first>S</span>ession <span class=first>F</span>resh_<span class=first>I</span>dentifiers</h1><div></div></header><div id=banner data-id=0><p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button></div><div><main><div id=Fresh><div class=head><h1>Theory Fresh</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹The type class <span class=antiquoted><span class=raw_text><span class=antiquoted><span class=raw_text><span class=operator><span class=operator>‹</span></span>fresh›</span></span></span></span>›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Fresh
   <span class=keyword2><span class=keyword>imports</span></span> <a href=https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/library/HOL/HOL/Main.html>Main</a>
@@ -83,9 +42,7 @@ the former).›</span></span>
   <span class=keyword1><span class=command>using</span></span> finite_list local.fresh_notIn <span class=keyword1><span class=command>by</span></span> <span class=operator>auto</span>
 
 <span class=keyword2><span class=keyword>end</span></span>
-</pre></div><div id=Fresh_Nat>
-<div class=head>
-<h1>Theory Fresh_Nat</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Fresh identifier generation for natural numbers›</span></span>
+</pre></div><div id=Fresh_Nat><div class=head><h1>Theory Fresh_Nat</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Fresh identifier generation for natural numbers›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Fresh_Nat
   <span class=keyword2><span class=keyword>imports</span></span> <a href=#Fresh>Fresh</a>
@@ -141,9 +98,7 @@ that is fresh for <span class=antiquoted><span class=raw_text><span class=antiqu
         fresh <span class=main>{</span><span class=numeral>3</span><span class=main>,</span><span class=numeral>5</span><span class=main>,</span><span class=numeral>2</span><span class=main>,</span><span class=numeral>4</span><span class=main>}</span> <span class=numeral>3</span><span class=main>]</span>"</span></span>
 
 <span class=keyword2><span class=keyword>end</span></span>
-</pre></div><div id=Fresh_String>
-<div class=head>
-<h1>Theory Fresh_String</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Fresh identifier generation for strings›</span></span>
+</pre></div><div id=Fresh_String><div class=head><h1>Theory Fresh_String</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Fresh identifier generation for strings›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Fresh_String
   <span class=keyword2><span class=keyword>imports</span></span> <a href=#Fresh>Fresh</a>
@@ -417,9 +372,7 @@ since <span class=antiquoted><span class=antiquoted><span class=operator><span c
         fresh <span class=main>{</span><span class=keyword1>STR</span> <span class=inner_quoted>''X''</span><span class=main>,</span> <span class=keyword1>STR</span> <span class=inner_quoted>''Y''</span><span class=main>,</span> <span class=keyword1>STR</span> <span class=inner_quoted>''Yab''</span><span class=main>,</span> <span class=keyword1>STR</span> <span class=inner_quoted>''Y''</span><span class=main>}</span> <span class=main>(</span><span class=keyword1>STR</span> <span class=inner_quoted>''Y''</span><span class=main>)</span><span class=main>]</span>"</span></span>
 
 <span class=keyword2><span class=keyword>end</span></span>
-</pre></div><div id=Fresh_Infinite>
-<div class=head>
-<h1>Theory Fresh_Infinite</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Fresh identifier generation for infinite types›</span></span>
+</pre></div><div id=Fresh_Infinite><div class=head><h1>Theory Fresh_Infinite</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Fresh identifier generation for infinite types›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Fresh_Infinite
   <span class=keyword2><span class=keyword>imports</span></span> <a href=#Fresh>Fresh</a>

@@ -1,55 +1,8 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Session FOL_Seq_Calc2 - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session FOL_Seq_Calc2">
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:url" content="/entries/fol_seq_calc2/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories">
-<meta property="og:site_name" content="Archive of Formal Proofs">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="/images/afp.png">
-<meta name=twitter:title content="Session FOL_Seq_Calc2">
-<meta name=twitter:description content>
-<link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
-<link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
-<aside>
-<div>
-<div>
-<a href=/>
-<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
-</a>
-<ul>
-<li><a href=/entries/fol_seq_calc2>Return to entry</a></li></ul><hr>
-<ul><li><a href=#SeCaV>SeCaV</a>
-</li><li><a href=#Sequent1>Sequent1</a>
-</li><li><a href=#Sequent_Calculus_Verifier>Sequent_Calculus_Verifier</a>
-</li><li><a href=#Prover>Prover</a>
-</li><li><a href=#Export>Export</a>
-</li><li><a href=#ProverLemmas>ProverLemmas</a>
-</li><li><a href=#Hintikka>Hintikka</a>
-</li><li><a href=#EPathHintikka>EPathHintikka</a>
-</li><li><a href=#Usemantics>Usemantics</a>
-</li><li><a href=#Countermodel>Countermodel</a>
-</li><li><a href=#Soundness>Soundness</a>
-</li><li><a href=#Completeness>Completeness</a>
-</li><li><a href=#Results>Results</a>
-</li></ul></div><ul>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/FOL_Seq_Calc2/outline.pdf>Proof
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Session FOL_Seq_Calc2 - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session FOL_Seq_Calc2"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="/entries/fol_seq_calc2/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories"><meta property="og:site_name" content="Archive of Formal Proofs"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/afp.png"><meta name=twitter:title content="Session FOL_Seq_Calc2"><meta name=twitter:description content><link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css><link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore><aside><div><div><a href=/><img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo></a><ul><li><a href=/entries/fol_seq_calc2>Return to entry</a></li></ul><hr><ul><li><a href=#SeCaV>SeCaV</a></li><li><a href=#Sequent1>Sequent1</a></li><li><a href=#Sequent_Calculus_Verifier>Sequent_Calculus_Verifier</a></li><li><a href=#Prover>Prover</a></li><li><a href=#Export>Export</a></li><li><a href=#ProverLemmas>ProverLemmas</a></li><li><a href=#Hintikka>Hintikka</a></li><li><a href=#EPathHintikka>EPathHintikka</a></li><li><a href=#Usemantics>Usemantics</a></li><li><a href=#Countermodel>Countermodel</a></li><li><a href=#Soundness>Soundness</a></li><li><a href=#Completeness>Completeness</a></li><li><a href=#Results>Results</a></li></ul></div><ul><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FOL_Seq_Calc2/outline.pdf>Proof
 outline</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FOL_Seq_Calc2/document.pdf>Proof
-document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FOL_Seq_Calc2/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header>
-<form action=/search>
-<div class=form-container>
-<input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
-<datalist id=autocomplete>
-</datalist>
-</div></form><h1><span class=first>S</span>ession <span class=first>F</span><span class=first>O</span><span class=first>L</span>_<span class=first>S</span>eq_<span class=first>C</span>alc2</h1><div>
-</div></header><div id=banner data-id=0>
-<p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div><div><main>
-<div id=Results>v class="head">
-<h1>Theory SeCaV</h1></div><pre class=source><span class=keyword1><span class=command><span>chapter</span></span></span><span> </span><span class=plain_text><span>SeCaV</span></span><span>
+document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FOL_Seq_Calc2/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header><form action=/search><div class=form-container><input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
+<datalist id=autocomplete></datalist></div></form><h1><span class=first>S</span>ession <span class=first>F</span><span class=first>O</span><span class=first>L</span>_<span class=first>S</span>eq_<span class=first>C</span>alc2</h1><div></div></header><div id=banner data-id=0><p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button></div><div><main><div id=Results>v class="head"><h1>Theory SeCaV</h1></div><pre class=source><span class=keyword1><span class=command><span>chapter</span></span></span><span> </span><span class=plain_text><span>SeCaV</span></span><span>
 
 </span><span class=comment1><span>(</span><span>*</span><span>
   Author: JÃ¸rgen Villadsen, DTU Compute, 2020
@@ -403,17 +356,14 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>text</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Mordechai Ben-Ari (Springer 2012): Mathematical Logic for Computer Science (Third Edition)</span><span>âº</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results><div class=head>
-<h1>Theory Sequent1</h1></div><pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Sequent1</span><span> </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><span class=quoted><span>"</span><a href=../FOL_Seq_Calc1/Sequent.html><span>FOL_Seq_Calc1.Sequent</span></a><span>"</span></span><span>
+</span></pre></div><div id=Results><div class=head><h1>Theory Sequent1</h1></div><pre class=source><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Sequent1</span><span> </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><span class=quoted><span>"</span><a href=../FOL_Seq_Calc1/Sequent.html><span>FOL_Seq_Calc1.Sequent</span></a><span>"</span></span><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>text</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>This theory exists exclusively as a shim to link the AFP theory imported here
 </span><span>  to the </span><span class=antiquoted><span class=raw_text><span class=operator><span>â¹</span></span><span>Sequent_Calculus_Verifierâº</span></span></span><span> theory.</span><span>âº</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results></head><body>
-<div class=head>
-<h1>Theory Sequent_Calculus_Verifier</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span>
+</span></pre></div><div id=Results></head><body><div class=head><h1>Theory Sequent_Calculus_Verifier</h1></div><pre class=source><span class=comment1><span>(</span><span>*</span><span>
   Author: JÃ¸rgen Villadsen, DTU Compute, 2020
 </span><span>*</span><span>)</span></span><span>
 
@@ -514,8 +464,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>text</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Asta HalkjÃ¦r From (2019): Sequent Calculus </span><span class=antiquoted><span class=operator><span>ð</span></span><span>â¹https://www.isa-afp.org/entries/FOL_Seq_Calc1.htmlâº</span></span><span>âº</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>iv class="head">
-<h1>Theory Prover</h1></div><pre class=source><span class=keyword1><span class=command><span>chapter</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>The prover</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>iv class="head"><h1>Theory Prover</h1></div><pre class=source><span class=keyword1><span class=command><span>chapter</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>The prover</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Proof search procedure</span><span>âº</span></span></span><span>
 
@@ -706,8 +655,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>abbreviation</span></span></span><span> </span><span class=quoted><span class=quoted><span>â¹</span><span class=free><span class=entity_def id=Prover.rootSequent|const><span>rootSequent</span></span></span><span> </span><span class=free><span class=bound><span class=entity><span>t</span></span></span></span><span> </span><span class=main><span>â¡</span></span><span> </span><span>snd</span><span> </span><span class=main><span>(</span></span><span>fst</span><span> </span><span class=main><span>(</span></span><a class=entity_ref href=../Abstract_Completeness/Abstract_Completeness.html#Abstract_Completeness.tree.root|const><span>root</span></a><span> </span><span class=free><span class=bound><span class=entity><span>t</span></span></span></span><span class=main><span>)</span></span><span class=main><span>)</span></span><span>âº</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>iv class="head">
-<h1>Theory Export</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Export</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>iv class="head"><h1>Theory Export</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Export</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Export</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Prover.html><span>Prover</span></a><span>
@@ -754,9 +702,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>text</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>We then export this version of the prover into Haskell.</span><span>âº</span></span></span><span>
 </span><span class=keyword1><span class=command><span>export_code</span></span></span><span> </span><span class=keyword2><span class=keyword><span>open</span></span></span><span> </span><span class=quoted><span class=quoted><a class=entity_ref href=Export.html#Export.secavProverCode|const><span>secavProverCode</span></a></span></span><span> </span><span class=keyword2><span class=keyword><span>in</span></span></span><span> Haskell</span><span>
 
-</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Results>dy>
-<div class=head>
-<h1>Theory ProverLemmas</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Lemmas about the prover</span><span>âº</span></span></span><span>
+</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=Results>dy><div class=head><h1>Theory ProverLemmas</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Lemmas about the prover</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>ProverLemmas</span><span> </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Prover.html><span>Prover</span></a><span> </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 
@@ -1308,8 +1254,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>qed</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results><div class=head>
-<h1>Theory Hintikka</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Hintikka sets for SeCaV</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results><div class=head><h1>Theory Hintikka</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Hintikka sets for SeCaV</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Hintikka</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Prover.html><span>Prover</span></a><span>
@@ -1342,9 +1287,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
     </span><span class=entity_def id=Hintikka.Hintikka.Neg|fact><span class=entity_def id=Hintikka.Hintikka.Neg|thm><span>Neg</span></span></span><span class=main><span>:</span></span><span> </span><span class=quoted><span class=quoted><span>â¹</span><a class=entity_ref href=SeCaV.html#SeCaV.fm.Neg|const><span>Neg</span></a><span> </span><span class=main><span>(</span></span><a class=entity_ref href=SeCaV.html#SeCaV.fm.Neg|const><span>Neg</span></a><span> </span><span class=free><span>p</span></span><span class=main><span>)</span></span><span> </span><span class=main><span>â</span></span><span> </span><span class=free><span>H</span></span><span> </span><span class=main><span>â¹</span></span><span> </span><span class=free><span>p</span></span><span> </span><span class=main><span>â</span></span><span> </span><span class=free><span>H</span></span><span>âº</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>ody>
-<div class=head>
-<h1>Theory EPathHintikka</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Escape path formulas are Hintikka</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>ody><div class=head><h1>Theory EPathHintikka</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Escape path formulas are Hintikka</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>EPathHintikka</span><span> </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Hintikka.html><span>Hintikka</span></a><span> </span><a href=ProverLemmas.html><span>ProverLemmas</span></a><span> </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 
@@ -2152,9 +2095,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>qed</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>>
-<div class=head>
-<h1>Theory Usemantics</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Bounded semantics</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>><div class=head><h1>Theory Usemantics</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Bounded semantics</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Usemantics</span><span> </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=SeCaV.html><span>SeCaV</span></a><span> </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 
@@ -2248,9 +2189,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>qed</span></span></span><span> </span><span class=operator><span>fastforce</span></span><span class=main><span class=keyword3><span>+</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>dy>
-<div class=head>
-<h1>Theory Countermodel</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Countermodels from Hintikka sets</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>dy><div class=head><h1>Theory Countermodel</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Countermodels from Hintikka sets</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Countermodel</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Hintikka.html><span>Hintikka</span></a><span> </span><a href=Usemantics.html><span>Usemantics</span></a><span> </span><a href=ProverLemmas.html><span>ProverLemmas</span></a><span>
@@ -2515,9 +2454,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>qed</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>
-<div class=head>
-<h1>Theory Soundness</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Soundness</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results><div class=head><h1>Theory Soundness</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Soundness</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Soundness</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=ProverLemmas.html><span>ProverLemmas</span></a><span>
@@ -2840,9 +2777,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
   </span><span class=keyword1><span class=command><span>using</span></span></span><span> </span><a class=entity_ref href=Soundness.html#offset_12200..12207><span>assms</span></a><span> </span><a class=entity_ref href=Soundness.html#Soundness.soundness|fact><span>soundness</span></a><span> </span><span class=keyword1><span class=command><span>by</span></span></span><span> </span><span class=operator><span>fastforce</span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>dy>
-<div class=head>
-<h1>Theory Completeness</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Completeness</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>dy><div class=head><h1>Theory Completeness</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Completeness</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Completeness</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Countermodel.html><span>Countermodel</span></a><span> </span><a href=EPathHintikka.html><span>EPathHintikka</span></a><span>
@@ -2924,8 +2859,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/FO
 </span><span class=keyword1><span class=command><span>qed</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Results>div class="head">
-<h1>Theory Results</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Results</span><span>âº</span></span></span><span>
+</span></pre></div><div id=Results>div class="head"><h1>Theory Results</h1></div><pre class=source><span class=keyword1><span class=command><span>section</span></span></span><span> </span><span class=quoted><span class=plain_text><span>â¹</span><span>Results</span><span>âº</span></span></span><span>
 
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Results</span><span> </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=Soundness.html><span>Soundness</span></a><span> </span><a href=Completeness.html><span>Completeness</span></a><span> </span><a href=Sequent_Calculus_Verifier.html><span>Sequent_Calculus_Verifier</span></a><span> </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
 

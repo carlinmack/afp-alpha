@@ -1,55 +1,8 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Session Cubic_Quartic_Equations - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Cubic_Quartic_Equations">
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:url" content="/entries/cubic_quartic_equations/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories">
-<meta property="og:site_name" content="Archive of Formal Proofs">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="/images/afp.png">
-<meta name=twitter:title content="Session Cubic_Quartic_Equations">
-<meta name=twitter:description content>
-<link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
-<link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
-<aside>
-<div>
-<div>
-<a href=/>
-<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
-</a>
-<ul>
-<li><a href=/entries/cubic_quartic_equations>Return to entry</a></li></ul><hr>
-<ul><li><a href=#Ferraris_Formula>Ferraris_Formula</a>
-<ul>
-<li><a href=#Ferraris_Formula-to_depressed_quartic>to_depressed_quartic</a></li><li><a href=#Ferraris_Formula-biquadratic_solution>biquadratic_solution</a></li><li><a href=#Ferraris_Formula-depressed_quartic_Ferrari>depressed_quartic_Ferrari</a></li></ul></li><li><a href=#Cardanos_Formula>Cardanos_Formula</a>
-<ul>
-<li><a href=#Cardanos_Formula-to_depressed_cubic>to_depressed_cubic</a></li><li><a href=#Cardanos_Formula-cubic_depressed>cubic_depressed</a></li><li><a href=#Cardanos_Formula-solve_cubic_depressed_Cardano_complex>solve_cubic_depressed_Cardano_complex</a></li><li><a href=#Cardanos_Formula-discriminant_cubic_depressed>discriminant_cubic_depressed</a></li><li><a href=#Cardanos_Formula-solve_cubic_depressed_Cardano_real>solve_cubic_depressed_Cardano_real</a></li><li><a href=#Cardanos_Formula-solve_cubic_depressed_Cardano_all_real_roots>solve_cubic_depressed_Cardano_all_real_roots</a></li></ul></li><li><a href=#Min_Int_Poly_Impl>Min_Int_Poly_Impl</a>
-<ul>
-<li><a href=#Min_Int_Poly_Impl-min_int_poly_of_rat>min_int_poly_of_rat</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_real_alg>min_int_poly_real_alg</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_real_code_unfold>min_int_poly_real_code_unfold</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_real_code>min_int_poly_real_code</a></li><li><a href=#Min_Int_Poly_Impl-complex_poly>complex_poly</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_real_iff>algebraic_real_iff</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_real_code>algebraic_real_code</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_complex_iff>algebraic_complex_iff</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_0>algebraic_0</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_complex_of_real>min_int_poly_complex_of_real</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_complex>min_int_poly_complex</a></li></ul></li><li><a href=#Complex_Roots>Complex_Roots</a>
-<ul>
-<li><a href=#Complex_Roots-all_croots_code>all_croots_code</a></li><li><a href=#Complex_Roots-all_croots>all_croots</a></li><li><a href=#Complex_Roots-croot_0>croot_0</a></li><li><a href=#Complex_Roots-croot_power>croot_power</a></li><li><a href=#Complex_Roots-arg_of_real>arg_of_real</a></li><li><a href=#Complex_Roots-arg_rcis_cis>arg_rcis_cis</a></li><li><a href=#Complex_Roots-cis_arg_1>cis_arg_1</a></li><li><a href=#Complex_Roots-cis_arg_power>cis_arg_power</a></li><li><a href=#Complex_Roots-arg_croot>arg_croot</a></li><li><a href=#Complex_Roots-cos_abs>cos_abs</a></li><li><a href=#Complex_Roots-cos_mono_le>cos_mono_le</a></li><li><a href=#Complex_Roots-abs_add_2_mult_bound>abs_add_2_mult_bound</a></li><li><a href=#Complex_Roots-abs_eq_add_2_mult>abs_eq_add_2_mult</a></li><li><a href=#Complex_Roots-croot_principal>croot_principal</a></li><li><a href=#Complex_Roots-croot_unique>croot_unique</a></li><li><a href=#Complex_Roots-csqrt_is_croot_2>csqrt_is_croot_2</a></li><li><a href=#Complex_Roots-croot_via_root_selection>croot_via_root_selection</a></li><li><a href=#Complex_Roots-croot_impl>croot_impl</a></li></ul></li><li><a href=#Cubic_Polynomials>Cubic_Polynomials</a>
-<ul>
-<li><a href=#Cubic_Polynomials-complex_of_real_code>complex_of_real_code</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_Cardano_real>solve_depressed_cubic_Cardano_real</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_complex_code>solve_depressed_cubic_complex_code</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_complex>solve_depressed_cubic_complex</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_real_code>solve_depressed_cubic_real_code</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_real>solve_depressed_cubic_real</a></li><li><a href=#Cubic_Polynomials-degree3_coeffs>degree3_coeffs</a></li><li><a href=#Cubic_Polynomials-roots3_generic>roots3_generic</a></li><li><a href=#Cubic_Polynomials-croots3>croots3</a></li><li><a href=#Cubic_Polynomials-rroots3>rroots3</a></li></ul></li><li><a href=#Quartic_Polynomials>Quartic_Polynomials</a>
-<ul>
-<li><a href=#Quartic_Polynomials-solve_depressed_quartic_complex>solve_depressed_quartic_complex</a></li><li><a href=#Quartic_Polynomials-solve_depressed_quartic_real>solve_depressed_quartic_real</a></li><li><a href=#Quartic_Polynomials-numeral_4_eq_4>numeral_4_eq_4</a></li><li><a href=#Quartic_Polynomials-degree4_coeffs>degree4_coeffs</a></li><li><a href=#Quartic_Polynomials-roots4_generic>roots4_generic</a></li><li><a href=#Quartic_Polynomials-croots4>croots4</a></li><li><a href=#Quartic_Polynomials-rroots4>rroots4</a></li></ul></li></ul></div><ul>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cubic_Quartic_Equations/outline.pdf>Proof
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Session Cubic_Quartic_Equations - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Cubic_Quartic_Equations"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="/entries/cubic_quartic_equations/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories"><meta property="og:site_name" content="Archive of Formal Proofs"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/afp.png"><meta name=twitter:title content="Session Cubic_Quartic_Equations"><meta name=twitter:description content><link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css><link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore><aside><div><div><a href=/><img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo></a><ul><li><a href=/entries/cubic_quartic_equations>Return to entry</a></li></ul><hr><ul><li><a href=#Ferraris_Formula>Ferraris_Formula</a><ul><li><a href=#Ferraris_Formula-to_depressed_quartic>to_depressed_quartic</a></li><li><a href=#Ferraris_Formula-biquadratic_solution>biquadratic_solution</a></li><li><a href=#Ferraris_Formula-depressed_quartic_Ferrari>depressed_quartic_Ferrari</a></li></ul></li><li><a href=#Cardanos_Formula>Cardanos_Formula</a><ul><li><a href=#Cardanos_Formula-to_depressed_cubic>to_depressed_cubic</a></li><li><a href=#Cardanos_Formula-cubic_depressed>cubic_depressed</a></li><li><a href=#Cardanos_Formula-solve_cubic_depressed_Cardano_complex>solve_cubic_depressed_Cardano_complex</a></li><li><a href=#Cardanos_Formula-discriminant_cubic_depressed>discriminant_cubic_depressed</a></li><li><a href=#Cardanos_Formula-solve_cubic_depressed_Cardano_real>solve_cubic_depressed_Cardano_real</a></li><li><a href=#Cardanos_Formula-solve_cubic_depressed_Cardano_all_real_roots>solve_cubic_depressed_Cardano_all_real_roots</a></li></ul></li><li><a href=#Min_Int_Poly_Impl>Min_Int_Poly_Impl</a><ul><li><a href=#Min_Int_Poly_Impl-min_int_poly_of_rat>min_int_poly_of_rat</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_real_alg>min_int_poly_real_alg</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_real_code_unfold>min_int_poly_real_code_unfold</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_real_code>min_int_poly_real_code</a></li><li><a href=#Min_Int_Poly_Impl-complex_poly>complex_poly</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_real_iff>algebraic_real_iff</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_real_code>algebraic_real_code</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_complex_iff>algebraic_complex_iff</a></li><li><a href=#Min_Int_Poly_Impl-algebraic_0>algebraic_0</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_complex_of_real>min_int_poly_complex_of_real</a></li><li><a href=#Min_Int_Poly_Impl-min_int_poly_complex>min_int_poly_complex</a></li></ul></li><li><a href=#Complex_Roots>Complex_Roots</a><ul><li><a href=#Complex_Roots-all_croots_code>all_croots_code</a></li><li><a href=#Complex_Roots-all_croots>all_croots</a></li><li><a href=#Complex_Roots-croot_0>croot_0</a></li><li><a href=#Complex_Roots-croot_power>croot_power</a></li><li><a href=#Complex_Roots-arg_of_real>arg_of_real</a></li><li><a href=#Complex_Roots-arg_rcis_cis>arg_rcis_cis</a></li><li><a href=#Complex_Roots-cis_arg_1>cis_arg_1</a></li><li><a href=#Complex_Roots-cis_arg_power>cis_arg_power</a></li><li><a href=#Complex_Roots-arg_croot>arg_croot</a></li><li><a href=#Complex_Roots-cos_abs>cos_abs</a></li><li><a href=#Complex_Roots-cos_mono_le>cos_mono_le</a></li><li><a href=#Complex_Roots-abs_add_2_mult_bound>abs_add_2_mult_bound</a></li><li><a href=#Complex_Roots-abs_eq_add_2_mult>abs_eq_add_2_mult</a></li><li><a href=#Complex_Roots-croot_principal>croot_principal</a></li><li><a href=#Complex_Roots-croot_unique>croot_unique</a></li><li><a href=#Complex_Roots-csqrt_is_croot_2>csqrt_is_croot_2</a></li><li><a href=#Complex_Roots-croot_via_root_selection>croot_via_root_selection</a></li><li><a href=#Complex_Roots-croot_impl>croot_impl</a></li></ul></li><li><a href=#Cubic_Polynomials>Cubic_Polynomials</a><ul><li><a href=#Cubic_Polynomials-complex_of_real_code>complex_of_real_code</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_Cardano_real>solve_depressed_cubic_Cardano_real</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_complex_code>solve_depressed_cubic_complex_code</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_complex>solve_depressed_cubic_complex</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_real_code>solve_depressed_cubic_real_code</a></li><li><a href=#Cubic_Polynomials-solve_depressed_cubic_real>solve_depressed_cubic_real</a></li><li><a href=#Cubic_Polynomials-degree3_coeffs>degree3_coeffs</a></li><li><a href=#Cubic_Polynomials-roots3_generic>roots3_generic</a></li><li><a href=#Cubic_Polynomials-croots3>croots3</a></li><li><a href=#Cubic_Polynomials-rroots3>rroots3</a></li></ul></li><li><a href=#Quartic_Polynomials>Quartic_Polynomials</a><ul><li><a href=#Quartic_Polynomials-solve_depressed_quartic_complex>solve_depressed_quartic_complex</a></li><li><a href=#Quartic_Polynomials-solve_depressed_quartic_real>solve_depressed_quartic_real</a></li><li><a href=#Quartic_Polynomials-numeral_4_eq_4>numeral_4_eq_4</a></li><li><a href=#Quartic_Polynomials-degree4_coeffs>degree4_coeffs</a></li><li><a href=#Quartic_Polynomials-roots4_generic>roots4_generic</a></li><li><a href=#Quartic_Polynomials-croots4>croots4</a></li><li><a href=#Quartic_Polynomials-rroots4>rroots4</a></li></ul></li></ul></div><ul><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cubic_Quartic_Equations/outline.pdf>Proof
 outline</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cubic_Quartic_Equations/document.pdf>Proof
-document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cubic_Quartic_Equations/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header>
-<form action=/search>
-<div class=form-container>
-<input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
-<datalist id=autocomplete>
-</datalist>
-</div></form><h1><span class=first>S</span>ession <span class=first>C</span>ubic_<span class=first>Q</span>uartic_<span class=first>E</span>quations</h1><div>
-</div></header><div id=banner data-id=0>
-<p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div><div><main>
-<div id=Ferraris_Formula>
-<div class=head>
-<h1>Theory Ferraris_Formula</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Ferrari's formula for solving quartic equations›</span></span>
+document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cubic_Quartic_Equations/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header><form action=/search><div class=form-container><input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
+<datalist id=autocomplete></datalist></div></form><h1><span class=first>S</span>ession <span class=first>C</span>ubic_<span class=first>Q</span>uartic_<span class=first>E</span>quations</h1><div></div></header><div id=banner data-id=0><p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button></div><div><main><div id=Ferraris_Formula><div class=head><h1>Theory Ferraris_Formula</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Ferrari's formula for solving quartic equations›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Ferraris_Formula
   <span class=keyword2><span class=keyword>imports</span></span> 
@@ -136,9 +89,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cu
 <span class=keyword1><span class=command>qed</span></span>
 
 
-<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Cardanos_Formula>
-<div class=head>
-<h1>Theory Cardanos_Formula</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Cardano's formula for solving cubic equations›</span></span>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Cardanos_Formula><div class=head><h1>Theory Cardanos_Formula</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Cardano's formula for solving cubic equations›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Cardanos_Formula
   <span class=keyword2><span class=keyword>imports</span></span> 
@@ -476,9 +427,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Cu
   <span class=keyword1><span class=command>finally</span></span> <span class=keyword3><span class=command>show</span></span> <span class=quoted><span class=quoted>"<span class=free>y</span> <span class=main>∈</span> <span class=main>ℝ</span>"</span></span> <span class=keyword1><span class=command>by</span></span> <span class=operator>auto</span>
 <span class=keyword1><span class=command>qed</span></span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Min_Int_Poly_Impl>
-<div class=head>
-<h1>Theory Min_Int_Poly_Impl</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Implementation of the minimal polynomial of a real or complex algebraic number›</span></span>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Min_Int_Poly_Impl><div class=head><h1>Theory Min_Int_Poly_Impl</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Implementation of the minimal polynomial of a real or complex algebraic number›</span></span>
 
 <span class=keyword1><span class=command>text</span></span> <span class=quoted><span class=plain_text>‹This theory provides implementation of the minimal-representing-polynomial of an algebraic
   number, for both the real-numbers and the complex-numbers.›</span></span>
@@ -649,9 +598,7 @@ value (code) "min_int_poly (sqrt 2 + 𝗂)"
 
 *)</span>
 <span class=keyword2><span class=keyword>end</span></span>
-</pre></div><div id=Complex_Roots>
-<div class=head>
-<h1>Theory Complex_Roots</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹$n$-th roots of complex numbers›</span></span>
+</pre></div><div id=Complex_Roots><div class=head><h1>Theory Complex_Roots</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹$n$-th roots of complex numbers›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Complex_Roots
   <span class=keyword2><span class=keyword>imports</span></span> 
@@ -1104,9 +1051,7 @@ value (code) "min_int_poly (sqrt 2 + 𝗂)"
     <span class=keyword1><span class=command>by</span></span> <span class=main>(</span><span class=operator>rule</span> croot_via_root_selection<span class=main><span class=main>[</span></span><span class=operator>OF</span> _ n0<span class=main><span class=main>]</span></span><span class=main><span class=keyword3>,</span></span> <span class=operator>rule</span> all_croots<span class=main><span class=main>[</span></span><span class=operator>OF</span> n0<span class=main><span class=main>]</span></span><span class=main>)</span>
 <span class=keyword1><span class=command>qed</span></span> <span class=operator>auto</span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Cubic_Polynomials>
-<div class=head>
-<h1>Theory Cubic_Polynomials</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Algorithms to compute all complex and real roots of a cubic polynomial›</span></span>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Cubic_Polynomials><div class=head><h1>Theory Cubic_Polynomials</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Algorithms to compute all complex and real roots of a cubic polynomial›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Cubic_Polynomials
   <span class=keyword2><span class=keyword>imports</span></span> 
@@ -1364,9 +1309,7 @@ value (code) "min_int_poly (sqrt 2 + 𝗂)"
   <span class=keyword2><span class=keyword>shows</span></span> <span class=quoted><span class=quoted>"set <span class=main>(</span>rroots3 <span class=free>p</span><span class=main>)</span> <span class=main>=</span> <span class=main>{</span> <span class=bound>x</span><span class=main>.</span> poly <span class=free>p</span> <span class=bound>x</span> <span class=main>=</span> <span class=main>0</span><span class=main>}</span>"</span></span> 
   <span class=keyword1><span class=command>unfolding</span></span> rroots3_def <span class=keyword1><span class=command>by</span></span> <span class=main>(</span><span class=operator>rule</span> roots3_generic<span class=main><span class=main>[</span></span><span class=operator>OF</span> deg solve_depressed_cubic_real<span class=main><span class=main>]</span></span><span class=main>)</span>
 
-<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Quartic_Polynomials>
-<div class=head>
-<h1>Theory Quartic_Polynomials</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Algorithms to compute all complex and real roots of a quartic polynomial›</span></span>
+<span class=keyword2><span class=keyword>end</span></span></pre></div><div id=Quartic_Polynomials><div class=head><h1>Theory Quartic_Polynomials</h1></div><pre class=source><span class=keyword1><span class=command>section</span></span> <span class=quoted><span class=plain_text>‹Algorithms to compute all complex and real roots of a quartic polynomial›</span></span>
 
 <span class=keyword1><span class=command>theory</span></span> Quartic_Polynomials
   <span class=keyword2><span class=keyword>imports</span></span> 

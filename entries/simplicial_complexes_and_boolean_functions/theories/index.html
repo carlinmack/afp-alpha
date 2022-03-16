@@ -1,51 +1,8 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Session Simplicial_complexes_and_boolean_functions - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Simplicial_complexes_and_boolean_functions">
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:url" content="/entries/simplicial_complexes_and_boolean_functions/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories">
-<meta property="og:site_name" content="Archive of Formal Proofs">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="/images/afp.png">
-<meta name=twitter:title content="Session Simplicial_complexes_and_boolean_functions">
-<meta name=twitter:description content>
-<link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css>
-<link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
-<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore>
-<aside>
-<div>
-<div>
-<a href=/>
-<img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo>
-</a>
-<ul>
-<li><a href=/entries/simplicial_complexes_and_boolean_functions>Return to entry</a></li></ul><hr>
-<ul><li><a href=#Boolean_functions>Boolean_functions</a>
-</li><li><a href=#Simplicial_complex>Simplicial_complex</a>
-</li><li><a href=#Bij_betw_simplicial_complex_bool_func>Bij_betw_simplicial_complex_bool_func</a>
-</li><li><a href=#MkIfex>MkIfex</a>
-</li><li><a href=#Evasive>Evasive</a>
-</li><li><a href=#ListLexorder>ListLexorder</a>
-</li><li><a href=#BDD>BDD</a>
-</li><li><a href=#Binary_operations>Binary_operations</a>
-</li></ul></div><ul>
-<li><a href=https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/outline.pdf>Proof
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Session Simplicial_complexes_and_boolean_functions - Archive of Formal Proofs</title><meta name=description content="A collection of proof libraries, examples, and larger scientific developments, mechanically checked in the theorem prover Isabelle."><meta property="og:title" content="Session Simplicial_complexes_and_boolean_functions"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="/entries/simplicial_complexes_and_boolean_functions/theories/"><meta property="og:image" content="/images/afp.png"><meta property="article:section" content="theories"><meta property="og:site_name" content="Archive of Formal Proofs"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/afp.png"><meta name=twitter:title content="Session Simplicial_complexes_and_boolean_functions"><meta name=twitter:description content><link rel=stylesheet type=text/css href=/css/front.min.css><link rel=stylesheet type=text/css href=/css/isabelle.css><link rel=icon href=/images/favicon.ico type=image/icon><script src=/js/flexsearch.min.js></script>
+<script src=/js/banner.js></script><script src=/js/header-search.js></script></head><body class=mathjax_ignore><aside><div><div><a href=/><img src=/images/afp.png alt="Logo of the Archive of Formal Proofs" class=logo></a><ul><li><a href=/entries/simplicial_complexes_and_boolean_functions>Return to entry</a></li></ul><hr><ul><li><a href=#Boolean_functions>Boolean_functions</a></li><li><a href=#Simplicial_complex>Simplicial_complex</a></li><li><a href=#Bij_betw_simplicial_complex_bool_func>Bij_betw_simplicial_complex_bool_func</a></li><li><a href=#MkIfex>MkIfex</a></li><li><a href=#Evasive>Evasive</a></li><li><a href=#ListLexorder>ListLexorder</a></li><li><a href=#BDD>BDD</a></li><li><a href=#Binary_operations>Binary_operations</a></li></ul></div><ul><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/outline.pdf>Proof
 outline</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/document.pdf>Proof
-document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header>
-<form action=/search>
-<div class=form-container>
-<input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
-<datalist id=autocomplete>
-</datalist>
-</div></form><h1><span class=first>S</span>ession <span class=first>S</span>implicial_complexes_and_boolean_functions</h1><div>
-</div></header><div id=banner data-id=0>
-<p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button>
-</div><div><main>
-<div id=Boolean_functions>
-<div class=head>
-<h1>Theory Boolean_functions</h1></div><pre class=source><span>
+document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Simplicial_complexes_and_boolean_functions/session_graph.pdf>Theory dependencies</a></li></ul></div></aside><div class="content theories"><header><form action=/search><div class=form-container><input id=searchInput type=search size=31 maxlength=255 aria-label="Search the AFP" list=autocomplete><button id=searchButton type=button><img src=/images/search.svg alt=Search></button>
+<datalist id=autocomplete></datalist></div></form><h1><span class=first>S</span>ession <span class=first>S</span>implicial_complexes_and_boolean_functions</h1><div></div></header><div id=banner data-id=0><p>This is an unofficial reimagining of the <a href=https://isa-afp.org target=_blank rel="noreferrer noopener">Archive of Formal Proofs</a></p><button style=display:none id=close title=close><svg viewBox="0 0 6.718 6.718" aria-hidden="true" focusable="false"><rect transform="rotate(45)" x="4" y="-4" width="1.5" height="8"/><rect transform="rotate(45)" x=".75" y="-.75" width="8" height="1.5"/></svg></button></div><div><main><div id=Boolean_functions><div class=head><h1>Theory Boolean_functions</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Boolean_functions</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
     </span><a href=https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/library/HOL/HOL/Main.html><span>Main</span></a><span>
@@ -164,9 +121,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Simplicial_complex>
-<div class=head>
-<h1>Theory Simplicial_complex</h1></div><pre class=source><span>
+</span></pre></div><div id=Simplicial_complex><div class=head><h1>Theory Simplicial_complex</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Simplicial_complex</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
     </span><a href=#Boolean_functions><span>Boolean_functions</span></a><span>
@@ -959,9 +914,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Bij_betw_simplicial_complex_bool_func>
-<div class=head>
-<h1>Theory Bij_betw_simplicial_complex_bool_func</h1></div><pre class=source><span>
+</span></pre></div><div id=Bij_betw_simplicial_complex_bool_func><div class=head><h1>Theory Bij_betw_simplicial_complex_bool_func</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Bij_betw_simplicial_complex_bool_func</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
     </span><a href=#Simplicial_complex><span>Simplicial_complex</span></a><span>
@@ -1207,9 +1160,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
 
-</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=MkIfex>
-<div class=head>
-<h1>Theory MkIfex</h1></div><pre class=source><span>
+</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=MkIfex><div class=head><h1>Theory MkIfex</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>text</span></span></span><span class=quoted><span class=plain_text><span>‹</span><span>
   </span><span>Author: Julius Michaelis</span><span>
 </span><span>›</span></span></span><span>
@@ -1287,9 +1238,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
 </span><span class=keyword1><span class=command><span>qed</span></span></span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Evasive>
-<div class=head>
-<h1>Theory Evasive</h1></div><pre class=source><span>
+</span></pre></div><div id=Evasive><div class=head><h1>Theory Evasive</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Evasive</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
     </span><a href=#Bij_betw_simplicial_complex_bool_func><span>Bij_betw_simplicial_complex_bool_func</span></a><span>
@@ -1422,9 +1371,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
 
 </span><span class=keyword1><span class=command><span>lemma</span></span></span><span> </span><span class=quoted><span class=quoted><span>"</span><span class=main><a class=entity_ref href=../../HOL/HOL/HOL.html#HOL.Not|const><span>¬</span></a></span><span> </span><a class=entity_ref href=Evasive.html#Evasive.evasive|const><span>evasive</span></a><span> </span><span class=numeral><span>4</span></span><span> </span><a class=entity_ref href=../ROBDD/Bool_Func.html#Bool_Func.bf_False|const><span>bf_False</span></a><span>"</span></span></span><span> </span><span class=keyword1><span class=command><span>by</span></span></span><span> </span><a class=entity_ref href=../../HOL/HOL/HOL.html#HOL.eval|method><span class=operator><span>eval</span></span></a><span>
 
-</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=ListLexorder>
-<div class=head>
-<h1>Theory ListLexorder</h1></div><pre class=source><span>
+</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=ListLexorder><div class=head><h1>Theory ListLexorder</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>ListLexorder</span><span>
 </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/library/HOL/HOL/Main.html><span>Main</span></a><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
@@ -1499,9 +1446,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
   </span><span class=quoted><span class=quoted><span>"</span><a class=entity_ref href=../../HOL/HOL/Finite_Set.html#Finite_Set.finite|const><span>finite</span></a><span> </span><span class=free><span>L</span></span><span> </span><span class=main><span>⟹</span></span><span> </span><a class=entity_ref href=../../HOL/HOL/List.html#List.list.set|const><span>set</span></a><span> </span><span class=main><span>(</span></span><a class=entity_ref href=ListLexorder.html#ListLexorder.sorted_list_of_list_set|const><span>sorted_list_of_list_set</span></a><span> </span><span class=free><span>L</span></span><span class=main><span>)</span></span><span> </span><span class=main><a class=entity_ref href=../../HOL/HOL/HOL.html#HOL.eq|const><span>=</span></a></span><span> </span><span class=free><span>L</span></span><span>"</span></span></span><span>
   </span><span class=keyword1><span class=command><span>by</span></span></span><span class=main><span>(</span></span><span class=operator><span>force</span></span><span> </span><span class=quasi_keyword><span>simp</span></span><span> </span><span class=quasi_keyword><span>add</span></span><span class=main><span class=main><span>:</span></span></span><span> </span><a class=entity_ref href=ListLexorder.html#ListLexorder.sorted_list_of_list_set_def|fact><span>sorted_list_of_list_set_def</span></a><span> </span><a class=entity_ref href=ListLexorder.html#ListLexorder.linorder_list_unwrap_def|fact><span>linorder_list_unwrap_def</span></a><span class=main><span>)</span></span><span>
 
-</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=BDD>
-<div class=head>
-<h1>Theory BDD</h1></div><pre class=source><span>
+</span><span class=keyword2><span class=keyword><span>end</span></span></span></pre></div><div id=BDD><div class=head><h1>Theory BDD</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>BDD</span><span>
   </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span>
     </span><a href=#Evasive><span>Evasive</span></a><span>
@@ -1996,9 +1941,7 @@ document</a></li><li><a href=https://www.isa-afp.org/browser_info/current/AFP/Si
   </span><span class=keyword2><span class=keyword><span>in</span></span></span><span> SML </span><span class=keyword2><span class=keyword><span>module_name</span></span></span><span> IBDD </span><span class=keyword2><span class=keyword><span>file</span></span></span><span> </span><span>SMLBDD</span><span>
 
 </span><span class=keyword2><span class=keyword><span>end</span></span></span><span>
-</span></pre></div><div id=Binary_operations>
-<div class=head>
-<h1>Theory Binary_operations</h1></div><pre class=source><span>
+</span></pre></div><div id=Binary_operations><div class=head><h1>Theory Binary_operations</h1></div><pre class=source><span>
 </span><span class=keyword1><span class=command><span>theory</span></span></span><span> </span><span>Binary_operations</span><span>
  </span><span class=keyword2><span class=keyword><span>imports</span></span></span><span> </span><a href=#Bij_betw_simplicial_complex_bool_func><span>Bij_betw_simplicial_complex_bool_func</span></a><span>
 </span><span class=keyword2><span class=keyword><span>begin</span></span></span><span>
