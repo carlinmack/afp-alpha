@@ -10683,7 +10683,10 @@
         ],
         "date": "2022-03-15",
         "abstract": "\n<p>In this article, I formalise a proof from <a\nhref=\"https://dx.doi.org/10.1007/978-3-662-57265-8\">THE\nBOOK</a>; namely a formula that was called ‘one of the most\nbeautiful formulas involving elementary functions’:</p> \\[\\pi\n\\cot(\\pi z) = \\frac{1}{z} + \\sum_{n=1}^\\infty\\left(\\frac{1}{z+n} +\n\\frac{1}{z-n}\\right)\\] <p>The proof uses Herglotz's trick\nto show the real case and analytic continuation for the complex\ncase.</p>",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Cotangent_PFD_Formula"
+        ]
     },
     {
         "session": "Locally-Nameless-Sigma",
@@ -12748,6 +12751,19 @@
         "theories": [
             "Irreducible"
         ]
+    },
+    {
+        "session": "Ackermanns_not_PR",
+        "title": "Ackermann's Function Is Not Primitive Recursive",
+        "authors": [
+            "Lawrence C. Paulson"
+        ],
+        "topics": [
+            "Logic/Computability"
+        ],
+        "date": "2022-03-23",
+        "abstract": "\nAckermann's function is defined in the usual way and a number of\nits elementary properties are proved. Then, the primitive recursive\nfunctions are defined inductively: as a predicate on the functions\nthat map lists of  numbers to numbers. It is shown that every\nprimitive recursive function is strictly dominated by Ackermann's\nfunction. The formalisation follows an earlier one by Nora Szasz.",
+        "licence": "BSD"
     },
     {
         "session": "Decl_Sem_Fun_PL",
