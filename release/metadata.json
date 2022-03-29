@@ -5022,6 +5022,25 @@
         ]
     },
     {
+        "session": "FOL_Seq_Calc3",
+        "title": "A Naive Prover for First-Order Logic",
+        "authors": [
+            "Asta Halkjær From"
+        ],
+        "topics": [
+            "Logic/General logic/Classical first-order logic",
+            "Logic/Proof theory",
+            "Logic/General logic/Mechanization of proofs"
+        ],
+        "date": "2022-03-22",
+        "abstract": "\n<p> The AFP entry <a\nhref=\"https://www.isa-afp.org/entries/Abstract_Completeness.html\">Abstract\nCompleteness</a> by Blanchette, Popescu and Traytel formalizes\nthe core of Beth/Hintikka-style completeness proofs for first-order\nlogic and can be used to formalize executable sequent calculus\nprovers. In the Journal of Automated Reasoning, the authors\ninstantiate the framework with a sequent calculus for first-order\nlogic and prove its completeness. Their use of an infinite set of\nproof rules indexed by formulas yields very direct arguments. A fair\nstream of these rules controls the prover, making its definition\nremarkably simple. The AFP entry, however, only contains a toy example\nfor propositional logic. The AFP entry <a\nhref=\"https://www.isa-afp.org/entries/FOL_Seq_Calc2.html\">A\nSequent Calculus Prover for First-Order Logic with Functions</a>\nby From and Jacobsen also uses the framework, but uses a finite set of\ngeneric rules resulting in a more sophisticated prover with more\ncomplicated proofs. </p> <p> This entry contains an\nexecutable sequent calculus prover for first-order logic with\nfunctions in the style presented by Blanchette et al. The prover can\nbe exported to Haskell and this entry includes formalized proofs of\nits soundness and completeness. The proofs are simpler than those for\nthe prover by From and Jacobsen but the performance of the prover is\nsignificantly worse. </p> <p> The included theory\n<em>Fair-Stream</em> first proves that the sequence of\nnatural numbers 0, 0, 1, 0, 1, 2, etc. is fair. It then proves that\nmapping any surjective function across the sequence preserves\nfairness. This method of obtaining a fair stream of rules is similar\nto the one given by Blanchette et al. The concrete functions from\nnatural numbers to terms, formulas and rules are defined using the\n<em>Nat-Bijection</em> theory in the HOL-Library.\n</p>",
+        "licence": "BSD",
+        "dependencies": [
+            "Abstract_Soundness",
+            "Abstract_Completeness"
+        ]
+    },
+    {
         "session": "Nat-Interval-Logic",
         "title": "Interval Temporal Logic on Natural Numbers",
         "authors": [
@@ -12763,7 +12782,10 @@
         ],
         "date": "2022-03-23",
         "abstract": "\nAckermann's function is defined in the usual way and a number of\nits elementary properties are proved. Then, the primitive recursive\nfunctions are defined inductively: as a predicate on the functions\nthat map lists of  numbers to numbers. It is shown that every\nprimitive recursive function is strictly dominated by Ackermann's\nfunction. The formalisation follows an earlier one by Nora Szasz.",
-        "licence": "BSD"
+        "licence": "BSD",
+        "theories": [
+            "Primrec"
+        ]
     },
     {
         "session": "Decl_Sem_Fun_PL",
@@ -30961,6 +30983,20 @@
                 "2020": "2020-11-30"
             }
         ]
+    },
+    {
+        "session": "Dedekind_Real",
+        "title": "Constructing the Reals as Dedekind Cuts of Rationals",
+        "authors": [
+            "Jacques D. Fleuriot",
+            "Lawrence C. Paulson"
+        ],
+        "topics": [
+            "Mathematics/Analysis"
+        ],
+        "date": "2022-03-24",
+        "abstract": "\nThe type of real numbers is constructed from the positive rationals\nusing the method of Dedekind cuts. This development, briefly described\nin papers by the authors, follows the textbook presentation by\nGleason. It's notable that the first formalisation of a\nsignificant piece of mathematics, by Jutting in 1977, involved a\nsimilar construction.",
+        "licence": "BSD"
     },
     {
         "session": "Noninterference_Sequential_Composition",
