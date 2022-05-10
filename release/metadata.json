@@ -2433,6 +2433,22 @@
         ]
     },
     {
+        "session": "Digit_Expansions",
+        "title": "Digit Expansions",
+        "authors": [
+            "Jonas Bayer",
+            "Marco David",
+            "Abhik Pal",
+            "Benedikt Stock"
+        ],
+        "topics": [
+            "Mathematics/Number theory"
+        ],
+        "date": "2022-04-20",
+        "abstract": "\nWe formalize how a natural number can be expanded into its digits in\nsome base and prove properties about functions that operate on digit\nexpansions. This includes the formalization of concepts such as digit\nshifts and carries. For a base that is a power of 2 we formalize the\nbinary AND, binary orthogonality and binary masking of two natural\nnumbers. This library on digit expansions builds the basis for the\nformalization of the DPRM theorem.",
+        "licence": "BSD"
+    },
+    {
         "session": "CZH_Elementary_Categories",
         "title": "Category Theory for ZFC in HOL II: Elementary Theory of 1-Categories",
         "authors": [
@@ -6147,6 +6163,19 @@
                 "2020": "2020-09-02"
             }
         ]
+    },
+    {
+        "session": "Sophomores_Dream",
+        "title": "The Sophomore's Dream",
+        "authors": [
+            "Manuel Eberl"
+        ],
+        "topics": [
+            "Mathematics/Analysis"
+        ],
+        "date": "2022-04-10",
+        "abstract": "\n<p>This article provides a brief formalisation of the two\nequations known as the <em>Sophomore's Dream</em>,\nfirst discovered by Johann Bernoulli in 1697:</p> \\[\\int_0^1\nx^{-x}\\,\\text{d}x = \\sum_{n=1}^\\infty n^{-n} \\quad\\text{and}\\quad\n\\int_0^1 x^x\\,\\text{d}x = -\\sum_{n=1}^\\infty (-n)^{-n}\\]",
+        "licence": "BSD"
     },
     {
         "session": "Noninterference_Concurrent_Composition",
@@ -11210,14 +11239,14 @@
         "session": "Differential_Dynamic_Logic",
         "title": "Differential Dynamic Logic",
         "authors": [
-            "Brandon Bohrer"
+            "Rose Bohrer"
         ],
         "topics": [
             "Logic/General logic/Modal logic",
             "Computer science/Programming languages/Logics"
         ],
         "date": "2017-02-13",
-        "abstract": "\nWe formalize differential dynamic logic, a logic for proving\nproperties of hybrid systems. The proof calculus in this formalization\nis based on the uniform substitution principle. We show it is sound\nwith respect to our denotational semantics, which provides increased\nconfidence in the correctness of the KeYmaera X theorem prover based\non this calculus. As an application, we include a proof term checker\nembedded in Isabelle/HOL with several example proofs.  Published in:\nBrandon Bohrer, Vincent Rahli, Ivana Vukotic, Marcus Völp, André\nPlatzer: Formally verified differential dynamic logic. CPP 2017.",
+        "abstract": "\nWe formalize differential dynamic logic, a logic for proving\nproperties of hybrid systems. The proof calculus in this formalization\nis based on the uniform substitution principle. We show it is sound\nwith respect to our denotational semantics, which provides increased\nconfidence in the correctness of the KeYmaera X theorem prover based\non this calculus. As an application, we include a proof term checker\nembedded in Isabelle/HOL with several example proofs.  Published in:\nRose Bohrer, Vincent Rahli, Ivana Vukotic, Marcus Völp, André\nPlatzer: Formally verified differential dynamic logic. CPP 2017.",
         "licence": "BSD",
         "olderReleases": [
             {
@@ -13358,6 +13387,19 @@
             "Polynomial_Factorization",
             "List-Index",
             "BenOr_Kozen_Reif"
+        ],
+        "theories": [
+            "Set_Multiset_Extras",
+            "Matrix_Vector_Extras",
+            "Design_Extras",
+            "Incidence_Matrices",
+            "Dual_Systems",
+            "Rank_Argument_General",
+            "Linear_Bound_Argument",
+            "Fishers_Inequality",
+            "Vector_Matrix_Mod",
+            "Fishers_Inequality_Variations",
+            "Fishers_Inequality_Root"
         ]
     },
     {
@@ -15729,6 +15771,23 @@
         ]
     },
     {
+        "session": "Clique_and_Monotone_Circuits",
+        "title": "Clique is not solvable by monotone circuits of polynomial size",
+        "authors": [
+            "René Thiemann"
+        ],
+        "topics": [
+            "Mathematics/Combinatorics"
+        ],
+        "date": "2022-05-08",
+        "abstract": "\n<p> Given a graph $G$ with $n$ vertices and a number $s$, the\ndecision problem Clique asks whether $G$ contains a fully connected\nsubgraph with $s$ vertices. For this NP-complete problem there exists\na non-trivial lower bound: no monotone circuit of a size that is\npolynomial in $n$ can solve Clique. </p><p> This entry\nprovides an Isabelle/HOL formalization of a concrete lower bound (the\nbound is $\\sqrt[7]{n}^{\\sqrt[8]{n}}$ for the fixed choice of $s =\n\\sqrt[4]{n}$), following a proof by Gordeev. </p>",
+        "licence": "BSD",
+        "dependencies": [
+            "Stirling_Formula",
+            "Sunflowers"
+        ]
+    },
+    {
         "session": "AutoFocus-Stream",
         "title": "AutoFocus Stream Processing for Single-Clocking and Multi-Clocking Semantics",
         "authors": [
@@ -17223,7 +17282,7 @@
         "session": "Interval_Arithmetic_Word32",
         "title": "Interval Arithmetic on 32-bit Words",
         "authors": [
-            "Brandon Bohrer"
+            "Rose Bohrer"
         ],
         "topics": [
             "Computer science/Data structures"
@@ -24003,7 +24062,7 @@
             "Emmanuel Gunther",
             "Miguel Pagano",
             "Pedro Sánchez Terraf",
-            "and Matías Steinberg"
+            "Matías Steinberg"
         ],
         "topics": [
             "Logic/Set theory"
@@ -36084,7 +36143,7 @@
             "Emmanuel Gunther",
             "Miguel Pagano",
             "Pedro Sánchez Terraf",
-            "and Matías Steinberg"
+            "Matías Steinberg"
         ],
         "topics": [
             "Logic/Set theory"
